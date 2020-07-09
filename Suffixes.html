@@ -1,0 +1,776 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Suffixes</title>
+	<style>
+		body{background-color:#000000; color:#FFFFFF}
+		table, th, td {border: 1px solid #888888}
+		th, td {padding: 2px}
+		#uName{color:#998855}
+		#cName{color:#BB7700}
+		#sName{color:#44EE44}
+		#rName{color:#CCCC00}
+		#mName{color:#5555CC}
+		#tName{color:#00AA00}
+		#stats{color:#AAAAAA}
+		#mods{color:#6677DD}
+		#removed{color:#660000}
+		#added{color:#FFFFFF}
+		#fire{color:#AA3333}
+		#ltng{color:#AAAA33}
+		#cold{color:#3333AA}
+		#pois{color:#33AA33}
+		#phys{color:#888888}
+		#magc{color:#CCCCFF}
+		</style>
+	<script>
+var rows = 
+	[{rowID:"row_000", lvl: 7, maxLvl: 36, itemsOK:["Ring","Amulet","Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_001", lvl:24, maxLvl: 60, itemsOK:["Ring","Amulet","Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_002", lvl:36, maxLvl: 84, itemsOK:["Amulet","Ring"], itemsNG:[""]},
+	 {rowID:"row_003", lvl:60, maxLvl:100, itemsOK:["Amulet","Ring"], itemsNG:[""]},
+	 {rowID:"row_004", lvl:84, maxLvl:100, itemsOK:["Amulet","Ring"], itemsNG:[""]},
+	 {rowID:"row_005", lvl:48, maxLvl: 80, itemsOK:["Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_006", lvl:66, maxLvl: 90, itemsOK:["Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_007", lvl:80, maxLvl:100, itemsOK:["Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_008", lvl:80, maxLvl:100, itemsOK:["Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_009", lvl: 7, maxLvl: 50, itemsOK:["Ring","Amulet","Sorceress Orb","Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_010", lvl:30, maxLvl: 70, itemsOK:["Ring","Amulet","Sorceress Orb","Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_011", lvl:50, maxLvl:100, itemsOK:["Ring","Amulet","Sorceress Orb"], itemsNG:[""]},
+	 {rowID:"row_012", lvl:70, maxLvl:100, itemsOK:["Ring","Amulet","Sorceress Orb"], itemsNG:[""]},
+	 {rowID:"row_013", lvl:42, maxLvl: 92, itemsOK:["Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_014", lvl:66, maxLvl:100, itemsOK:["Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_015", lvl:82, maxLvl:100, itemsOK:["Torso Armor","Any Shield","Circlet"], itemsNG:[""]},
+	 {rowID:"row_016", lvl: 1, maxLvl: 30, itemsOK:["Weapon"], itemsNG:["Wand","Sorceress Orb"]},
+	 {rowID:"row_017", lvl:15, maxLvl: 50, itemsOK:["Weapon"], itemsNG:["Wand","Sorceress Orb"]},
+	 {rowID:"row_018", lvl:30, maxLvl:100, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_019", lvl:50, maxLvl:100, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_020", lvl:10, maxLvl:100, itemsOK:["Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_021", lvl:30, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_022", lvl: 1, maxLvl: 30, itemsOK:["Any Shield"], itemsNG:[""]},
+	 {rowID:"row_023", lvl:20, maxLvl:100, itemsOK:["Any Shield"], itemsNG:[""]},
+	 {rowID:"row_024", lvl: 1, maxLvl:100, itemsOK:["Staves And Rods","Ring","Amulet","Sorceress Orb","Circlet"], itemsNG:[""]},
+	 {rowID:"row_025", lvl:35, maxLvl:100, itemsOK:["Staves And Rods","Sorceress Orb","Circlet","Amulet","Ring"], itemsNG:[""]},
+	 {rowID:"row_026", lvl: 1, maxLvl: 15, itemsOK:["Weapon","Ring","Amulet"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_027", lvl:10, maxLvl: 20, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_028", lvl:15, maxLvl: 30, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_029", lvl:20, maxLvl: 45, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_030", lvl:30, maxLvl: 60, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_031", lvl:45, maxLvl: 80, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_032", lvl:60, maxLvl: 90, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_033", lvl:80, maxLvl:100, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_034", lvl:81, maxLvl:100, itemsOK:["Weapon"], itemsNG:["Wand","Staff","Sorceress Orb"]},
+	 {rowID:"row_035", lvl: 1, maxLvl: 20, itemsOK:["Any Shield","Ring","Amulet","Belt"], itemsNG:[""]},
+	 {rowID:"row_036", lvl:10, maxLvl: 40, itemsOK:["Circlet","Ring","Amulet","Belt"], itemsNG:[""]},
+	 {rowID:"row_037", lvl:20, maxLvl: 50, itemsOK:["Circlet","Ring","Amulet","Belt"], itemsNG:[""]},
+	 {rowID:"row_038", lvl:40, maxLvl: 60, itemsOK:["Circlet","Ring","Amulet","Belt"], itemsNG:[""]},
+	 {rowID:"row_039", lvl:50, maxLvl: 70, itemsOK:["Circlet","Ring","Amulet","Belt"], itemsNG:[""]},
+	 {rowID:"row_040", lvl:60, maxLvl: 80, itemsOK:["Circlet","Ring","Amulet","Belt"], itemsNG:[""]},
+	 {rowID:"row_041", lvl:70, maxLvl:100, itemsOK:["Circlet","Ring","Amulet","Belt"], itemsNG:[""]},
+	 {rowID:"row_042", lvl:80, maxLvl:100, itemsOK:["Circlet","Ring","Amulet","Belt"], itemsNG:[""]},
+	 {rowID:"row_043", lvl:10, maxLvl: 30, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_044", lvl:20, maxLvl: 40, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_045", lvl:30, maxLvl: 50, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_046", lvl:40, maxLvl: 60, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_047", lvl:50, maxLvl:100, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_048", lvl:15, maxLvl: 40, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_049", lvl:25, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_050", lvl:66, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_051", lvl:30, maxLvl: 90, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_052", lvl:60, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_053", lvl:81, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_054", lvl: 1, maxLvl: 40, itemsOK:["Weapon"], itemsNG:["Staff","Wand","Sorceress Orb"]},
+	 {rowID:"row_055", lvl:20, maxLvl: 60, itemsOK:["Weapon"], itemsNG:["Staff","Wand","Sorceress Orb"]},
+	 {rowID:"row_056", lvl:40, maxLvl: 80, itemsOK:["Weapon"], itemsNG:["Staff","Wand","Sorceress Orb"]},
+	 {rowID:"row_057", lvl:60, maxLvl:100, itemsOK:["Weapon"], itemsNG:["Staff","Wand","Sorceress Orb"]},
+	 {rowID:"row_058", lvl:80, maxLvl:100, itemsOK:["Weapon"], itemsNG:["Staff","Wand","Sorceress Orb"]},
+	 {rowID:"row_059", lvl:20, maxLvl: 30, itemsOK:["Ring","Amulet","Circlet","Belt"], itemsNG:[""]},
+	 {rowID:"row_060", lvl:37, maxLvl: 59, itemsOK:["Ring","Amulet","Circlet","Belt"], itemsNG:[""]},
+	 {rowID:"row_061", lvl:59, maxLvl:100, itemsOK:["Ring","Amulet","Circlet","Belt"], itemsNG:[""]},
+	 {rowID:"row_062", lvl:81, maxLvl:100, itemsOK:["Ring","Amulet","Circlet","Belt"], itemsNG:[""]},
+	 {rowID:"row_063", lvl:55, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_064", lvl:75, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_065", lvl: 1, maxLvl: 36, itemsOK:["Amulet","Missile Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_066", lvl:18, maxLvl: 60, itemsOK:["Amulet","Missile Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_067", lvl:36, maxLvl: 72, itemsOK:["Amulet","Missile Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_068", lvl:60, maxLvl: 86, itemsOK:["Amulet","Missile Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_069", lvl:72, maxLvl:100, itemsOK:["Amulet","Missile Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_070", lvl:86, maxLvl:100, itemsOK:["Amulet","Missile Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_071", lvl: 1, maxLvl: 42, itemsOK:["Ring","Gloves"], itemsNG:[""]},
+	 {rowID:"row_072", lvl:21, maxLvl: 63, itemsOK:["Ring","Gloves"], itemsNG:[""]},
+	 {rowID:"row_073", lvl:42, maxLvl: 84, itemsOK:["Ring","Gloves"], itemsNG:[""]},
+	 {rowID:"row_074", lvl:63, maxLvl:100, itemsOK:["Ring","Gloves"], itemsNG:[""]},
+	 {rowID:"row_075", lvl:84, maxLvl:100, itemsOK:["Ring","Gloves"], itemsNG:[""]},
+	 {rowID:"row_076", lvl: 8, maxLvl: 32, itemsOK:["Torso Armor","Boots","Helm"], itemsNG:["Gloves"]},
+	 {rowID:"row_077", lvl:16, maxLvl: 64, itemsOK:["Torso Armor","Boots","Helm"], itemsNG:["Gloves"]},
+	 {rowID:"row_078", lvl:32, maxLvl:100, itemsOK:["Torso Armor","Boots","Helm"], itemsNG:["Gloves"]},
+	 {rowID:"row_079", lvl:64, maxLvl:100, itemsOK:["Torso Armor","Boots","Helm"], itemsNG:["Gloves"]},
+	 {rowID:"row_080", lvl:12, maxLvl: 70, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_081", lvl:12, maxLvl: 70, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_082", lvl:12, maxLvl: 70, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_083", lvl:60, maxLvl:100, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_084", lvl:60, maxLvl:100, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_085", lvl:60, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_086", lvl: 1, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_087", lvl: 5, maxLvl: 40, itemsOK:["Any Armor"], itemsNG:["Gloves","Bow Quiver","Crossbow Quiver"]},
+	 {rowID:"row_088", lvl:20, maxLvl:100, itemsOK:["Torso Armor","Belt","Any Shield","Helm"], itemsNG:[""]},
+	 {rowID:"row_089", lvl:40, maxLvl:100, itemsOK:["Torso Armor","Belt","Helm"], itemsNG:[""]},
+	 {rowID:"row_090", lvl: 6, maxLvl:100, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_091", lvl:14, maxLvl:100, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_092", lvl:29, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_093", lvl:36, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_094", lvl: 1, maxLvl: 10, itemsOK:["Any Armor","Ring","Amulet"], itemsNG:[""]},
+	 {rowID:"row_095", lvl:10, maxLvl: 20, itemsOK:["Any Armor","Ring","Amulet"], itemsNG:[""]},
+	 {rowID:"row_096", lvl:20, maxLvl: 30, itemsOK:["Any Armor","Ring","Amulet"], itemsNG:["Scepter"]},
+	 {rowID:"row_097", lvl:30, maxLvl:100, itemsOK:["Any Armor","Ring","Amulet"], itemsNG:[""]},
+	 {rowID:"row_098", lvl: 1, maxLvl:100, itemsOK:["Melee Weapon"], itemsNG:["Staves And Rods","Sorceress Orb"]},
+	 {rowID:"row_099", lvl: 1, maxLvl:100, itemsOK:["Boots","Gloves","Belt","Amulet","Circlet","Ring"], itemsNG:[""]},
+	 {rowID:"row_100", lvl:50, maxLvl:100, itemsOK:["Boots","Gloves","Belt","Amulet","Circlet","Ring"], itemsNG:[""]},
+	 {rowID:"row_101", lvl: 1, maxLvl:100, itemsOK:["Grand Charm","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_102", lvl:50, maxLvl:100, itemsOK:["Grand Charm","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_103", lvl: 1, maxLvl:100, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_104", lvl:50, maxLvl:100, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_105", lvl:15, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_106", lvl:12, maxLvl: 36, itemsOK:["Boots","Gloves","Ring","Amulet","Circlet","Belt"], itemsNG:[""]},
+	 {rowID:"row_107", lvl:24, maxLvl: 72, itemsOK:["Boots","Gloves","Ring","Amulet","Circlet","Belt"], itemsNG:[""]},
+	 {rowID:"row_108", lvl:36, maxLvl:100, itemsOK:["Boots","Gloves","Ring","Amulet","Circlet","Belt"], itemsNG:[""]},
+	 {rowID:"row_109", lvl:72, maxLvl:100, itemsOK:["Boots","Gloves","Ring","Amulet","Circlet","Belt"], itemsNG:[""]},
+	 {rowID:"row_110", lvl:18, maxLvl: 60, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_111", lvl:48, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_112", lvl: 1, maxLvl: 18, itemsOK:["Amulet","Sorceress Orb","Circlet","Wand","Staff","Scepter","Helm"], itemsNG:[""]},
+	 {rowID:"row_113", lvl: 7, maxLvl: 36, itemsOK:["Amulet","Sorceress Orb","Circlet","Wand","Staff","Scepter","Helm"], itemsNG:[""]},
+	 {rowID:"row_114", lvl:18, maxLvl: 72, itemsOK:["Amulet","Sorceress Orb","Circlet","Wand","Staff","Scepter","Helm"], itemsNG:[""]},
+	 {rowID:"row_115", lvl:36, maxLvl: 90, itemsOK:["Amulet","Sorceress Orb","Circlet","Wand","Staff","Scepter","Helm"], itemsNG:[""]},
+	 {rowID:"row_116", lvl:72, maxLvl:100, itemsOK:["Amulet","Sorceress Orb","Circlet","Wand","Staff","Scepter","Helm"], itemsNG:[""]},
+	 {rowID:"row_117", lvl:81, maxLvl:100, itemsOK:["Amulet","Sorceress Orb","Circlet","Wand","Staff","Scepter","Helm"], itemsNG:[""]},
+	 {rowID:"row_118", lvl: 7, maxLvl: 36, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_119", lvl:18, maxLvl: 72, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_120", lvl:36, maxLvl: 90, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_121", lvl:72, maxLvl:100, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_122", lvl:90, maxLvl:100, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_123", lvl:10, maxLvl: 50, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_124", lvl:12, maxLvl:100, itemsOK:["Melee Weapon"], itemsNG:[""]},
+	 {rowID:"row_125", lvl: 6, maxLvl: 40, itemsOK:["Any Armor","Staves And Rods","Ring","Amulet"], itemsNG:[""]},
+	 {rowID:"row_126", lvl:40, maxLvl: 70, itemsOK:["Staves And Rods","Missile Weapon","Ring","Amulet","Helm"], itemsNG:[""]},
+	 {rowID:"row_127", lvl:70, maxLvl:100, itemsOK:["Staves And Rods","Missile Weapon","Gloves","Ring","Amulet","Helm"], itemsNG:[""]},
+	 {rowID:"row_128", lvl: 1, maxLvl: 21, itemsOK:["Torso Armor","Belt","Amulet","Helm","Any Shield","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_129", lvl: 7, maxLvl: 42, itemsOK:["Torso Armor","Belt","Amulet","Helm","Any Shield","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_130", lvl:21, maxLvl: 76, itemsOK:["Torso Armor","Belt","Amulet","Helm","Any Shield","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_131", lvl:42, maxLvl: 88, itemsOK:["Torso Armor","Belt","Amulet","Helm","Any Shield","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_132", lvl:76, maxLvl:100, itemsOK:["Torso Armor","Belt","Amulet","Helm","Any Shield","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_133", lvl:78, maxLvl:100, itemsOK:["Torso Armor","Belt","Amulet","Helm","Any Shield","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_134", lvl:82, maxLvl:100, itemsOK:["Torso Armor","Belt","Amulet","Helm","Any Shield","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_135", lvl:85, maxLvl:100, itemsOK:["Torso Armor","Belt","Amulet","Helm","Any Shield","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_136", lvl: 4, maxLvl: 18, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_137", lvl: 9, maxLvl: 36, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_138", lvl:18, maxLvl: 72, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_139", lvl:36, maxLvl: 88, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_140", lvl:72, maxLvl:100, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_141", lvl:78, maxLvl:100, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_142", lvl: 9, maxLvl: 36, itemsOK:["Weapon"], itemsNG:[""]},
+	 {rowID:"row_143", lvl:18, maxLvl: 72, itemsOK:["Weapon"], itemsNG:[""]},
+	 {rowID:"row_144", lvl:36, maxLvl: 88, itemsOK:["Weapon"], itemsNG:[""]},
+	 {rowID:"row_145", lvl:72, maxLvl:100, itemsOK:["Weapon"], itemsNG:[""]},
+	 {rowID:"row_146", lvl:78, maxLvl:100, itemsOK:["Weapon"], itemsNG:[""]},
+	 {rowID:"row_147", lvl: 1, maxLvl: 30, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_148", lvl: 9, maxLvl: 29, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_149", lvl:19, maxLvl: 49, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_150", lvl:29, maxLvl: 69, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_151", lvl:49, maxLvl: 79, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_152", lvl:69, maxLvl: 89, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_153", lvl:79, maxLvl: 92, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_154", lvl:87, maxLvl:100, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_155", lvl:87, maxLvl:100, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_156", lvl: 9, maxLvl: 42, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_157", lvl:15, maxLvl: 65, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_158", lvl:42, maxLvl: 82, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_159", lvl:65, maxLvl: 88, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_160", lvl:82, maxLvl:100, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_161", lvl:87, maxLvl:100, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_162", lvl:14, maxLvl: 50, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_163", lvl:28, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_164", lvl:72, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_165", lvl:24, maxLvl: 55, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_166", lvl:48, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_167", lvl: 6, maxLvl: 18, itemsOK:["Weapon"], itemsNG:["Sorceress Orb","Staff","Wand"]},
+	 {rowID:"row_168", lvl:18, maxLvl: 36, itemsOK:["Weapon"], itemsNG:["Sorceress Orb","Staff","Wand"]},
+	 {rowID:"row_169", lvl:36, maxLvl:100, itemsOK:["Weapon"], itemsNG:["Sorceress Orb","Staff","Wand"]},
+	 {rowID:"row_170", lvl:14, maxLvl: 80, itemsOK:["Ring","Circlet"], itemsNG:[""]},
+	 {rowID:"row_171", lvl:47, maxLvl:100, itemsOK:["Ring","Circlet"], itemsNG:[""]},
+	 {rowID:"row_172", lvl:80, maxLvl:100, itemsOK:["Ring","Circlet"], itemsNG:[""]},
+	 {rowID:"row_173", lvl:34, maxLvl:100, itemsOK:["Gloves","Jewel"], itemsNG:[""]},
+	 {rowID:"row_174", lvl: 7, maxLvl: 21, itemsOK:["Weapon"], itemsNG:["Sorceress Orb"]},
+	 {rowID:"row_175", lvl:21, maxLvl: 56, itemsOK:["Weapon"], itemsNG:[""]},
+	 {rowID:"row_176", lvl:56, maxLvl:100, itemsOK:["Weapon"], itemsNG:[""]},
+	 {rowID:"row_177", lvl:15, maxLvl: 58, itemsOK:["Amulet","Circlet"], itemsNG:[""]},
+	 {rowID:"row_178", lvl:58, maxLvl:100, itemsOK:["Amulet","Circlet"], itemsNG:[""]},
+	 {rowID:"row_179", lvl:78, maxLvl:100, itemsOK:["Amulet","Circlet"], itemsNG:[""]},
+	 {rowID:"row_180", lvl:35, maxLvl:100, itemsOK:["Gloves"], itemsNG:[""]},
+	 {rowID:"row_181", lvl:72, maxLvl:100, itemsOK:["Torso Armor","Any Shield","Amulet","Circlet","Helm"], itemsNG:[""]},
+	 {rowID:"row_182", lvl:48, maxLvl:100, itemsOK:["Torso Armor","Any Shield","Amulet","Circlet","Helm"], itemsNG:[""]},
+	 {rowID:"row_183", lvl: 7, maxLvl: 72, itemsOK:["Any Armor","Ring","Amulet","Circlet"], itemsNG:[""]},
+	 {rowID:"row_184", lvl: 1, maxLvl: 24, itemsOK:["Amulet","Belt","Melee Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_185", lvl: 8, maxLvl: 48, itemsOK:["Amulet","Belt","Melee Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_186", lvl:24, maxLvl: 62, itemsOK:["Amulet","Belt","Melee Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_187", lvl:48, maxLvl:100, itemsOK:["Amulet","Belt","Melee Weapon","Circlet"], itemsNG:[""]},
+	 {rowID:"row_188", lvl:62, maxLvl:100, itemsOK:["Amulet","Belt"], itemsNG:[""]},
+	 {rowID:"row_189", lvl:84, maxLvl:100, itemsOK:["Belt"], itemsNG:[""]},
+	 {rowID:"row_190", lvl: 1, maxLvl: 24, itemsOK:["Ring","Torso Armor","Boots"], itemsNG:[""]},
+	 {rowID:"row_191", lvl: 8, maxLvl: 48, itemsOK:["Ring","Torso Armor","Boots"], itemsNG:[""]},
+	 {rowID:"row_192", lvl:24, maxLvl: 66, itemsOK:["Ring","Torso Armor","Boots"], itemsNG:[""]},
+	 {rowID:"row_193", lvl:48, maxLvl:100, itemsOK:["Ring","Torso Armor","Boots"], itemsNG:[""]},
+	 {rowID:"row_194", lvl:66, maxLvl:100, itemsOK:["Ring","Torso Armor","Boots"], itemsNG:[""]},
+	 {rowID:"row_195", lvl:12, maxLvl: 25, itemsOK:["Gloves","Any Shield"], itemsNG:["Blunt"]},
+	 {rowID:"row_196", lvl:25, maxLvl: 37, itemsOK:["Gloves","Any Shield"], itemsNG:["Blunt"]},
+	 {rowID:"row_197", lvl:37, maxLvl:100, itemsOK:["Gloves","Any Shield"], itemsNG:["Blunt"]},
+	 {rowID:"row_198", lvl:51, maxLvl:100, itemsOK:["Gloves","Any Shield"], itemsNG:["Blunt"]},
+	 {rowID:"row_199", lvl: 1, maxLvl: 40, itemsOK:["Grand Charm","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_200", lvl: 3, maxLvl: 40, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_201", lvl: 7, maxLvl: 40, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_202", lvl:29, maxLvl:100, itemsOK:["Grand Charm","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_203", lvl:29, maxLvl:100, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_204", lvl:29, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_205", lvl:18, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_206", lvl: 1, maxLvl: 37, itemsOK:["Boots","Circlet","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_207", lvl:22, maxLvl: 66, itemsOK:["Boots","Circlet","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_208", lvl:37, maxLvl:100, itemsOK:["Boots","Circlet","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_209", lvl:66, maxLvl:100, itemsOK:["Boots","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_210", lvl:82, maxLvl:100, itemsOK:["Boots","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_211", lvl:19, maxLvl:100, itemsOK:["Grand Charm"], itemsNG:[""]},
+	 {rowID:"row_212", lvl:24, maxLvl:100, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_213", lvl:35, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_214", lvl: 1, maxLvl: 79, itemsOK:["Weapon"], itemsNG:["Combo Weapon","Missile Weapon"]},
+	 {rowID:"row_215", lvl:16, maxLvl:100, itemsOK:["Torso Armor","Amulet","Druid Pelt","Barbarian Helm","Belt"], itemsNG:[""]},
+	 {rowID:"row_216", lvl:16, maxLvl:100, itemsOK:["Circlet","Amulet","Druid Pelt","Belt"], itemsNG:[""]},
+	 {rowID:"row_217", lvl:32, maxLvl:100, itemsOK:["Torso Armor","Helm","Belt"], itemsNG:[""]},
+	 {rowID:"row_218", lvl:16, maxLvl:100, itemsOK:["Amulet","Helm"], itemsNG:[""]},
+	 {rowID:"row_219", lvl:16, maxLvl:100, itemsOK:["Amulet","Helm"], itemsNG:[""]},
+	 {rowID:"row_220", lvl:16, maxLvl:100, itemsOK:["Amulet","Helm"], itemsNG:[""]},
+	 {rowID:"row_221", lvl:20, maxLvl: 50, itemsOK:["Torso Armor","Gloves","Amulet"], itemsNG:[""]},
+	 {rowID:"row_222", lvl:20, maxLvl: 50, itemsOK:["Any Shield","Helm","Amulet"], itemsNG:[""]},
+	 {rowID:"row_223", lvl:20, maxLvl: 50, itemsOK:["Gloves","Boots","Ring"], itemsNG:[""]},
+	 {rowID:"row_224", lvl:20, maxLvl: 50, itemsOK:["Belt","Ring","Amulet"], itemsNG:[""]},
+	 {rowID:"row_225", lvl:30, maxLvl: 60, itemsOK:["Circlet"], itemsNG:[""]},
+	 {rowID:"row_226", lvl:55, maxLvl:100, itemsOK:["Belt","Boots","Helm"], itemsNG:[""]},
+	 {rowID:"row_227", lvl:20, maxLvl: 50, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_228", lvl:50, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_229", lvl:20, maxLvl: 50, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_230", lvl:50, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_231", lvl:20, maxLvl: 50, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_232", lvl:50, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_233", lvl:20, maxLvl:100, itemsOK:["Gloves"], itemsNG:[""]},
+	 {rowID:"row_234", lvl: 1, maxLvl: 15, itemsOK:["Grand Charm","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_235", lvl:15, maxLvl: 30, itemsOK:["Grand Charm","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_236", lvl:30, maxLvl:100, itemsOK:["Grand Charm","Bow Quiver","Crossbow Quiver"], itemsNG:[""]},
+	 {rowID:"row_237", lvl:20, maxLvl: 40, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_238", lvl:40, maxLvl: 60, itemsOK:["Large Charm"], itemsNG:[""]},
+	 {rowID:"row_239", lvl:60, maxLvl:100, itemsOK:["Small Charm"], itemsNG:[""]},
+	 {rowID:"row_240", lvl: 1, maxLvl: 20, itemsOK:["Boots","Gloves"], itemsNG:[""]},
+	 {rowID:"row_241", lvl: 1, maxLvl: 20, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_242", lvl: 1, maxLvl: 20, itemsOK:["Gloves","Belt"], itemsNG:[""]},
+	 {rowID:"row_243", lvl: 1, maxLvl: 20, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_244", lvl: 1, maxLvl: 15, itemsOK:["Weapon"], itemsNG:["Staff","Wand","Sorceress Orb"]},
+	 {rowID:"row_245", lvl: 1, maxLvl: 15, itemsOK:["Weapon"], itemsNG:["Staff","Wand","Sorceress Orb"]},
+	 {rowID:"row_246", lvl: 1, maxLvl: 15, itemsOK:["Weapon"], itemsNG:["Scepter","Staff","Sorceress Orb"]},
+	 {rowID:"row_247", lvl: 1, maxLvl: 15, itemsOK:["Weapon"], itemsNG:["Staff","Wand","Sorceress Orb"]},
+	 {rowID:"row_248", lvl: 3, maxLvl:100, itemsOK:["Amulet","Ring"], itemsNG:[""]},
+	 {rowID:"row_249", lvl: 1, maxLvl: 20, itemsOK:["Amulet","Sorceress Orb","Circlet","Wand","Staff","Helm","Ring"], itemsNG:[""]},
+	 {rowID:"row_250", lvl: 1, maxLvl: 20, itemsOK:["Ring","Amulet"], itemsNG:[""]},
+	 {rowID:"row_251", lvl:24, maxLvl: 48, itemsOK:["Amulet"], itemsNG:[""]},
+	 {rowID:"row_252", lvl:48, maxLvl: 72, itemsOK:["Amulet"], itemsNG:[""]},
+	 {rowID:"row_253", lvl:72, maxLvl:100, itemsOK:["Amulet"], itemsNG:[""]},
+	 {rowID:"row_254", lvl:25, maxLvl: 50, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_255", lvl:50, maxLvl: 75, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_256", lvl:75, maxLvl:100, itemsOK:["Ring"], itemsNG:[""]},
+	 {rowID:"row_257", lvl:40, maxLvl: 92, itemsOK:["2 Handed Weapon"], itemsNG:["Staff","Missile Weapon"]},
+	 {rowID:"row_258", lvl:40, maxLvl: 92, itemsOK:["Weapon"], itemsNG:["Sorceress Orb","Wand","2 Handed Weapon"]},
+	 {rowID:"row_259", lvl:85, maxLvl:100, itemsOK:["2 Handed Weapon"], itemsNG:["Staff","Missile Weapon"]},
+	 {rowID:"row_260", lvl:85, maxLvl:100, itemsOK:["Weapon"], itemsNG:["Sorceress Orb","Wand","2 Handed Weapon"]},
+	 {rowID:"row_261", lvl: 8, maxLvl: 60, itemsOK:["Gloves","Boots"], itemsNG:[""]},
+	 {rowID:"row_262", lvl:60, maxLvl:100, itemsOK:["Gloves","Boots"], itemsNG:[""]},
+	 {rowID:"row_263", lvl: 1, maxLvl: 30, itemsOK:["Belt"], itemsNG:[""]},
+	 {rowID:"row_264", lvl:20, maxLvl: 40, itemsOK:["Belt"], itemsNG:[""]},
+	 {rowID:"row_265", lvl:30, maxLvl: 50, itemsOK:["Belt"], itemsNG:[""]},
+	 {rowID:"row_266", lvl:40, maxLvl:100, itemsOK:["Belt"], itemsNG:[""]},
+	 {rowID:"row_267", lvl:50, maxLvl:100, itemsOK:["Belt"], itemsNG:[""]},
+	 {rowID:"row_268", lvl:20, maxLvl: 80, itemsOK:["Torso Armor","Helm","Any Shield","Belt"], itemsNG:[""]},
+	 {rowID:"row_269", lvl:50, maxLvl:100, itemsOK:["Torso Armor","Helm","Any Shield","Belt"], itemsNG:[""]},
+	 {rowID:"row_270", lvl:80, maxLvl:100, itemsOK:["Torso Armor","Helm","Any Shield","Belt"], itemsNG:[""]},
+	 {rowID:"row_271", lvl:60, maxLvl:100, itemsOK:["Jewel"], itemsNG:[""]},
+	 {rowID:"row_272", lvl:60, maxLvl:100, itemsOK:["Bow Quiver","Crossbow Quiver","Helm","Circlet","Amulet"], itemsNG:[""]},
+	 {rowID:"row_273", lvl:80, maxLvl:100, itemsOK:["Torso Armor","Any Shield","Crossbow Quiver","Bow Quiver","Amulet"], itemsNG:[""]},
+	 {rowID:"row_274", lvl:60, maxLvl:100, itemsOK:["Torso Armor","Any Shield","Crossbow Quiver","Bow Quiver","Amulet"], itemsNG:[""]},
+	 {rowID:"row_275", lvl:60, maxLvl:100, itemsOK:["Ring","Amulet","Helm","Circlet"], itemsNG:[""]},
+	 {rowID:"row_276", lvl:50, maxLvl:100, itemsOK:["Helm","Circlet","Grand Charm","Torso Armor"], itemsNG:[""]},
+	 {rowID:"row_277", lvl:50, maxLvl:100, itemsOK:["Jewel","Ring","Amulet","Gloves","Boots"], itemsNG:[""]},
+	 {rowID:"row_278", lvl:80, maxLvl:100, itemsOK:["Ring","Amulet","Druid Pelt","Circlet","Staves And Rods","Wand","Staff"], itemsNG:[""]},
+	 {rowID:"row_279", lvl:50, maxLvl:100, itemsOK:["Ring","Amulet","Jewel"], itemsNG:[""]},
+	 {rowID:"row_280", lvl:80, maxLvl:100, itemsOK:["Ring","Amulet","Jewel"], itemsNG:[""]},
+	 {rowID:"row_281", lvl:25, maxLvl: 54, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_282", lvl:55, maxLvl: 84, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_283", lvl:85, maxLvl:100, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_284", lvl:25, maxLvl: 54, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_285", lvl:55, maxLvl: 84, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_286", lvl:85, maxLvl:100, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_287", lvl:25, maxLvl: 54, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_288", lvl:55, maxLvl: 84, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_289", lvl:85, maxLvl:100, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_290", lvl:25, maxLvl: 54, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_291", lvl:55, maxLvl: 84, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_292", lvl:85, maxLvl:100, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_293", lvl:25, maxLvl: 54, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_294", lvl:55, maxLvl: 84, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_295", lvl:85, maxLvl:100, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_296", lvl:25, maxLvl: 54, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_297", lvl:55, maxLvl: 84, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_298", lvl:85, maxLvl:100, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_299", lvl:25, maxLvl: 54, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_300", lvl:55, maxLvl: 84, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_301", lvl:85, maxLvl:100, itemsOK:["Belt","Gloves","Helm"], itemsNG:[""]},
+	 {rowID:"row_302", lvl:25, maxLvl:100, itemsOK:["Melee Weapon","Ring","Amulet","Helm","Gloves"], itemsNG:[""]},
+	 {rowID:"row_303", lvl:25, maxLvl:100, itemsOK:["Gloves","Ring","Amulet","Helm"], itemsNG:[""]},
+	 {rowID:"row_304", lvl:25, maxLvl: 54, itemsOK:["Missile Weapon"], itemsNG:[""]},
+	 {rowID:"row_305", lvl:55, maxLvl: 84, itemsOK:["Missile Weapon"], itemsNG:[""]},
+	 {rowID:"row_306", lvl:85, maxLvl:100, itemsOK:["Missile Weapon"], itemsNG:[""]},
+	 {rowID:"row_307", lvl:25, maxLvl: 54, itemsOK:["Missile Weapon"], itemsNG:[""]},
+	 {rowID:"row_308", lvl:55, maxLvl: 84, itemsOK:["Missile Weapon"], itemsNG:[""]},
+	 {rowID:"row_309", lvl:85, maxLvl:100, itemsOK:["Missile Weapon"], itemsNG:[""]},
+	 {rowID:"row_310", lvl:25, maxLvl: 54, itemsOK:["Missile Weapon"], itemsNG:[""]},
+	 {rowID:"row_311", lvl:55, maxLvl: 84, itemsOK:["Missile Weapon"], itemsNG:[""]},
+	 {rowID:"row_312", lvl:85, maxLvl:100, itemsOK:["Missile Weapon"], itemsNG:[""]},
+	 {rowID:"row_313", lvl:81, maxLvl:100, itemsOK:["Druid Pelt"], itemsNG:[""]},
+	 {rowID:"row_314", lvl:20, maxLvl: 85, itemsOK:["Gloves","Belt","Boots"], itemsNG:[""]},
+	 {rowID:"row_315", lvl:20, maxLvl: 85, itemsOK:["Gloves","Belt","Boots"], itemsNG:[""]},
+	 {rowID:"row_316", lvl:20, maxLvl: 85, itemsOK:["Gloves","Belt","Boots"], itemsNG:[""]},
+	 {rowID:"row_317", lvl:20, maxLvl: 85, itemsOK:["Gloves","Belt","Boots"], itemsNG:[""]},
+	 {rowID:"row_318", lvl:20, maxLvl: 85, itemsOK:["Gloves","Belt","Boots"], itemsNG:[""]},
+	 {rowID:"row_319", lvl:20, maxLvl: 85, itemsOK:["Gloves","Belt","Boots"], itemsNG:[""]},
+	 {rowID:"row_320", lvl:30, maxLvl:100, itemsOK:["Gloves","Belt","Boots"], itemsNG:[""]}
+	];
+
+    function unFilterTable(){
+        rLength = rows.length;
+        // For every row, reveal it 
+        rVis = "visible";
+        for (r = 0; r < rLength; r++){
+            rowID= "row_";
+            if (r < 10){
+                rowID += "00";
+            } else if (r < 100) {
+                rowID += "0";
+            }
+            rowID += r;
+            document.getElementById(rowID).style.visibility = rVis;
+        } // ends for each row
+    } // ends unFilterTable()
+
+    function filterTable(){
+        iLevel  = parseInt(document.getElementById("lvlSelect").value);
+        iTypes  = document.getElementById("itemSelect").value.split(",");
+        iLength = iTypes.length;
+        rLength = rows.length;
+
+        if (isNaN(iLevel) || iLevel < 1){
+            iLevel = 1;
+        }
+
+        // For every row, collapse it unless the level and item type is found
+        for (r = 0; r < rLength ;r++){
+            // 2016-06-30 Chrome won't "collapse", it "hidden"
+            rVis = "collapse";
+            rowID= "row_";
+            if (r < 10){
+                rowID += "00";
+            } else if (r < 100) {
+                rowID += "0";
+            }
+            rowID += r;
+            
+            ilvl = rows[r]["lvl"];
+            xLvl = rows[r]["maxLvl"];
+            jLength = rows[r]["itemsOK"].length;
+            kLength = rows[r]["itemsNG"].length;
+            indexOK = iLength; // Order in items[] is from specific to general
+            indexNG = iLength; // If disabled at more specific, then collapse
+            if (iLevel >= ilvl && iLevel < xLvl){
+                for (i=0; i < iLength; i++){
+                    for (j=0; j < jLength; j++){
+                        if (iTypes[i] == rows[r]["itemsOK"][j]){
+                            indexOK = i;
+                            break;
+                        }
+                    }
+                    for (k=0; k < kLength; k++){
+                        if (iTypes[i] == rows[r]["itemsNG"][k]){
+                            indexNG = i;
+                            break;
+                        }
+                    }
+                }
+                if (indexOK < indexNG){
+                    rVis = "visible";
+                }
+            }
+            document.getElementById(rowID).style.visibility = rVis;
+        } // ends for each row
+    } // ends filterTable()
+
+	</script>
+</head>
+<body>
+Item Level: <input type="number" id="lvlSelect">
+Item Type : <select id="itemSelect">
+	<option value="2 Handed Weapon,Weapon">2 Handed Weapon</option>
+	<option value="Amulet,Miscellaneous">Amulet</option>
+	<option value="Any Armor">Any Armor</option>
+	<option value="Belt,Any Armor">Belt</option>
+	<option value="Blunt,Melee Weapon,Weapon">Blunt</option>
+	<option value="Boots,Any Armor">Boots</option>
+	<option value="Bow Quiver,Missile,Any Armor,Miscellaneous">Bow Quiver</option>
+	<option value="Circlet,Helm,Any Armor">Circlet</option>
+	<option value="Combo Weapon,Melee Weapon,Thrown Weapon,Weapon">Combo Weapon</option>
+	<option value="Gloves,Any Armor">Gloves</option>
+	<option value="Helm,Any Armor">Helm</option>
+	<option value="Jewel,Socket Filler,Miscellaneous">Jewel</option>
+	<option value="Grand Charm,Charm,Miscellaneous">Grand Charm</option>
+	<option value="Large Charm,Charm,Miscellaneous">Large Charm</option>
+	<option value="Melee Weapon,Weapon">Melee Weapon</option>
+	<option value="Missile Weapon,Weapon">Missile Weapon</option>
+	<option value="Sorceress Orb,Staves And Rods,Sorceress Item,Blunt,Class Specific,Melee Weapon,Weapon">Sorceress Orb</option>
+	<option value="Druid Pelt,Helm,Druid Item,Any Armor,Class Specific">Druid Pelt</option>
+	<option value="Barbarian Helm,Helm,Barbarian Item,Any Armor,Class Specific">Barbarian Helm</option>
+	<option value="Ring,Miscellaneous">Ring</option>
+	<option value="Staves And Rods,Blunt,Melee Weapon,Weapon">Staves And Rods</option>
+	<option value="Scepter,Staves And Rods,Blunt,Melee Weapon,Weapon">Scepter</option>
+	<option value="Small Charm,Charm,Miscellaneous">Small Charm</option>
+	<option value="Any Shield,Any Armor,Second Hand">Any Shield</option>
+	<option value="Staff,Staves And Rods,2 Handed Weapon,Blunt,Weapon,Melee Weapon">Staff</option>
+	<option value="Torso Armor,Any Armor">Torso Armor</option>
+	<option value="Wand,Staves And Rods,Blunt,Melee Weapon,Weapon">Wand</option>
+	<option value="Weapon">Weapon</option>
+	<option value="Crossbow Quiver,Missile,Any Armor,Miscellaneous">Crossbow Quiver</option></select>
+<button type="button" onclick="filterTable()">Filter</button><button type="button" onclick="unFilterTable()">Show All</button>
+<table>
+	<tr><th>Affix</th><th>Mods</th><th>Enabled<br><span id=stats>Disabled</span></th></tr>
+	<tr id="row_000"><td><span id=rName>of Health</span><br>Group <span id=stats>1</span><br>Level <span id=stats>7</span><br>MaxLvl <span id=stats>36</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>PhysDmg Reduced by 1-2</span></td><td>Ring<br>Amulet<br>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_001"><td><span id=rName>of Protection</span><br>Group <span id=stats>1</span><br>Level <span id=stats>24</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>14</span></td><td><span id=mods>PhysDmg Reduced by 2-3</span></td><td>Ring<br>Amulet<br>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_002"><td><span id=rName>of Absorption</span><br>Group <span id=stats>1</span><br>Level <span id=stats>36</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>26</span></td><td><span id=mods>PhysDmg Reduced by 4-6</span></td><td>Amulet<br>Ring</td></tr>
+	<tr id="row_003"><td><span id=rName>of Life</span><br>Group <span id=stats>1</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>PhysDmg Reduced by 5-8</span></td><td>Amulet<br>Ring</td></tr>
+	<tr id="row_004"><td><span id=rName>of Life Everlasting</span><br>Group <span id=stats>1</span><br>Level <span id=stats>84</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>74</span></td><td><span id=mods>PhysDmg Reduced by 6-12</span></td><td>Amulet<br>Ring</td></tr>
+	<tr id="row_005"><td><span id=rName>of Protection</span><br>Group <span id=stats>1</span><br>Level <span id=stats>48</span><br>MaxLvl <span id=stats>80</span><br>ReqLvl <span id=stats>38</span></td><td><span id=mods>PhysDmg Reduced by 8-12</span></td><td>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_006"><td><span id=rName>of Absorption</span><br>Group <span id=stats>1</span><br>Level <span id=stats>66</span><br>MaxLvl <span id=stats>90</span><br>ReqLvl <span id=stats>56</span></td><td><span id=mods>PhysDmg Reduced by 10-16</span></td><td>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_007"><td><span id=rName>of Life</span><br>Group <span id=stats>1</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>PhysDmg Reduced by 12-20</span></td><td>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_008"><td><span id=rName>of Anima</span><br>Group <span id=stats>1</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>81</span></td><td><span id=mods>PhysDmg Reduced by 16-24</span></td><td>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_009"><td><span id=rName>of Warding</span><br>Group <span id=stats>2</span><br>Level <span id=stats>7</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>Mag and Elem Dmg Reduced by 1-2</span></td><td>Ring<br>Amulet<br>Sorceress Orb<br>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_010"><td><span id=rName>of the Sentinel</span><br>Group <span id=stats>2</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>70</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>Mag and Elem Dmg Reduced by 2-3</span></td><td>Ring<br>Amulet<br>Sorceress Orb<br>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_011"><td><span id=rName>of Guarding</span><br>Group <span id=stats>2</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>Mag and Elem Dmg Reduced by 4-6</span></td><td>Ring<br>Amulet<br>Sorceress Orb</td></tr>
+	<tr id="row_012"><td><span id=rName>of Negation</span><br>Group <span id=stats>2</span><br>Level <span id=stats>70</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>61</span></td><td><span id=mods>Mag and Elem Dmg Reduced by 5-8</span></td><td>Ring<br>Amulet<br>Sorceress Orb</td></tr>
+	<tr id="row_013"><td><span id=rName>of the Sentinel</span><br>Group <span id=stats>2</span><br>Level <span id=stats>42</span><br>MaxLvl <span id=stats>92</span><br>ReqLvl <span id=stats>32</span></td><td><span id=mods>Mag and Elem Dmg Reduced by 8-12</span></td><td>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_014"><td><span id=rName>of Guarding</span><br>Group <span id=stats>2</span><br>Level <span id=stats>66</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>52</span></td><td><span id=mods>Mag and Elem Dmg Reduced by 12-20</span></td><td>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_015"><td><span id=rName>of Negation</span><br>Group <span id=stats>2</span><br>Level <span id=stats>82</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>82</span></td><td><span id=mods>Mag and Elem Dmg Reduced by 16-24</span></td><td>Torso Armor<br>Any Shield<br>Circlet</td></tr>
+	<tr id="row_016"><td><span id=rName>of Readiness</span><br>Group <span id=stats>7</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>30</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+10% IASpeed</span></td><td>Weapon<br><span id=stats>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_017"><td><span id=rName>of Alacrity</span><br>Group <span id=stats>7</span><br>Level <span id=stats>15</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>5</span></td><td><span id=mods>+20% IASpeed</span></td><td>Weapon<br><span id=stats>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_018"><td><span id=rName>of Swiftness</span><br>Group <span id=stats>7</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>+30% IASpeed</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_019"><td><span id=rName>of Quickness</span><br>Group <span id=stats>7</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+40% IASpeed</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_020"><td><span id=rName>of Alacrity</span><br>Group <span id=stats>7</span><br>Level <span id=stats>10</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+20% IASpeed</span></td><td>Gloves<br>Helm</td></tr>
+	<tr id="row_021"><td><span id=rName>of Fervor</span><br>Group <span id=stats>7</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>+20% IASpeed</span></td><td>Jewel</td></tr>
+	<tr id="row_022"><td><span id=rName>of Blocking</span><br>Group <span id=stats>8</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>30</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+10% ICBlocking<br>+15% FBRate</span></td><td>Any Shield</td></tr>
+	<tr id="row_023"><td><span id=rName>of Deflecting</span><br>Group <span id=stats>8</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+20% ICBlocking<br>+30% FBRate</span></td><td>Any Shield</td></tr>
+	<tr id="row_024"><td><span id=rName>of the Apprentice</span><br>Group <span id=stats>9</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+10% FCRate</span></td><td>Staves And Rods<br>Ring<br>Amulet<br>Sorceress Orb<br>Circlet</td></tr>
+	<tr id="row_025"><td><span id=rName>of the Magus</span><br>Group <span id=stats>9</span><br>Level <span id=stats>35</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>25</span></td><td><span id=mods>+20% FCRate</span></td><td>Staves And Rods<br>Sorceress Orb<br>Circlet<br>Amulet<br>Ring</td></tr>
+	<tr id="row_026"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>15</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2-3 to Max Phys Damage</span></td><td>Weapon<br>Ring<br>Amulet<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_027"><td><span id=rName>of Quality</span><br>Group <span id=stats>14</span><br>Level <span id=stats>10</span><br>MaxLvl <span id=stats>20</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+3-4 to Max Phys Damage</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_028"><td><span id=rName>of Maiming</span><br>Group <span id=stats>14</span><br>Level <span id=stats>15</span><br>MaxLvl <span id=stats>30</span><br>ReqLvl <span id=stats>5</span></td><td><span id=mods>+5-6 to Max Phys Damage</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_029"><td><span id=rName>of Slaying</span><br>Group <span id=stats>14</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>45</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+8-9 to Max Phys Damage</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_030"><td><span id=rName>of Gore</span><br>Group <span id=stats>14</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>+10-12 to Max Phys Damage</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_031"><td><span id=rName>of Carnage</span><br>Group <span id=stats>14</span><br>Level <span id=stats>45</span><br>MaxLvl <span id=stats>80</span><br>ReqLvl <span id=stats>35</span></td><td><span id=mods>+14-16 to Max Phys Damage</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_032"><td><span id=rName>of Slaughter</span><br>Group <span id=stats>14</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>90</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+18-24 to Max Phys Damage</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_033"><td><span id=rName>of Butchery</span><br>Group <span id=stats>14</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>+24-36 to Max Phys Damage</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_034"><td><span id=rName>of Evisceration</span><br>Group <span id=stats>14</span><br>Level <span id=stats>81</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>81</span></td><td><span id=mods>+36-50 to Max Phys Damage</span></td><td>Weapon<br><span id=stats>Wand<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_035"><td><span id=rName>of Maiming</span><br>Group <span id=stats>14</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>20</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2 to Max Phys Damage</span></td><td>Any Shield<br>Ring<br>Amulet<br>Belt</td></tr>
+	<tr id="row_036"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>10</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2-3 to Max Phys Damage</span></td><td>Circlet<br>Ring<br>Amulet<br>Belt</td></tr>
+	<tr id="row_037"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+3-4 to Max Phys Damage</span></td><td>Circlet<br>Ring<br>Amulet<br>Belt</td></tr>
+	<tr id="row_038"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>40</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>31</span></td><td><span id=mods>+4-5 to Max Phys Damage</span></td><td>Circlet<br>Ring<br>Amulet<br>Belt</td></tr>
+	<tr id="row_039"><td><span id=rName>of Quality</span><br>Group <span id=stats>14</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>70</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+5-6 to Max Phys Damage</span></td><td>Circlet<br>Ring<br>Amulet<br>Belt</td></tr>
+	<tr id="row_040"><td><span id=rName>of Quality</span><br>Group <span id=stats>14</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>80</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+7-8 to Max Phys Damage</span></td><td>Circlet<br>Ring<br>Amulet<br>Belt</td></tr>
+	<tr id="row_041"><td><span id=rName>of Maiming</span><br>Group <span id=stats>14</span><br>Level <span id=stats>70</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>61</span></td><td><span id=mods>+9-10 to Max Phys Damage</span></td><td>Circlet<br>Ring<br>Amulet<br>Belt</td></tr>
+	<tr id="row_042"><td><span id=rName>of Maiming</span><br>Group <span id=stats>14</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>+12-16 to Max Phys Damage</span></td><td>Circlet<br>Ring<br>Amulet<br>Belt</td></tr>
+	<tr id="row_043"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>10</span><br>MaxLvl <span id=stats>30</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2 to Max Phys Damage</span></td><td>Large Charm</td></tr>
+	<tr id="row_044"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+1-2 to Max Phys Damage</span></td><td>Large Charm</td></tr>
+	<tr id="row_045"><td><span id=rName>of Quality</span><br>Group <span id=stats>14</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>+2-3 to Max Phys Damage</span></td><td>Large Charm</td></tr>
+	<tr id="row_046"><td><span id=rName>of Quality</span><br>Group <span id=stats>14</span><br>Level <span id=stats>40</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>31</span></td><td><span id=mods>+3-4 to Max Phys Damage</span></td><td>Large Charm</td></tr>
+	<tr id="row_047"><td><span id=rName>of Maiming</span><br>Group <span id=stats>14</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+4-5 to Max Phys Damage</span></td><td>Large Charm</td></tr>
+	<tr id="row_048"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>15</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>5</span></td><td><span id=mods>+1 to Max Phys Damage</span></td><td>Small Charm</td></tr>
+	<tr id="row_049"><td><span id=rName>of Quality</span><br>Group <span id=stats>14</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+2 to Max Phys Damage</span></td><td>Small Charm</td></tr>
+	<tr id="row_050"><td><span id=rName>of Maiming</span><br>Group <span id=stats>14</span><br>Level <span id=stats>66</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>56</span></td><td><span id=mods>+3 to Max Phys Damage</span></td><td>Small Charm</td></tr>
+	<tr id="row_051"><td><span id=rName>of Ire</span><br>Group <span id=stats>14</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>90</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>+4-8 to Max Phys Damage</span></td><td>Jewel</td></tr>
+	<tr id="row_052"><td><span id=rName>of Wrath</span><br>Group <span id=stats>14</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+8-12 to Max Phys Damage</span></td><td>Jewel</td></tr>
+	<tr id="row_053"><td><span id=rName>of Carnage</span><br>Group <span id=stats>14</span><br>Level <span id=stats>81</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>81</span></td><td><span id=mods>+12-16 to Max Phys Damage</span></td><td>Jewel</td></tr>
+	<tr id="row_054"><td><span id=rName>of Worth</span><br>Group <span id=stats>15</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+1-2 to Min Phys Damage</span></td><td>Weapon<br><span id=stats>Staff<br>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_055"><td><span id=rName>of Measure</span><br>Group <span id=stats>15</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+5-7 to Min Phys Damage</span></td><td>Weapon<br><span id=stats>Staff<br>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_056"><td><span id=rName>of Excellence</span><br>Group <span id=stats>15</span><br>Level <span id=stats>40</span><br>MaxLvl <span id=stats>80</span><br>ReqLvl <span id=stats>31</span></td><td><span id=mods>+9-13 to Min Phys Damage</span></td><td>Weapon<br><span id=stats>Staff<br>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_057"><td><span id=rName>of Performance</span><br>Group <span id=stats>15</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+13-17 to Min Phys Damage</span></td><td>Weapon<br><span id=stats>Staff<br>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_058"><td><span id=rName>of Transcendence</span><br>Group <span id=stats>15</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>+24-35 to Min Phys Damage</span></td><td>Weapon<br><span id=stats>Staff<br>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_059"><td><span id=rName>of Worth</span><br>Group <span id=stats>15</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>30</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+2 to Min Phys Damage</span></td><td>Ring<br>Amulet<br>Circlet<br>Belt</td></tr>
+	<tr id="row_060"><td><span id=rName>of Measure</span><br>Group <span id=stats>15</span><br>Level <span id=stats>37</span><br>MaxLvl <span id=stats>59</span><br>ReqLvl <span id=stats>27</span></td><td><span id=mods>+4 to Min Phys Damage</span></td><td>Ring<br>Amulet<br>Circlet<br>Belt</td></tr>
+	<tr id="row_061"><td><span id=rName>of Excellence</span><br>Group <span id=stats>15</span><br>Level <span id=stats>59</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>49</span></td><td><span id=mods>+6 to Min Phys Damage</span></td><td>Ring<br>Amulet<br>Circlet<br>Belt</td></tr>
+	<tr id="row_062"><td><span id=rName>of Performance</span><br>Group <span id=stats>15</span><br>Level <span id=stats>81</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>+10 to Min Phys Damage</span></td><td>Ring<br>Amulet<br>Circlet<br>Belt</td></tr>
+	<tr id="row_063"><td><span id=rName>of Joyfulness</span><br>Group <span id=stats>15</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+8-12 to Min Phys Damage</span></td><td>Jewel</td></tr>
+	<tr id="row_064"><td><span id=rName>of Bliss</span><br>Group <span id=stats>15</span><br>Level <span id=stats>75</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>65</span></td><td><span id=mods>+12-16 to Min Phys Damage</span></td><td>Jewel</td></tr>
+	<tr id="row_065"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>17</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>36</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+5-10 Dexterity</span></td><td>Amulet<br>Missile Weapon<br>Circlet</td></tr>
+	<tr id="row_066"><td><span id=rName>of Skill</span><br>Group <span id=stats>17</span><br>Level <span id=stats>18</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>8</span></td><td><span id=mods>+10-15 Dexterity</span></td><td>Amulet<br>Missile Weapon<br>Circlet</td></tr>
+	<tr id="row_067"><td><span id=rName>of Accuracy</span><br>Group <span id=stats>17</span><br>Level <span id=stats>36</span><br>MaxLvl <span id=stats>72</span><br>ReqLvl <span id=stats>26</span></td><td><span id=mods>+15-20 Dexterity</span></td><td>Amulet<br>Missile Weapon<br>Circlet</td></tr>
+	<tr id="row_068"><td><span id=rName>of Precision</span><br>Group <span id=stats>17</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>86</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+20-25 Dexterity</span></td><td>Amulet<br>Missile Weapon<br>Circlet</td></tr>
+	<tr id="row_069"><td><span id=rName>of Perfection</span><br>Group <span id=stats>17</span><br>Level <span id=stats>72</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>62</span></td><td><span id=mods>+25-30 Dexterity</span></td><td>Amulet<br>Missile Weapon<br>Circlet</td></tr>
+	<tr id="row_070"><td><span id=rName>of Nirvana</span><br>Group <span id=stats>17</span><br>Level <span id=stats>86</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>76</span></td><td><span id=mods>+30-40 Dexterity</span></td><td>Amulet<br>Missile Weapon<br>Circlet</td></tr>
+	<tr id="row_071"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>17</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>42</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+4-6 Dexterity</span></td><td>Ring<br>Gloves</td></tr>
+	<tr id="row_072"><td><span id=rName>of Skill</span><br>Group <span id=stats>17</span><br>Level <span id=stats>21</span><br>MaxLvl <span id=stats>63</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+6-8 Dexterity</span></td><td>Ring<br>Gloves</td></tr>
+	<tr id="row_073"><td><span id=rName>of Accuracy</span><br>Group <span id=stats>17</span><br>Level <span id=stats>42</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>32</span></td><td><span id=mods>+8-12 Dexterity</span></td><td>Ring<br>Gloves</td></tr>
+	<tr id="row_074"><td><span id=rName>of Precision</span><br>Group <span id=stats>17</span><br>Level <span id=stats>63</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>53</span></td><td><span id=mods>+12-16 Dexterity</span></td><td>Ring<br>Gloves</td></tr>
+	<tr id="row_075"><td><span id=rName>of Perfection</span><br>Group <span id=stats>17</span><br>Level <span id=stats>84</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>74</span></td><td><span id=mods>+16-24 Dexterity</span></td><td>Ring<br>Gloves</td></tr>
+	<tr id="row_076"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>17</span><br>Level <span id=stats>8</span><br>MaxLvl <span id=stats>32</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+4-8 Dexterity</span></td><td>Torso Armor<br>Boots<br>Helm<br><span id=stats>Gloves</span></td></tr>
+	<tr id="row_077"><td><span id=rName>of Skill</span><br>Group <span id=stats>17</span><br>Level <span id=stats>16</span><br>MaxLvl <span id=stats>64</span><br>ReqLvl <span id=stats>6</span></td><td><span id=mods>+8-12 Dexterity</span></td><td>Torso Armor<br>Boots<br>Helm<br><span id=stats>Gloves</span></td></tr>
+	<tr id="row_078"><td><span id=rName>of Accuracy</span><br>Group <span id=stats>17</span><br>Level <span id=stats>32</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>22</span></td><td><span id=mods>+12-16 Dexterity</span></td><td>Torso Armor<br>Boots<br>Helm<br><span id=stats>Gloves</span></td></tr>
+	<tr id="row_079"><td><span id=rName>of Precision</span><br>Group <span id=stats>17</span><br>Level <span id=stats>64</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>54</span></td><td><span id=mods>+16-24 Dexterity</span></td><td>Torso Armor<br>Boots<br>Helm<br><span id=stats>Gloves</span></td></tr>
+	<tr id="row_080"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>31</span><br>Level <span id=stats>12</span><br>MaxLvl <span id=stats>70</span><br>ReqLvl <span id=stats>2</span></td><td><span id=mods>+3-6 Dexterity</span></td><td>Grand Charm</td></tr>
+	<tr id="row_081"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>31</span><br>Level <span id=stats>12</span><br>MaxLvl <span id=stats>70</span><br>ReqLvl <span id=stats>2</span></td><td><span id=mods>+2-4 Dexterity</span></td><td>Large Charm</td></tr>
+	<tr id="row_082"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>31</span><br>Level <span id=stats>12</span><br>MaxLvl <span id=stats>70</span><br>ReqLvl <span id=stats>2</span></td><td><span id=mods>+1-2 Dexterity</span></td><td>Small Charm</td></tr>
+	<tr id="row_083"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>31</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+6-9 Dexterity</span></td><td>Grand Charm</td></tr>
+	<tr id="row_084"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>31</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+4-6 Dexterity</span></td><td>Large Charm</td></tr>
+	<tr id="row_085"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>31</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+2-3 Dexterity</span></td><td>Small Charm</td></tr>
+	<tr id="row_086"><td><span id=rName>of Daring</span><br>Group <span id=stats>17</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2-6 Dexterity</span></td><td>Jewel</td></tr>
+	<tr id="row_087"><td><span id=rName>of Balance</span><br>Group <span id=stats>18</span><br>Level <span id=stats>5</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+10% FHRecovery</span></td><td>Any Armor<br><span id=stats>Gloves<br>Bow Quiver<br>Crossbow Quiver</span></td></tr>
+	<tr id="row_088"><td><span id=rName>of Equilibrium</span><br>Group <span id=stats>18</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+20% FHRecovery</span></td><td>Torso Armor<br>Belt<br>Any Shield<br>Helm</td></tr>
+	<tr id="row_089"><td><span id=rName>of Stability</span><br>Group <span id=stats>18</span><br>Level <span id=stats>40</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>31</span></td><td><span id=mods>+30% FHRecovery</span></td><td>Torso Armor<br>Belt<br>Helm</td></tr>
+	<tr id="row_090"><td><span id=rName>of Balance</span><br>Group <span id=stats>18</span><br>Level <span id=stats>6</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+12-16% FHRecovery</span></td><td>Grand Charm</td></tr>
+	<tr id="row_091"><td><span id=rName>of Balance</span><br>Group <span id=stats>18</span><br>Level <span id=stats>14</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+8-12% FHRecovery</span></td><td>Large Charm</td></tr>
+	<tr id="row_092"><td><span id=rName>of Balance</span><br>Group <span id=stats>18</span><br>Level <span id=stats>29</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>19</span></td><td><span id=mods>+4-6% FHRecovery</span></td><td>Small Charm</td></tr>
+	<tr id="row_093"><td><span id=rName>of Truth</span><br>Group <span id=stats>18</span><br>Level <span id=stats>36</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>26</span></td><td><span id=mods>+10% FHRecovery</span></td><td>Jewel</td></tr>
+	<tr id="row_094"><td><span id=rName>of Regeneration</span><br>Group <span id=stats>19</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>10</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+10 Replenish HP</span></td><td>Any Armor<br>Ring<br>Amulet</td></tr>
+	<tr id="row_095"><td><span id=rName>of Regeneration</span><br>Group <span id=stats>19</span><br>Level <span id=stats>10</span><br>MaxLvl <span id=stats>20</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+15 Replenish HP</span></td><td>Any Armor<br>Ring<br>Amulet</td></tr>
+	<tr id="row_096"><td><span id=rName>of Regeneration</span><br>Group <span id=stats>19</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>30</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+20 Replenish HP</span></td><td>Any Armor<br>Ring<br>Amulet<br><span id=stats>Scepter</span></td></tr>
+	<tr id="row_097"><td><span id=rName>of Regrowth</span><br>Group <span id=stats>19</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>+33 Replenish HP</span></td><td>Any Armor<br>Ring<br>Amulet</td></tr>
+	<tr id="row_098"><td><span id=rName>of Vileness</span><br>Group <span id=stats>20</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>Prevents Monster HP Regen</span></td><td>Melee Weapon<br><span id=stats>Staves And Rods<br>Sorceress Orb</span></td></tr>
+	<tr id="row_099"><td><span id=rName>of Greed</span><br>Group <span id=stats>21</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+15-25% Gold Find</span></td><td>Boots<br>Gloves<br>Belt<br>Amulet<br>Circlet<br>Ring</td></tr>
+	<tr id="row_100"><td><span id=rName>of Wealth</span><br>Group <span id=stats>21</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+26-50% Gold Find</span></td><td>Boots<br>Gloves<br>Belt<br>Amulet<br>Circlet<br>Ring</td></tr>
+	<tr id="row_101"><td><span id=rName>of Greed</span><br>Group <span id=stats>21</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+15-25% Gold Find</span></td><td>Grand Charm<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_102"><td><span id=rName>of Greed</span><br>Group <span id=stats>21</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+26-50% Gold Find</span></td><td>Grand Charm<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_103"><td><span id=rName>of Greed</span><br>Group <span id=stats>21</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+10-20% Gold Find</span></td><td>Large Charm</td></tr>
+	<tr id="row_104"><td><span id=rName>of Greed</span><br>Group <span id=stats>21</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+21-35% Gold Find</span></td><td>Large Charm</td></tr>
+	<tr id="row_105"><td><span id=rName>of Greed</span><br>Group <span id=stats>21</span><br>Level <span id=stats>15</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>5</span></td><td><span id=mods>+10-20% Gold Find</span></td><td>Small Charm</td></tr>
+	<tr id="row_106"><td><span id=rName>of Chance</span><br>Group <span id=stats>22</span><br>Level <span id=stats>12</span><br>MaxLvl <span id=stats>36</span><br>ReqLvl <span id=stats>2</span></td><td><span id=mods>+10-20% Magic Find</span></td><td>Boots<br>Gloves<br>Ring<br>Amulet<br>Circlet<br>Belt</td></tr>
+	<tr id="row_107"><td><span id=rName>of Fortune</span><br>Group <span id=stats>22</span><br>Level <span id=stats>24</span><br>MaxLvl <span id=stats>72</span><br>ReqLvl <span id=stats>14</span></td><td><span id=mods>+20-30% Magic Find</span></td><td>Boots<br>Gloves<br>Ring<br>Amulet<br>Circlet<br>Belt</td></tr>
+	<tr id="row_108"><td><span id=rName>of Fortune</span><br>Group <span id=stats>22</span><br>Level <span id=stats>36</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>26</span></td><td><span id=mods>+30-40% Magic Find</span></td><td>Boots<br>Gloves<br>Ring<br>Amulet<br>Circlet<br>Belt</td></tr>
+	<tr id="row_109"><td><span id=rName>of Luck</span><br>Group <span id=stats>22</span><br>Level <span id=stats>72</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>62</span></td><td><span id=mods>+40-50% Magic Find</span></td><td>Boots<br>Gloves<br>Ring<br>Amulet<br>Circlet<br>Belt</td></tr>
+	<tr id="row_110"><td><span id=rName>of Fortune</span><br>Group <span id=stats>22</span><br>Level <span id=stats>18</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>8</span></td><td><span id=mods>+2-4% Magic Find</span></td><td>Small Charm</td></tr>
+	<tr id="row_111"><td><span id=rName>of Good Luck</span><br>Group <span id=stats>22</span><br>Level <span id=stats>48</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>38</span></td><td><span id=mods>+4-6% Magic Find</span></td><td>Small Charm</td></tr>
+	<tr id="row_112"><td><span id=rName>of Energy</span><br>Group <span id=stats>23</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>18</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+4-6 Energy</span></td><td>Amulet<br>Sorceress Orb<br>Circlet<br>Wand<br>Staff<br>Scepter<br>Helm</td></tr>
+	<tr id="row_113"><td><span id=rName>of the Mind</span><br>Group <span id=stats>23</span><br>Level <span id=stats>7</span><br>MaxLvl <span id=stats>36</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+8-12 Energy</span></td><td>Amulet<br>Sorceress Orb<br>Circlet<br>Wand<br>Staff<br>Scepter<br>Helm</td></tr>
+	<tr id="row_114"><td><span id=rName>of Brilliance</span><br>Group <span id=stats>23</span><br>Level <span id=stats>18</span><br>MaxLvl <span id=stats>72</span><br>ReqLvl <span id=stats>8</span></td><td><span id=mods>+12-16 Energy</span></td><td>Amulet<br>Sorceress Orb<br>Circlet<br>Wand<br>Staff<br>Scepter<br>Helm</td></tr>
+	<tr id="row_115"><td><span id=rName>of Sorcery</span><br>Group <span id=stats>23</span><br>Level <span id=stats>36</span><br>MaxLvl <span id=stats>90</span><br>ReqLvl <span id=stats>26</span></td><td><span id=mods>+16-20 Energy</span></td><td>Amulet<br>Sorceress Orb<br>Circlet<br>Wand<br>Staff<br>Scepter<br>Helm</td></tr>
+	<tr id="row_116"><td><span id=rName>of Wizardry</span><br>Group <span id=stats>23</span><br>Level <span id=stats>72</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>62</span></td><td><span id=mods>+20-30 Energy</span></td><td>Amulet<br>Sorceress Orb<br>Circlet<br>Wand<br>Staff<br>Scepter<br>Helm</td></tr>
+	<tr id="row_117"><td><span id=rName>of Enlightenment</span><br>Group <span id=stats>23</span><br>Level <span id=stats>81</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>81</span></td><td><span id=mods>+30-40 Energy</span></td><td>Amulet<br>Sorceress Orb<br>Circlet<br>Wand<br>Staff<br>Scepter<br>Helm</td></tr>
+	<tr id="row_118"><td><span id=rName>of Energy</span><br>Group <span id=stats>23</span><br>Level <span id=stats>7</span><br>MaxLvl <span id=stats>36</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+4-8 Energy</span></td><td>Ring</td></tr>
+	<tr id="row_119"><td><span id=rName>of the Mind</span><br>Group <span id=stats>23</span><br>Level <span id=stats>18</span><br>MaxLvl <span id=stats>72</span><br>ReqLvl <span id=stats>8</span></td><td><span id=mods>+8-12 Energy</span></td><td>Ring</td></tr>
+	<tr id="row_120"><td><span id=rName>of Brilliance</span><br>Group <span id=stats>23</span><br>Level <span id=stats>36</span><br>MaxLvl <span id=stats>90</span><br>ReqLvl <span id=stats>26</span></td><td><span id=mods>+12-16 Energy</span></td><td>Ring</td></tr>
+	<tr id="row_121"><td><span id=rName>of Sorcery</span><br>Group <span id=stats>23</span><br>Level <span id=stats>72</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>62</span></td><td><span id=mods>+16-20 Energy</span></td><td>Ring</td></tr>
+	<tr id="row_122"><td><span id=rName>of Wizardry</span><br>Group <span id=stats>23</span><br>Level <span id=stats>90</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>81</span></td><td><span id=mods>+20-30 Energy</span></td><td>Ring</td></tr>
+	<tr id="row_123"><td><span id=rName>of Knowledge</span><br>Group <span id=stats>23</span><br>Level <span id=stats>10</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+5 Energy</span></td><td>Jewel</td></tr>
+	<tr id="row_124"><td><span id=rName>of the Bear</span><br>Group <span id=stats>24</span><br>Level <span id=stats>12</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>2</span></td><td><span id=mods>Knockback</span></td><td>Melee Weapon</td></tr>
+	<tr id="row_125"><td><span id=rName>of Light</span><br>Group <span id=stats>25</span><br>Level <span id=stats>6</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+1-2 Light Radius<br>+40-60 ARating</span></td><td>Any Armor<br>Staves And Rods<br>Ring<br>Amulet</td></tr>
+	<tr id="row_126"><td><span id=rName>of Radiance</span><br>Group <span id=stats>25</span><br>Level <span id=stats>40</span><br>MaxLvl <span id=stats>70</span><br>ReqLvl <span id=stats>31</span></td><td><span id=mods>+3-4 Light Radius<br>+80-120 ARating</span></td><td>Staves And Rods<br>Missile Weapon<br>Ring<br>Amulet<br>Helm</td></tr>
+	<tr id="row_127"><td><span id=rName>of the Sun</span><br>Group <span id=stats>25</span><br>Level <span id=stats>70</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>61</span></td><td><span id=mods>+5-6 Light Radius<br>+160-240 ARating</span></td><td>Staves And Rods<br>Missile Weapon<br>Gloves<br>Ring<br>Amulet<br>Helm</td></tr>
+	<tr id="row_128"><td><span id=rName>of the Jackal</span><br>Group <span id=stats>26</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>21</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+10-20 HP</span></td><td>Torso Armor<br>Belt<br>Amulet<br>Helm<br>Any Shield<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_129"><td><span id=rName>of the Fox</span><br>Group <span id=stats>26</span><br>Level <span id=stats>7</span><br>MaxLvl <span id=stats>42</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+20-25 HP</span></td><td>Torso Armor<br>Belt<br>Amulet<br>Helm<br>Any Shield<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_130"><td><span id=rName>of the Wolf</span><br>Group <span id=stats>26</span><br>Level <span id=stats>21</span><br>MaxLvl <span id=stats>76</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+25-50 HP</span></td><td>Torso Armor<br>Belt<br>Amulet<br>Helm<br>Any Shield<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_131"><td><span id=rName>of the Tiger</span><br>Group <span id=stats>26</span><br>Level <span id=stats>42</span><br>MaxLvl <span id=stats>88</span><br>ReqLvl <span id=stats>32</span></td><td><span id=mods>+50-80 HP</span></td><td>Torso Armor<br>Belt<br>Amulet<br>Helm<br>Any Shield<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_132"><td><span id=rName>of the Mammoth</span><br>Group <span id=stats>26</span><br>Level <span id=stats>76</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>66</span></td><td><span id=mods>+80-120 HP</span></td><td>Torso Armor<br>Belt<br>Amulet<br>Helm<br>Any Shield<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_133"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>26</span><br>Level <span id=stats>78</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>78</span></td><td><span id=mods>+120-140 HP</span></td><td>Torso Armor<br>Belt<br>Amulet<br>Helm<br>Any Shield<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_134"><td><span id=rName>of the Squid</span><br>Group <span id=stats>26</span><br>Level <span id=stats>82</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>82</span></td><td><span id=mods>+140-180 HP</span></td><td>Torso Armor<br>Belt<br>Amulet<br>Helm<br>Any Shield<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_135"><td><span id=rName>of the Whale</span><br>Group <span id=stats>26</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>85</span></td><td><span id=mods>+180-200 HP</span></td><td>Torso Armor<br>Belt<br>Amulet<br>Helm<br>Any Shield<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_136"><td><span id=rName>of the Jackal</span><br>Group <span id=stats>26</span><br>Level <span id=stats>4</span><br>MaxLvl <span id=stats>18</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+8-12 HP</span></td><td>Ring</td></tr>
+	<tr id="row_137"><td><span id=rName>of the Fox</span><br>Group <span id=stats>26</span><br>Level <span id=stats>9</span><br>MaxLvl <span id=stats>36</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+12-20 HP</span></td><td>Ring</td></tr>
+	<tr id="row_138"><td><span id=rName>of the Wolf</span><br>Group <span id=stats>26</span><br>Level <span id=stats>18</span><br>MaxLvl <span id=stats>72</span><br>ReqLvl <span id=stats>8</span></td><td><span id=mods>+24-32 HP</span></td><td>Ring</td></tr>
+	<tr id="row_139"><td><span id=rName>of the Tiger</span><br>Group <span id=stats>26</span><br>Level <span id=stats>36</span><br>MaxLvl <span id=stats>88</span><br>ReqLvl <span id=stats>26</span></td><td><span id=mods>+48-70 HP</span></td><td>Ring</td></tr>
+	<tr id="row_140"><td><span id=rName>of the Mammoth</span><br>Group <span id=stats>26</span><br>Level <span id=stats>72</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>62</span></td><td><span id=mods>+70-100 HP</span></td><td>Ring</td></tr>
+	<tr id="row_141"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>26</span><br>Level <span id=stats>78</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>78</span></td><td><span id=mods>+100-130 HP</span></td><td>Ring</td></tr>
+	<tr id="row_142"><td><span id=rName>of the Jackal</span><br>Group <span id=stats>26</span><br>Level <span id=stats>9</span><br>MaxLvl <span id=stats>36</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+20-30 HP</span></td><td>Weapon</td></tr>
+	<tr id="row_143"><td><span id=rName>of the Fox</span><br>Group <span id=stats>26</span><br>Level <span id=stats>18</span><br>MaxLvl <span id=stats>72</span><br>ReqLvl <span id=stats>8</span></td><td><span id=mods>+30-40 HP</span></td><td>Weapon</td></tr>
+	<tr id="row_144"><td><span id=rName>of the Wolf</span><br>Group <span id=stats>26</span><br>Level <span id=stats>36</span><br>MaxLvl <span id=stats>88</span><br>ReqLvl <span id=stats>26</span></td><td><span id=mods>+40-60 HP</span></td><td>Weapon</td></tr>
+	<tr id="row_145"><td><span id=rName>of the Tiger</span><br>Group <span id=stats>26</span><br>Level <span id=stats>72</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>62</span></td><td><span id=mods>+60-80 HP</span></td><td>Weapon</td></tr>
+	<tr id="row_146"><td><span id=rName>of the Mammoth</span><br>Group <span id=stats>26</span><br>Level <span id=stats>78</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>78</span></td><td><span id=mods>+80-100 HP</span></td><td>Weapon</td></tr>
+	<tr id="row_147"><td><span id=rName>of Life</span><br>Group <span id=stats>26</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>30</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+8-10 HP</span></td><td>Grand Charm</td></tr>
+	<tr id="row_148"><td><span id=rName>of Life</span><br>Group <span id=stats>26</span><br>Level <span id=stats>9</span><br>MaxLvl <span id=stats>29</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+16-20 HP</span></td><td>Grand Charm</td></tr>
+	<tr id="row_149"><td><span id=rName>of Life</span><br>Group <span id=stats>26</span><br>Level <span id=stats>19</span><br>MaxLvl <span id=stats>49</span><br>ReqLvl <span id=stats>9</span></td><td><span id=mods>+24-30 HP</span></td><td>Grand Charm</td></tr>
+	<tr id="row_150"><td><span id=rName>of Substinence</span><br>Group <span id=stats>26</span><br>Level <span id=stats>29</span><br>MaxLvl <span id=stats>69</span><br>ReqLvl <span id=stats>19</span></td><td><span id=mods>+32-40 HP</span></td><td>Grand Charm</td></tr>
+	<tr id="row_151"><td><span id=rName>of Substinence</span><br>Group <span id=stats>26</span><br>Level <span id=stats>49</span><br>MaxLvl <span id=stats>79</span><br>ReqLvl <span id=stats>39</span></td><td><span id=mods>+40-50 HP</span></td><td>Grand Charm</td></tr>
+	<tr id="row_152"><td><span id=rName>of Substinence</span><br>Group <span id=stats>26</span><br>Level <span id=stats>69</span><br>MaxLvl <span id=stats>89</span><br>ReqLvl <span id=stats>59</span></td><td><span id=mods>+48-60 HP</span></td><td>Grand Charm</td></tr>
+	<tr id="row_153"><td><span id=rName>of Vita</span><br>Group <span id=stats>26</span><br>Level <span id=stats>79</span><br>MaxLvl <span id=stats>92</span><br>ReqLvl <span id=stats>69</span></td><td><span id=mods>+56-70 HP</span></td><td>Grand Charm</td></tr>
+	<tr id="row_154"><td><span id=rName>of Vita</span><br>Group <span id=stats>26</span><br>Level <span id=stats>87</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>79</span></td><td><span id=mods>+64-80 HP</span></td><td>Grand Charm</td></tr>
+	<tr id="row_155"><td><span id=rName>of Vita</span><br>Group <span id=stats>26</span><br>Level <span id=stats>87</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>82</span></td><td><span id=mods>+72-90 HP</span></td><td>Grand Charm</td></tr>
+	<tr id="row_156"><td><span id=rName>of Life</span><br>Group <span id=stats>26</span><br>Level <span id=stats>9</span><br>MaxLvl <span id=stats>42</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+8-10 HP</span></td><td>Large Charm</td></tr>
+	<tr id="row_157"><td><span id=rName>of Life</span><br>Group <span id=stats>26</span><br>Level <span id=stats>15</span><br>MaxLvl <span id=stats>65</span><br>ReqLvl <span id=stats>5</span></td><td><span id=mods>+16-20 HP</span></td><td>Large Charm</td></tr>
+	<tr id="row_158"><td><span id=rName>of Substinence</span><br>Group <span id=stats>26</span><br>Level <span id=stats>42</span><br>MaxLvl <span id=stats>82</span><br>ReqLvl <span id=stats>32</span></td><td><span id=mods>+32-30 HP</span></td><td>Large Charm</td></tr>
+	<tr id="row_159"><td><span id=rName>of Substinence</span><br>Group <span id=stats>26</span><br>Level <span id=stats>65</span><br>MaxLvl <span id=stats>88</span><br>ReqLvl <span id=stats>55</span></td><td><span id=mods>+32-40 HP</span></td><td>Large Charm</td></tr>
+	<tr id="row_160"><td><span id=rName>of Vita</span><br>Group <span id=stats>26</span><br>Level <span id=stats>82</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>72</span></td><td><span id=mods>+40-50 HP</span></td><td>Large Charm</td></tr>
+	<tr id="row_161"><td><span id=rName>of Vita</span><br>Group <span id=stats>26</span><br>Level <span id=stats>87</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>78</span></td><td><span id=mods>+48-60 HP</span></td><td>Large Charm</td></tr>
+	<tr id="row_162"><td><span id=rName>of Life</span><br>Group <span id=stats>26</span><br>Level <span id=stats>14</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>4</span></td><td><span id=mods>+8-12 HP</span></td><td>Small Charm</td></tr>
+	<tr id="row_163"><td><span id=rName>of Substinence</span><br>Group <span id=stats>26</span><br>Level <span id=stats>28</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>18</span></td><td><span id=mods>+16-24 HP</span></td><td>Small Charm</td></tr>
+	<tr id="row_164"><td><span id=rName>of Vita</span><br>Group <span id=stats>26</span><br>Level <span id=stats>72</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>62</span></td><td><span id=mods>+24-30 HP</span></td><td>Small Charm</td></tr>
+	<tr id="row_165"><td><span id=rName>of Spirit</span><br>Group <span id=stats>26</span><br>Level <span id=stats>24</span><br>MaxLvl <span id=stats>55</span><br>ReqLvl <span id=stats>14</span></td><td><span id=mods>+20-30 HP</span></td><td>Jewel</td></tr>
+	<tr id="row_166"><td><span id=rName>of Hope</span><br>Group <span id=stats>26</span><br>Level <span id=stats>48</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>38</span></td><td><span id=mods>+40-50 HP</span></td><td>Jewel</td></tr>
+	<tr id="row_167"><td><span id=rName>of the Leech</span><br>Group <span id=stats>27</span><br>Level <span id=stats>6</span><br>MaxLvl <span id=stats>18</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2-4% Life Steal</span></td><td>Weapon<br><span id=stats>Sorceress Orb<br>Staff<br>Wand</span></td></tr>
+	<tr id="row_168"><td><span id=rName>of the Locust</span><br>Group <span id=stats>27</span><br>Level <span id=stats>18</span><br>MaxLvl <span id=stats>36</span><br>ReqLvl <span id=stats>8</span></td><td><span id=mods>+3-6% Life Steal</span></td><td>Weapon<br><span id=stats>Sorceress Orb<br>Staff<br>Wand</span></td></tr>
+	<tr id="row_169"><td><span id=rName>of the Lamprey</span><br>Group <span id=stats>27</span><br>Level <span id=stats>36</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>26</span></td><td><span id=mods>+5-7% Life Steal</span></td><td>Weapon<br><span id=stats>Sorceress Orb<br>Staff<br>Wand</span></td></tr>
+	<tr id="row_170"><td><span id=rName>of the Leech</span><br>Group <span id=stats>27</span><br>Level <span id=stats>14</span><br>MaxLvl <span id=stats>80</span><br>ReqLvl <span id=stats>4</span></td><td><span id=mods>+1-4% Life Steal</span></td><td>Ring<br>Circlet</td></tr>
+	<tr id="row_171"><td><span id=rName>of the Locust</span><br>Group <span id=stats>27</span><br>Level <span id=stats>47</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>37</span></td><td><span id=mods>+2-5% Life Steal</span></td><td>Ring<br>Circlet</td></tr>
+	<tr id="row_172"><td><span id=rName>of the Lamprey</span><br>Group <span id=stats>27</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>+3-7% Life Steal</span></td><td>Ring<br>Circlet</td></tr>
+	<tr id="row_173"><td><span id=rName>of the Leech</span><br>Group <span id=stats>27</span><br>Level <span id=stats>34</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>24</span></td><td><span id=mods>+2-3% Life Steal</span></td><td>Gloves<br>Jewel</td></tr>
+	<tr id="row_174"><td><span id=rName>of the Bat</span><br>Group <span id=stats>28</span><br>Level <span id=stats>7</span><br>MaxLvl <span id=stats>21</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+4-6% Mana Steal</span></td><td>Weapon<br><span id=stats>Sorceress Orb</span></td></tr>
+	<tr id="row_175"><td><span id=rName>of the Wraith</span><br>Group <span id=stats>28</span><br>Level <span id=stats>21</span><br>MaxLvl <span id=stats>56</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+6-8% Mana Steal</span></td><td>Weapon</td></tr>
+	<tr id="row_176"><td><span id=rName>of the Vampire</span><br>Group <span id=stats>28</span><br>Level <span id=stats>56</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>46</span></td><td><span id=mods>+9-12% Mana Steal</span></td><td>Weapon</td></tr>
+	<tr id="row_177"><td><span id=rName>of the Bat</span><br>Group <span id=stats>28</span><br>Level <span id=stats>15</span><br>MaxLvl <span id=stats>58</span><br>ReqLvl <span id=stats>5</span></td><td><span id=mods>+3-4% Mana Steal</span></td><td>Amulet<br>Circlet</td></tr>
+	<tr id="row_178"><td><span id=rName>of the Wraith</span><br>Group <span id=stats>28</span><br>Level <span id=stats>58</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>48</span></td><td><span id=mods>+5-7% Mana Steal</span></td><td>Amulet<br>Circlet</td></tr>
+	<tr id="row_179"><td><span id=rName>of the Vampire</span><br>Group <span id=stats>28</span><br>Level <span id=stats>78</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>68</span></td><td><span id=mods>+8-10% Mana Steal</span></td><td>Amulet<br>Circlet</td></tr>
+	<tr id="row_180"><td><span id=rName>of the Bat</span><br>Group <span id=stats>28</span><br>Level <span id=stats>35</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>25</span></td><td><span id=mods>+3% Mana Steal</span></td><td>Gloves</td></tr>
+	<tr id="row_181"><td><span id=rName>of Defiance</span><br>Group <span id=stats>29</span><br>Level <span id=stats>72</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>62</span></td><td><span id=mods>75-100% Reduced Poison Length</span></td><td>Torso Armor<br>Any Shield<br>Amulet<br>Circlet<br>Helm</td></tr>
+	<tr id="row_182"><td><span id=rName>of Amelioration</span><br>Group <span id=stats>29</span><br>Level <span id=stats>48</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>38</span></td><td><span id=mods>50-66% Reduced Poison Length</span></td><td>Torso Armor<br>Any Shield<br>Amulet<br>Circlet<br>Helm</td></tr>
+	<tr id="row_183"><td><span id=rName>of Remedy</span><br>Group <span id=stats>29</span><br>Level <span id=stats>7</span><br>MaxLvl <span id=stats>72</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>25-33% Reduced Poison Length</span></td><td>Any Armor<br>Ring<br>Amulet<br>Circlet</td></tr>
+	<tr id="row_184"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>24</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2-4 Strength</span></td><td>Amulet<br>Belt<br>Melee Weapon<br>Circlet</td></tr>
+	<tr id="row_185"><td><span id=rName>of Might</span><br>Group <span id=stats>31</span><br>Level <span id=stats>8</span><br>MaxLvl <span id=stats>48</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+4-6 Strength</span></td><td>Amulet<br>Belt<br>Melee Weapon<br>Circlet</td></tr>
+	<tr id="row_186"><td><span id=rName>of the Ox</span><br>Group <span id=stats>31</span><br>Level <span id=stats>24</span><br>MaxLvl <span id=stats>62</span><br>ReqLvl <span id=stats>14</span></td><td><span id=mods>+8-12 Strength</span></td><td>Amulet<br>Belt<br>Melee Weapon<br>Circlet</td></tr>
+	<tr id="row_187"><td><span id=rName>of the Giant</span><br>Group <span id=stats>31</span><br>Level <span id=stats>48</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>38</span></td><td><span id=mods>+12-16 Strength</span></td><td>Amulet<br>Belt<br>Melee Weapon<br>Circlet</td></tr>
+	<tr id="row_188"><td><span id=rName>of the Titan</span><br>Group <span id=stats>31</span><br>Level <span id=stats>62</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>52</span></td><td><span id=mods>+16-24 Strength</span></td><td>Amulet<br>Belt</td></tr>
+	<tr id="row_189"><td><span id=rName>of Atlus</span><br>Group <span id=stats>31</span><br>Level <span id=stats>84</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>74</span></td><td><span id=mods>+24-32 Strength</span></td><td>Belt</td></tr>
+	<tr id="row_190"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>24</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2-4 Strength</span></td><td>Ring<br>Torso Armor<br>Boots</td></tr>
+	<tr id="row_191"><td><span id=rName>of Might</span><br>Group <span id=stats>31</span><br>Level <span id=stats>8</span><br>MaxLvl <span id=stats>48</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+4-8 Strength</span></td><td>Ring<br>Torso Armor<br>Boots</td></tr>
+	<tr id="row_192"><td><span id=rName>of the Ox</span><br>Group <span id=stats>31</span><br>Level <span id=stats>24</span><br>MaxLvl <span id=stats>66</span><br>ReqLvl <span id=stats>14</span></td><td><span id=mods>+8-12 Strength</span></td><td>Ring<br>Torso Armor<br>Boots</td></tr>
+	<tr id="row_193"><td><span id=rName>of the Giant</span><br>Group <span id=stats>31</span><br>Level <span id=stats>48</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>38</span></td><td><span id=mods>+12-16 Strength</span></td><td>Ring<br>Torso Armor<br>Boots</td></tr>
+	<tr id="row_194"><td><span id=rName>of the Titan</span><br>Group <span id=stats>31</span><br>Level <span id=stats>66</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>56</span></td><td><span id=mods>+16-24 Strength</span></td><td>Ring<br>Torso Armor<br>Boots</td></tr>
+	<tr id="row_195"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>12</span><br>MaxLvl <span id=stats>25</span><br>ReqLvl <span id=stats>2</span></td><td><span id=mods>+4-6 Strength</span></td><td>Gloves<br>Any Shield<br><span id=stats>Blunt</span></td></tr>
+	<tr id="row_196"><td><span id=rName>of Might</span><br>Group <span id=stats>31</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>37</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+7-10 Strength</span></td><td>Gloves<br>Any Shield<br><span id=stats>Blunt</span></td></tr>
+	<tr id="row_197"><td><span id=rName>of the Ox</span><br>Group <span id=stats>31</span><br>Level <span id=stats>37</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>27</span></td><td><span id=mods>+10-15 Strength</span></td><td>Gloves<br>Any Shield<br><span id=stats>Blunt</span></td></tr>
+	<tr id="row_198"><td><span id=rName>of the Giant</span><br>Group <span id=stats>31</span><br>Level <span id=stats>51</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+15-20 Strength</span></td><td>Gloves<br>Any Shield<br><span id=stats>Blunt</span></td></tr>
+	<tr id="row_199"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2-4 Strength</span></td><td>Grand Charm<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_200"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>3</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+2-3 Strength</span></td><td>Large Charm</td></tr>
+	<tr id="row_201"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>7</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+1 Strength</span></td><td>Small Charm</td></tr>
+	<tr id="row_202"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>29</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>19</span></td><td><span id=mods>+5-6 Strength</span></td><td>Grand Charm<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_203"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>29</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>19</span></td><td><span id=mods>+4-5 Strength</span></td><td>Large Charm</td></tr>
+	<tr id="row_204"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>29</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>19</span></td><td><span id=mods>+2 Strength</span></td><td>Small Charm</td></tr>
+	<tr id="row_205"><td><span id=rName>of Virility</span><br>Group <span id=stats>31</span><br>Level <span id=stats>18</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>8</span></td><td><span id=mods>+2-6 Strength</span></td><td>Jewel</td></tr>
+	<tr id="row_206"><td><span id=rName>of Pacing</span><br>Group <span id=stats>35</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>37</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+10% FR/Walk</span></td><td>Boots<br>Circlet<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_207"><td><span id=rName>of Haste</span><br>Group <span id=stats>35</span><br>Level <span id=stats>22</span><br>MaxLvl <span id=stats>66</span><br>ReqLvl <span id=stats>12</span></td><td><span id=mods>+20% FR/Walk</span></td><td>Boots<br>Circlet<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_208"><td><span id=rName>of Speed</span><br>Group <span id=stats>35</span><br>Level <span id=stats>37</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>27</span></td><td><span id=mods>+30% FR/Walk</span></td><td>Boots<br>Circlet<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_209"><td><span id=rName>of Traveling</span><br>Group <span id=stats>35</span><br>Level <span id=stats>66</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>56</span></td><td><span id=mods>+40% FR/Walk</span></td><td>Boots<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_210"><td><span id=rName>of Acceleration</span><br>Group <span id=stats>35</span><br>Level <span id=stats>82</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>72</span></td><td><span id=mods>+50% FR/Walk</span></td><td>Boots<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_211"><td><span id=rName>of Inertia</span><br>Group <span id=stats>35</span><br>Level <span id=stats>19</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>9</span></td><td><span id=mods>+15% FR/Walk</span></td><td>Grand Charm</td></tr>
+	<tr id="row_212"><td><span id=rName>of Inertia</span><br>Group <span id=stats>35</span><br>Level <span id=stats>24</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>14</span></td><td><span id=mods>+10% FR/Walk</span></td><td>Large Charm</td></tr>
+	<tr id="row_213"><td><span id=rName>of Inertia</span><br>Group <span id=stats>35</span><br>Level <span id=stats>35</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>25</span></td><td><span id=mods>+5% FR/Walk</span></td><td>Small Charm</td></tr>
+	<tr id="row_214"><td><span id=rName>of Self-Repair</span><br>Group <span id=stats>37</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>79</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>100/3 Seconds per +1 Durability</span></td><td>Weapon<br><span id=stats>Combo Weapon<br>Missile Weapon</span></td></tr>
+	<tr id="row_215"><td><span id=rName>of the Kraken</span><br>Group <span id=stats>41</span><br>Level <span id=stats>16</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>6</span></td><td><span id=mods>+16/8 HP per Player Level</span></td><td>Torso Armor<br>Amulet<br>Druid Pelt<br>Barbarian Helm<br>Belt</td></tr>
+	<tr id="row_216"><td><span id=rName>of Memory</span><br>Group <span id=stats>41</span><br>Level <span id=stats>16</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>6</span></td><td><span id=mods>+16/8 MP per Player Level</span></td><td>Circlet<br>Amulet<br>Druid Pelt<br>Belt</td></tr>
+	<tr id="row_217"><td><span id=rName>of the Elephant</span><br>Group <span id=stats>41</span><br>Level <span id=stats>32</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>22</span></td><td><span id=mods>+12/8 HP per Player Level<br>+12/8 MP per Player Level</span></td><td>Torso Armor<br>Helm<br>Belt</td></tr>
+	<tr id="row_218"><td><span id=rName>of Power</span><br>Group <span id=stats>42</span><br>Level <span id=stats>16</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>6</span></td><td><span id=mods>+3/8 Strength per Player Level</span></td><td>Amulet<br>Helm</td></tr>
+	<tr id="row_219"><td><span id=rName>of Grace</span><br>Group <span id=stats>42</span><br>Level <span id=stats>16</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>6</span></td><td><span id=mods>+3/8 Dexterity per Player Level</span></td><td>Amulet<br>Helm</td></tr>
+	<tr id="row_220"><td><span id=rName>of Grace and Power</span><br>Group <span id=stats>42</span><br>Level <span id=stats>16</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>6</span></td><td><span id=mods>+3/8 Strength per Player Level<br>+3/8 Dexterity per Player Level</span></td><td>Amulet<br>Helm</td></tr>
+	<tr id="row_221"><td><span id=rName>of the Yeti</span><br>Group <span id=stats>43</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+5/8% Resist Cold per Player Level</span></td><td>Torso Armor<br>Gloves<br>Amulet</td></tr>
+	<tr id="row_222"><td><span id=rName>of the Phoenix</span><br>Group <span id=stats>43</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+5/8% Resist Fire per Player Level</span></td><td>Any Shield<br>Helm<br>Amulet</td></tr>
+	<tr id="row_223"><td><span id=rName>of the Efreeti</span><br>Group <span id=stats>43</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+5/8% Resist Lightning per Player Level</span></td><td>Gloves<br>Boots<br>Ring</td></tr>
+	<tr id="row_224"><td><span id=rName>of the Cobra</span><br>Group <span id=stats>43</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+5/8% Resist Poison per Player Level</span></td><td>Belt<br>Ring<br>Amulet</td></tr>
+	<tr id="row_225"><td><span id=rName>of the Elements</span><br>Group <span id=stats>43</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>+3/8% Resist Cold per Player Level<br>+3/8% Resist Fire per Player Level<br>+3/8% Resist Lightning per Player Level</span></td><td>Circlet</td></tr>
+	<tr id="row_226"><td><span id=rName>of Enchant</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+5% Cast Level 25 Frozen Armor on Struck</span></td><td>Belt<br>Boots<br>Helm</td></tr>
+	<tr id="row_227"><td><span id=rName>of Daring</span><br>Group <span id=stats>17</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+5-10 Dexterity</span></td><td>Jewel</td></tr>
+	<tr id="row_228"><td><span id=rName>of Daring</span><br>Group <span id=stats>17</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+10-15 Dexterity</span></td><td>Jewel</td></tr>
+	<tr id="row_229"><td><span id=rName>of Knowledge</span><br>Group <span id=stats>23</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+6-8 Energy</span></td><td>Jewel</td></tr>
+	<tr id="row_230"><td><span id=rName>of Knowledge</span><br>Group <span id=stats>23</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+8-10 Energy</span></td><td>Jewel</td></tr>
+	<tr id="row_231"><td><span id=rName>of Virility</span><br>Group <span id=stats>31</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+5-10 Strength</span></td><td>Jewel</td></tr>
+	<tr id="row_232"><td><span id=rName>of Virility</span><br>Group <span id=stats>31</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+10-15 Strength</span></td><td>Jewel</td></tr>
+	<tr id="row_233"><td><span id=rName>of Readiness</span><br>Group <span id=stats>7</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+10% IASpeed</span></td><td>Gloves</td></tr>
+	<tr id="row_234"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>15</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+1-3 to Max Phys Damage</span></td><td>Grand Charm<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_235"><td><span id=rName>of Quality</span><br>Group <span id=stats>14</span><br>Level <span id=stats>15</span><br>MaxLvl <span id=stats>30</span><br>ReqLvl <span id=stats>5</span></td><td><span id=mods>+2-4 to Max Phys Damage</span></td><td>Grand Charm<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_236"><td><span id=rName>of Maiming</span><br>Group <span id=stats>14</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>+3-5 to Max Phys Damage</span></td><td>Grand Charm<br>Bow Quiver<br>Crossbow Quiver</td></tr>
+	<tr id="row_237"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+1-3 to Max Phys Damage</span></td><td>Large Charm</td></tr>
+	<tr id="row_238"><td><span id=rName>of Quality</span><br>Group <span id=stats>14</span><br>Level <span id=stats>40</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>31</span></td><td><span id=mods>+2-4 to Max Phys Damage</span></td><td>Large Charm</td></tr>
+	<tr id="row_239"><td><span id=rName>of Craftsmanship</span><br>Group <span id=stats>14</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+3-5 to Max Phys Damage</span></td><td>Small Charm</td></tr>
+	<tr id="row_240"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>17</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>20</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+3-5 Dexterity</span></td><td>Boots<br>Gloves</td></tr>
+	<tr id="row_241"><td><span id=rName>of Dexterity</span><br>Group <span id=stats>17</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>20</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+3-5 Dexterity</span></td><td>Ring</td></tr>
+	<tr id="row_242"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>20</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+3-5 Strength</span></td><td>Gloves<br>Belt</td></tr>
+	<tr id="row_243"><td><span id=rName>of Strength</span><br>Group <span id=stats>31</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>20</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+3-5 Strength</span></td><td>Ring</td></tr>
+	<tr id="row_244"><td><span id=rName>of Frost</span><br>Group <span id=stats>10</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>15</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+4-8 Cold Damage, Chills 25/25 seconds</span></td><td>Weapon<br><span id=stats>Staff<br>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_245"><td><span id=rName>of Flame</span><br>Group <span id=stats>12</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>15</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+5-10 Fire Damage</span></td><td>Weapon<br><span id=stats>Staff<br>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_246"><td><span id=rName>of Blight</span><br>Group <span id=stats>16</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>15</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+25-50/10 Poison DPS for 50/25 seconds</span></td><td>Weapon<br><span id=stats>Scepter<br>Staff<br>Sorceress Orb</span></td></tr>
+	<tr id="row_247"><td><span id=rName>of Shock</span><br>Group <span id=stats>13</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>15</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+1-20 Lightning Damage</span></td><td>Weapon<br><span id=stats>Staff<br>Wand<br>Sorceress Orb</span></td></tr>
+	<tr id="row_248"><td><span id=rName>of Regeneration</span><br>Group <span id=stats>19</span><br>Level <span id=stats>3</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+30 Replenish HP</span></td><td>Amulet<br>Ring</td></tr>
+	<tr id="row_249"><td><span id=rName>of Energy</span><br>Group <span id=stats>23</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>20</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+6-10 Energy</span></td><td>Amulet<br>Sorceress Orb<br>Circlet<br>Wand<br>Staff<br>Helm<br>Ring</td></tr>
+	<tr id="row_250"><td><span id=rName>of Light</span><br>Group <span id=stats>25</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>20</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+1 Light Radius<br>+30-50 ARating</span></td><td>Ring<br>Amulet</td></tr>
+	<tr id="row_251"><td><span id=rName>of the Leech</span><br>Group <span id=stats>27</span><br>Level <span id=stats>24</span><br>MaxLvl <span id=stats>48</span><br>ReqLvl <span id=stats>14</span></td><td><span id=mods>+2-4% Life Steal</span></td><td>Amulet</td></tr>
+	<tr id="row_252"><td><span id=rName>of the Locust</span><br>Group <span id=stats>27</span><br>Level <span id=stats>48</span><br>MaxLvl <span id=stats>72</span><br>ReqLvl <span id=stats>38</span></td><td><span id=mods>+3-5% Life Steal</span></td><td>Amulet</td></tr>
+	<tr id="row_253"><td><span id=rName>of the Lamprey</span><br>Group <span id=stats>27</span><br>Level <span id=stats>72</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>62</span></td><td><span id=mods>+4-6% Life Steal</span></td><td>Amulet</td></tr>
+	<tr id="row_254"><td><span id=rName>of the Bat</span><br>Group <span id=stats>28</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+2-3% Mana Steal</span></td><td>Ring</td></tr>
+	<tr id="row_255"><td><span id=rName>of the Wraith</span><br>Group <span id=stats>28</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>75</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+4-6% Mana Steal</span></td><td>Ring</td></tr>
+	<tr id="row_256"><td><span id=rName>of the Vampire</span><br>Group <span id=stats>28</span><br>Level <span id=stats>75</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>65</span></td><td><span id=mods>+7-8% Mana Steal</span></td><td>Ring</td></tr>
+	<tr id="row_257"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>45</span><br>Level <span id=stats>40</span><br>MaxLvl <span id=stats>92</span><br>ReqLvl <span id=stats>31</span></td><td><span id=mods>7-8% chance for Crushing Blow<br>+30-40% Enhanced Damage</span></td><td>2 Handed Weapon<br><span id=stats>Staff<br>Missile Weapon</span></td></tr>
+	<tr id="row_258"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>45</span><br>Level <span id=stats>40</span><br>MaxLvl <span id=stats>92</span><br>ReqLvl <span id=stats>31</span></td><td><span id=mods>3-4% chance for Crushing Blow<br>+30-40% Enhanced Damage</span></td><td>Weapon<br><span id=stats>Sorceress Orb<br>Wand<br>2 Handed Weapon</span></td></tr>
+	<tr id="row_259"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>45</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>80</span></td><td><span id=mods>9-10% chance for Crushing Blow<br>+60-80% Enhanced Damage</span></td><td>2 Handed Weapon<br><span id=stats>Staff<br>Missile Weapon</span></td></tr>
+	<tr id="row_260"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>45</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>80</span></td><td><span id=mods>4-5% chance for Crushing Blow<br>+60-80% Enhanced Damage</span></td><td>Weapon<br><span id=stats>Sorceress Orb<br>Wand<br>2 Handed Weapon</span></td></tr>
+	<tr id="row_261"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>45</span><br>Level <span id=stats>8</span><br>MaxLvl <span id=stats>60</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>1% chance for Crushing Blow<br>+15-20% chance for Deadly Strike</span></td><td>Gloves<br>Boots</td></tr>
+	<tr id="row_262"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>45</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>2% chance for Crushing Blow<br>+21-25% chance for Deadly Strike</span></td><td>Gloves<br>Boots</td></tr>
+	<tr id="row_263"><td><span id=rName>of the Wraith</span><br>Group <span id=stats>52</span><br>Level <span id=stats>1</span><br>MaxLvl <span id=stats>30</span><br>ReqLvl <span id=stats>1</span></td><td><span id=mods>+3-5 HP per kill<br>+3-5 MP per Kill</span></td><td>Belt</td></tr>
+	<tr id="row_264"><td><span id=rName>of the Wraith</span><br>Group <span id=stats>52</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>40</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+7-10 HP per kill<br>+7-10 MP per Kill</span></td><td>Belt</td></tr>
+	<tr id="row_265"><td><span id=rName>of the Wraith</span><br>Group <span id=stats>52</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>50</span><br>ReqLvl <span id=stats>21</span></td><td><span id=mods>+11-16 HP per kill<br>+11-16 MP per Kill</span></td><td>Belt</td></tr>
+	<tr id="row_266"><td><span id=rName>of the Wraith</span><br>Group <span id=stats>52</span><br>Level <span id=stats>40</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>31</span></td><td><span id=mods>+17-23 HP per kill<br>+17-23 MP per Kill</span></td><td>Belt</td></tr>
+	<tr id="row_267"><td><span id=rName>of the Wraith</span><br>Group <span id=stats>52</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+24-25 HP per kill<br>+24-25 MP per Kill</span></td><td>Belt</td></tr>
+	<tr id="row_268"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>56</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>80</span><br>ReqLvl <span id=stats>11</span></td><td><span id=mods>+5-6% Resist Phys</span></td><td>Torso Armor<br>Helm<br>Any Shield<br>Belt</td></tr>
+	<tr id="row_269"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>56</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+6-8% Resist Phys</span></td><td>Torso Armor<br>Helm<br>Any Shield<br>Belt</td></tr>
+	<tr id="row_270"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>56</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>+8-10% Resist Phys</span></td><td>Torso Armor<br>Helm<br>Any Shield<br>Belt</td></tr>
+	<tr id="row_271"><td><span id=rName>of Unity</span><br>Group <span id=stats>57</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+4-6 to Strength, Dexterity, Vitality, and Energy</span></td><td>Jewel</td></tr>
+	<tr id="row_272"><td><span id=rName>of Unison</span><br>Group <span id=stats>58</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+5-10 to Strength, Dexterity, Vitality, and Energy</span></td><td>Bow Quiver<br>Crossbow Quiver<br>Helm<br>Circlet<br>Amulet</td></tr>
+	<tr id="row_273"><td><span id=rName>of Unification</span><br>Group <span id=stats>59</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>+10-15 to Strength, Dexterity, Vitality, and Energy</span></td><td>Torso Armor<br>Any Shield<br>Crossbow Quiver<br>Bow Quiver<br>Amulet</td></tr>
+	<tr id="row_274"><td><span id=rName>of Arkaine</span><br>Group <span id=stats>60</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+15-30% Resist Magic</span></td><td>Torso Armor<br>Any Shield<br>Crossbow Quiver<br>Bow Quiver<br>Amulet</td></tr>
+	<tr id="row_275"><td><span id=rName>of Magik</span><br>Group <span id=stats>60</span><br>Level <span id=stats>60</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>51</span></td><td><span id=mods>+10-20% Resist Magic</span></td><td>Ring<br>Amulet<br>Helm<br>Circlet</td></tr>
+	<tr id="row_276"><td><span id=rName>of Exorcism</span><br>Group <span id=stats>61</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>8-12% Reduced Cursed Duration</span></td><td>Helm<br>Circlet<br>Grand Charm<br>Torso Armor</td></tr>
+	<tr id="row_277"><td><span id=rName>of the Exorcist</span><br>Group <span id=stats>61</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>8-12% Reduced Cursed Duration</span></td><td>Jewel<br>Ring<br>Amulet<br>Gloves<br>Boots</td></tr>
+	<tr id="row_278"><td><span id=rName>of Conjuring</span><br>Group <span id=stats>9</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>+15-20% FCRate</span></td><td>Ring<br>Amulet<br>Druid Pelt<br>Circlet<br>Staves And Rods<br>Wand<br>Staff</td></tr>
+	<tr id="row_279"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>56</span><br>Level <span id=stats>50</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>41</span></td><td><span id=mods>+4-6% Resist Phys</span></td><td>Ring<br>Amulet<br>Jewel</td></tr>
+	<tr id="row_280"><td><span id=rName>of the Colosuss</span><br>Group <span id=stats>56</span><br>Level <span id=stats>80</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>71</span></td><td><span id=mods>+6-10% Resist Phys</span></td><td>Ring<br>Amulet<br>Jewel</td></tr>
+	<tr id="row_281"><td><span id=rName>of Immolation</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+8% Cast Level 10 600 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_282"><td><span id=rName>of Immolation</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+8% Cast Level 30 600 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_283"><td><span id=rName>of Immolation</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+8% Cast Level 50 600 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_284"><td><span id=rName>of Meteor</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+8% Cast Level 10 602 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_285"><td><span id=rName>of Meteor</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+8% Cast Level 30 602 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_286"><td><span id=rName>of Meteor</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+8% Cast Level 50 602 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_287"><td><span id=rName>of Tornado</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+8% Cast Level 10 611 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_288"><td><span id=rName>of Tornado</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+8% Cast Level 30 611 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_289"><td><span id=rName>of Tornado</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+8% Cast Level 50 611 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_290"><td><span id=rName>of Lightning</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+8% Cast Level 10 614 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_291"><td><span id=rName>of Lightning</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+8% Cast Level 30 614 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_292"><td><span id=rName>of Lightning</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+8% Cast Level 50 614 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_293"><td><span id=rName>of Fire Ball</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+8% Cast Level 10 616 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_294"><td><span id=rName>of Fire Ball</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+8% Cast Level 30 616 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_295"><td><span id=rName>of Fire Ball</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+8% Cast Level 50 616 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_296"><td><span id=rName>of Frozen Orb</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+8% Cast Level 10 617 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_297"><td><span id=rName>of Frozen Orb</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+8% Cast Level 30 617 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_298"><td><span id=rName>of Frozen Orb</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+8% Cast Level 50 617 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_299"><td><span id=rName>of Bone Spear</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+8% Cast Level 10 618 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_300"><td><span id=rName>of Bone Spear</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+8% Cast Level 30 618 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_301"><td><span id=rName>of Bone Spear</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+8% Cast Level 50 618 on Melee hit</span></td><td>Belt<br>Gloves<br>Helm</td></tr>
+	<tr id="row_302"><td><span id=rName>of Amplify Damage</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+6% Cast Level 1 604 on Melee hit</span></td><td>Melee Weapon<br>Ring<br>Amulet<br>Helm<br>Gloves</td></tr>
+	<tr id="row_303"><td><span id=rName>of Weaken</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+6% Cast Level 1 605 on Melee hit</span></td><td>Gloves<br>Ring<br>Amulet<br>Helm</td></tr>
+	<tr id="row_304"><td><span id=rName>of Fire Ball2</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+4% Cast Level 10 Fire BallCTC on Strike</span></td><td>Missile Weapon</td></tr>
+	<tr id="row_305"><td><span id=rName>of Fire Ball2</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+4% Cast Level 30 Fire BallCTC on Strike</span></td><td>Missile Weapon</td></tr>
+	<tr id="row_306"><td><span id=rName>of Fire Ball2</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+4% Cast Level 50 Fire BallCTC on Strike</span></td><td>Missile Weapon</td></tr>
+	<tr id="row_307"><td><span id=rName>of Frozen Orb2</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+4% Cast Level 10 Frozen OrbCTC on Strike</span></td><td>Missile Weapon</td></tr>
+	<tr id="row_308"><td><span id=rName>of Frozen Orb2</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+4% Cast Level 30 Frozen OrbCTC on Strike</span></td><td>Missile Weapon</td></tr>
+	<tr id="row_309"><td><span id=rName>of Frozen Orb2</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+4% Cast Level 50 Frozen OrbCTC on Strike</span></td><td>Missile Weapon</td></tr>
+	<tr id="row_310"><td><span id=rName>of Bone Spear2</span><br>Group <span id=stats>44</span><br>Level <span id=stats>25</span><br>MaxLvl <span id=stats>54</span><br>ReqLvl <span id=stats>15</span></td><td><span id=mods>+4% Cast Level 10 Bone SpearCTC on Strike</span></td><td>Missile Weapon</td></tr>
+	<tr id="row_311"><td><span id=rName>of Bone Spear2</span><br>Group <span id=stats>44</span><br>Level <span id=stats>55</span><br>MaxLvl <span id=stats>84</span><br>ReqLvl <span id=stats>45</span></td><td><span id=mods>+4% Cast Level 30 Bone SpearCTC on Strike</span></td><td>Missile Weapon</td></tr>
+	<tr id="row_312"><td><span id=rName>of Bone Spear2</span><br>Group <span id=stats>44</span><br>Level <span id=stats>85</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>75</span></td><td><span id=mods>+4% Cast Level 50 Bone SpearCTC on Strike</span></td><td>Missile Weapon</td></tr>
+	<tr id="row_313"><td><span id=rName>of Phasing</span><br>Group <span id=stats>44</span><br>Level <span id=stats>81</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>81</span></td><td><span id=mods>+1 to oSkill Teleport2</span></td><td>Druid Pelt</td></tr>
+	<tr id="row_314"><td><span id=rName>of Hoarfrost</span><br>Group <span id=stats>62</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>85</span><br>ReqLvl <span id=stats>20</span></td><td><span id=mods>+4-5% Cold Damage</span></td><td>Gloves<br>Belt<br>Boots</td></tr>
+	<tr id="row_315"><td><span id=rName>of Searing</span><br>Group <span id=stats>62</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>85</span><br>ReqLvl <span id=stats>20</span></td><td><span id=mods>+4-5% Fire Damage</span></td><td>Gloves<br>Belt<br>Boots</td></tr>
+	<tr id="row_316"><td><span id=rName>of Cracking</span><br>Group <span id=stats>62</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>85</span><br>ReqLvl <span id=stats>20</span></td><td><span id=mods>+4-5% Lightning Damage</span></td><td>Gloves<br>Belt<br>Boots</td></tr>
+	<tr id="row_317"><td><span id=rName>of Malignancy</span><br>Group <span id=stats>62</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>85</span><br>ReqLvl <span id=stats>20</span></td><td><span id=mods>+4-5% Poison Damage</span></td><td>Gloves<br>Belt<br>Boots</td></tr>
+	<tr id="row_318"><td><span id=rName>of Bewitchment</span><br>Group <span id=stats>62</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>85</span><br>ReqLvl <span id=stats>20</span></td><td><span id=mods>+4-5% Magic Skill Damage</span></td><td>Gloves<br>Belt<br>Boots</td></tr>
+	<tr id="row_319"><td><span id=rName>of Impact</span><br>Group <span id=stats>62</span><br>Level <span id=stats>20</span><br>MaxLvl <span id=stats>85</span><br>ReqLvl <span id=stats>20</span></td><td><span id=mods>+4-5% Physical Skill Damage</span></td><td>Gloves<br>Belt<br>Boots</td></tr>
+	<tr id="row_320"><td><span id=rName>of Thaumaturgy</span><br>Group <span id=stats>62</span><br>Level <span id=stats>30</span><br>MaxLvl <span id=stats>100</span><br>ReqLvl <span id=stats>30</span></td><td><span id=mods>+4-5% Elemental and Non-Elemental Damage</span></td><td>Gloves<br>Belt<br>Boots</td></tr>
+</body></html>

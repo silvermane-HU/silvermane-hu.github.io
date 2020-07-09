@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Sets</title>
+	<style>
+		body{background-color:#000000; color:#FFFFFF}
+		table, th, td {border: 1px solid #888888}
+		th, td {padding: 2px}
+		#uName{color:#998855}
+		#cName{color:#BB7700}
+		#sName{color:#44EE44}
+		#rName{color:#CCCC00}
+		#mName{color:#5555CC}
+		#tName{color:#00AA00}
+		#stats{color:#AAAAAA}
+		#mods{color:#6677DD}
+		#removed{color:#660000}
+		#added{color:#FFFFFF}
+		#fire{color:#AA3333}
+		#ltng{color:#AAAA33}
+		#cold{color:#3333AA}
+		#pois{color:#33AA33}
+		#phys{color:#888888}
+		#magc{color:#CCCCFF}
+		</style>
+</head>
+<body>
+<table>
+	<tr>  <td><span id=sName>Forlorn Rogue</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+15% Resist All<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+3 to All Skills<br>75% Reduced Poison Length<br>1% chance for Crushing Blow<br>+10-20 Phys Damage<br>Prevents Monster HP Regen<br>+25% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Flavie's Cloak</span><br><span id=stats>Ghost Armor<br>Level 46</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>3 Sockets<br>+30% Resist Poison<br>+30% Resist Lightning<br>+20 Vitality<br>+15% Resist Magic<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5 to Min Phys Damage<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+10% IASpeed</span></td>  </tr>
+	<tr>  <td><span id=sName>Flavie's Heel</span><br><span id=stats>Sharkskin Boots<br>Level 46</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>+40% FR/Walk<br>+30% Resist Fire<br>+30% Resist Cold<br>+20 Dexterity<br>+10% Resist Magic<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5 to Min Phys Damage<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+10% IASpeed</span></td>  </tr>
+	<tr>  <td><span id=sName>Flavie's Cuff</span><br><span id=stats>Double Bow<br>Level 46</span></td>    <td><span id=mods>+300-400% Enhanced Damage<br>+30% IASpeed<br>3 Sockets<br>+3% Life Steal<br>+/8 Max PhysDamage per Player Level<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+20 to Max Phys Damage<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+20% IASpeed<br>+1 to All Skills</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Warden's Watch</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName>+2 to All Skills<br>+60% FHRecovery<br>+30% Resist All<br>+200 HP<br>+300 Defense<br>+300 ARating<br>+10% Resist Phys<br>+6% Cast Level 1 604 on Melee hit</span></td>  </tr>
+	<tr>  <td><span id=sName>Warden's Fist</span><br><span id=stats>Battle Gauntlets<br>Level 56</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>+15 Strength<br>+5% Mana Steal<br>3% chance for Crushing Blow<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Resist Phys<br>+35% Enhanced Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Wardens's Cord</span><br><span id=stats>Demonhide Sash<br>Level 56</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>+25 Vitality<br>+25% FHRecovery<br>+30 Replenish HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Resist Phys<br>+35% Enhanced Damage</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Arcanna's Tricks</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+40 MP<br>+40 HP<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+15% FCRate<br>Mag and Elem Dmg Reduced by 3<br>+15% Resist All<br>+15% FR/Walk<br>+1 to All Skills<br>+25 Energy</span></td>  </tr>
+	<tr>  <td><span id=sName>Arcanna's Flesh</span><br><span id=stats>Hard Leather Armor<br>Level 6</span></td>    <td><span id=mods>+50-100 Defense<br>+20% Regen MP<br>+15% Resist All<br>+10% FCRate<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10 HP per kill</span></td>  </tr>
+	<tr>  <td><span id=sName>Arcanna's Sign</span><br><span id=stats>Heavy Boots<br>Level 7</span></td>    <td><span id=mods>+30% FR/Walk<br>+15% Resist Cold<br>+20% Regen MP<br>+15% Resist Poison<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% FCRate</span></td>  </tr>
+	<tr>  <td><span id=sName>Arcanna's Deathwand</span><br><span id=stats>Short Staff<br>Level 5</span></td>    <td><span id=mods>+1 to All Skills<br>+10% FCRate<br>+15% Resist Fire<br>+15% Resist Lightning<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10 MP per Kill</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>AlbrechtAnguish</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% IASpeed<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>50% Reduced Poison Length<br>+4 to Max Phys Damage<br>+50% Enhanced Damage<br>+1 to All Skills<br>Prevents Monster HP Regen<br>15% chance to Open Wounds</span></td>  </tr>
+	<tr>  <td><span id=sName>AlbrechtBonds</span><br><span id=stats>Studded Leather <br>Level 10</span></td>    <td><span id=mods>+3 to Max Phys Damage<br>+10 Vitality<br>+10% Resist All<br>PhysDmg Reduced by 4<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% FR/Walk</span></td>  </tr>
+	<tr>  <td><span id=sName>AlbrechtTorture</span><br><span id=stats>Amulet<br>Level 10</span></td>    <td><span id=mods>+1 to Min Phys Damage<br>+10 Strength<br>+10% Resist All<br>Mag and Elem Dmg Reduced by 2<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+6% Mana Steal</span></td>  </tr>
+	<tr>  <td><span id=sName>AlbrechtTorment</span><br><span id=stats>Ring<br>Level 10</span></td>    <td><span id=mods>+1 to Min Phys Damage<br>+10 Dexterity<br>+10% Resist All<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+1% Life Steal</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Infernal Tools</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>Mag and Elem Dmg Reduced by 4<br>+50 MP<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+20% FR/Walk<br>+50% Gold Find<br>+50% Magic Find<br>+25 Replenish HP<br>+15% FCRate<br>+50% Gold Find<br>+1 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>Infernal Cranium</span><br><span id=stats>Cap/hat<br>Level 4</span></td>    <td><span id=mods>+15% Resist All<br>25% HP lost goes to MP<br>+25% Regen MP<br>+25 Replenish HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+16/8 Defense per Player level<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+1 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>Infernal Torch</span><br><span id=stats>Wand<br>Level 4</span></td>    <td><span id=mods>Cannot Be Frozen<br>+15 HP per kill<br>+15 MP per Kill<br>+35% IASpeed<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+20/2 ARating per Player Level</span></td>  </tr>
+	<tr>  <td><span id=sName>Infernal Sign</span><br><span id=stats>Preserved Head<br>Level 4</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>+30 HP<br>+20% Resist All<br>+10% FCRate<br>+1 to All Skills<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+25% Resist Poison<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+1 to All Skills</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Sentinel's Vestments</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+100 HP<br>50% Reduced Poison Length<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+3 to All Skills<br>2% chance for Crushing Blow<br>+10% Cast Level 30 Frost NovaCTC on Struck<br>+300 Defense<br>+15% Resist Magic<br>Mag and Elem Dmg Reduced by 10<br>PhysDmg Reduced by 10<br>+15% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Sentinel's Visage</span><br><span id=stats>Basinet<br>Level 56</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+15% Resist All<br>+5% Resist Phys<br>3 Sockets<br>+15 Strength<br>+30 HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Resist Phys<br>+2% Life Steal</span></td>  </tr>
+	<tr>  <td><span id=sName>Sentinel's Raiment</span><br><span id=stats>Russet Armor<br>Level 56</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+20% Resist All<br>+10% Resist Phys<br>3 Sockets<br>+25 Vitality<br>+10% HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Resist Phys</span></td>  </tr>
+	<tr>  <td><span id=sName>Sentinel's Stance</span><br><span id=stats>Mesh Boots<br>Level 56</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+10% Resist All<br>1% chance for Crushing Blow<br>+40% FR/Walk<br>+20 Dexterity<br>+30 HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Resist Phys<br>+5% Mana Steal</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Asheara's Rig</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName>+2 to All Skills<br>+200 HP<br>+200 MP<br>+50% FR/Walk<br>+50% FHRecovery<br>+25% Resist Magic<br>+25% FCRate<br>+15% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Asheara's Gaze</span><br><span id=stats>Tiara<br>Level 65</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+15% Resist All<br>+25% FCRate<br>+1 to All Skills<br>3 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30 HP per kill</span></td>  </tr>
+	<tr>  <td><span id=sName>Asheara's Robe</span><br><span id=stats>Mage Plate<br>Level 65</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+25% Resist Cold<br>Mag and Elem Dmg Reduced by 10<br>+25% FCRate<br>3 Sockets<br>+25-30% Resist Lightning<br>+1 to All Skills<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30 Replenish HP</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Tancred's Battlegear</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+1-500 Lightning Damage<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+100% Gold Find<br>+20% Resist All<br>50% chance to Open Wounds<br>+8% Mana Steal<br>+20% FCRate<br>+3 to All Skills<br>+50% Enhanced Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Tancred's Spine</span><br><span id=stats>Field Plate<br>Level 28</span></td>    <td><span id=mods>+60 HP<br>+25 Strength<br>+10% Resist All<br>+5% Resist Phys<br>2 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+18/8 Defense per Player level</span></td>  </tr>
+	<tr>  <td><span id=sName>Tancred's Hobnails</span><br><span id=stats>Light Plate Boots<br>Level 27</span></td>    <td><span id=mods>+30% Regen Stamina<br>+15 Dexterity<br>+40% FR/Walk<br>+10% Resist All<br>+10% Resist Magic<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10 Strength<br>1% chance for Crushing Blow</span></td>  </tr>
+	<tr>  <td><span id=sName>Tancred's Skull</span><br><span id=stats>Bone Helm<br>Level 27</span></td>    <td><span id=mods>+33% Enhanced Damage<br>+66 ARating<br>+33% Resist Poison<br>+10% Resist All<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Resist All</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Arctic Gear</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Resist All<br>+15 Dexterity<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25 Vitality<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+5-10 Cold Damage, Chills 150/25 seconds<br>+3% Life Steal<br>+5% Mana Steal<br>Freeze Target +1<br>+2 to All Skills<br>+15% Resist All<br>+20 Dexterity<br>+5-10 Fire Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Arctic Horn</span><br><span id=stats>Hunter's Bow<br>Level 5</span></td>    <td><span id=mods>+50% ARating<br>+150-200% Enhanced Damage<br>+15 Dexterity<br>+30% IASpeed<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+16/2 ARating per Player Level<br>+20% IASpeed<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+20-30 Cold Damage, Chills 100/25 seconds<br>+2/8 Max PhysDamage per Player Level</span></td>  </tr>
+	<tr>  <td><span id=sName>Arctic Furs</span><br><span id=stats>Quilted Armor<br>Level 3</span></td>    <td><span id=mods>+300-325% Enhanced Defense<br>+10% Resist All<br>+30% Resist Poison<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+24/8 Defense per Player level<br>+20% FR/Walk<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% Resist Cold</span></td>  </tr>
+	<tr>  <td><span id=sName>Arctic Binding</span><br><span id=stats>Light Belt<br>Level 6</span></td>    <td><span id=mods>+40% Resist Cold<br>+30 Defense<br>+25% Missiles Pierce Targets<br>+20% FR/Walk<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+20% Magic Find<br>33% Reduced Poison Length<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% Resist Fire</span></td>  </tr>
+	<tr>  <td><span id=sName>Arctic Mitts</span><br><span id=stats>Heavy Gloves<br>Level 6</span></td>    <td><span id=mods>+40 HP<br>+10% IASpeed<br>+3-5% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>Cannot Be Frozen<br>+20% IASpeed<br></span><span id=stats>3 Pieces:</span><br><span id=sName>1% chance for Crushing Blow</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Sigon's Complete Steel</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+3% Life Steal<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+200 Defense<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+25% Resist All<br>Freeze Target +1<br>PhysDmg Reduced by 12<br>Mag and Elem Dmg Reduced by 6<br>+5% Resist Phys<br>+60 HP<br>+3 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>Sigon's Gage</span><br><span id=stats>Gaunlets(H)<br>Level 27</span></td>    <td><span id=mods>+15 Strength<br>1% chance for Crushing Blow<br>+10% IASpeed<br>+40% Resist Poison<br>+200-250% Enhanced Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% IASpeed</span></td>  </tr>
+	<tr>  <td><span id=sName>Sigon's Visor</span><br><span id=stats>Great Helm<br>Level 23</span></td>    <td><span id=mods>+60 HP<br>+200-250% Enhanced Defense<br>+15% Resist Magic<br>+1 to All Skills<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+16/2 ARating per Player Level</span></td>  </tr>
+	<tr>  <td><span id=sName>Sigon's Shelter</span><br><span id=stats>Gothic Plate<br>Level 30</span></td>    <td><span id=mods>+200-250% Enhanced Defense<br>+40% Resist Fire<br>+40% FHRecovery<br>2 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10 Vitality<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+10% Resist Phys</span></td>  </tr>
+	<tr>  <td><span id=sName>Sigon's Sabot</span><br><span id=stats>Plate Boots<br>Level 27</span></td>    <td><span id=mods>+40% FR/Walk<br>+40% Resist Cold<br>1% chance for Crushing Blow<br>Cannot Be Frozen<br>+200-250% Enhanced Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50 ARating<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25% Magic Find</span></td>  </tr>
+	<tr>  <td><span id=sName>Sigon's Wrap</span><br><span id=stats>Girdle(H)<br>Level 27</span></td>    <td><span id=mods>+40% Resist Lightning<br>+60 HP<br>+20% FBRate<br>+200-250% Enhanced Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+16/8 Defense per Player level</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Civerb's Vestments</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+15% Resist All<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+20 Dexterity<br>+200% Enhanced Damage vs Undead<br>+200% Enhanced Damage vs Demons<br>+2 to All Skills<br>+15% Resist All<br>+30% IASpeed</span></td>  </tr>
+	<tr>  <td><span id=sName>Civerb's Ward</span><br><span id=stats>Large Shield<br>Level 13</span></td>    <td><span id=mods>+50-100% Enhanced Defense<br>+20% ICBlocking<br>+16% Resist Cold<br>+20% FBRate<br>+8% Resist All<br>+1 to All Skills<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+40 MP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25% Resist Poison</span></td>  </tr>
+	<tr>  <td><span id=sName>Civerb's Icon</span><br><span id=stats>Scale Mail<br>Level 13</span></td>    <td><span id=mods>+60% Regen MP<br>+30 Replenish HP<br>+20% ICBlocking<br>+50-100 Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+25% Resist Lightning<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+50 Defense</span></td>  </tr>
+	<tr>  <td><span id=sName>Civerb's Impaler</span><br><span id=stats>Pilum<br>Level 13</span></td>    <td><span id=mods>+4 to Max Phys Damage<br>+150-200% Enhanced Damage<br>+30% IASpeed<br>100/100 Seconds per +1 Quantity<br>+40-50% Missiles Pierce Targets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+2/8 Max PhysDamage per Player Level<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+1 to All Skills</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Hsarus' Defense</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+25% FHRecovery<br>+25% FR/Walk<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+4 to Max Phys Damage<br>+4 to Min Phys Damage<br>Cannot Be Frozen<br>+25% Resist All<br>+2 to All Skills<br>+200 Defense<br>+40% ICBlocking<br>+40% FBRate</span></td>  </tr>
+	<tr>  <td><span id=sName>Hsarus' Iron Heel</span><br><span id=stats>Chain Boots<br>Level 12</span></td>    <td><span id=mods>+35% Resist Fire<br>+30% FR/Walk<br>+15 Vitality<br>+25-50 Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5/2 ARating per Player Level</span></td>  </tr>
+	<tr>  <td><span id=sName>Hsarus' Iron Fist</span><br><span id=stats>Buckler<br>Level 4</span></td>    <td><span id=mods>PhysDmg Reduced by 10-15<br>+15 Strength<br>+35% Resist Lightning<br>+25-50 Defense<br>+20% ICBlocking<br>+20% FBRate<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5/8 Defense per Player level</span></td>  </tr>
+	<tr>  <td><span id=sName>Hsarus' Iron Stay</span><br><span id=stats>Belt(M)<br>Level 12</span></td>    <td><span id=mods>+35% Resist Cold<br>+25-50 HP<br>+15 Dexterity<br>+25-50 Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5/8 Defense per Player level</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Cleglaw's Brace</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+75 Defense<br>+75 ARating<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+50 Defense<br>+8% Mana Steal<br>2% chance for Crushing Blow<br>+25% IASpeed<br>+2 to All Skills<br>+6% Cast Level 1 604 on Melee hit<br>15% chance to Open Wounds</span></td>  </tr>
+	<tr>  <td><span id=sName>Cleglaw's Tooth</span><br><span id=stats>Ring<br>Level 10</span></td>    <td><span id=mods>+25% ARating<br>+10% chance for Deadly Strike<br>+1-2 Phys Damage<br>+15% IASpeed<br>+15% FHRecovery<br>+5% FCRate<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+3/8 Max PhysDamage per Player Level</span></td>  </tr>
+	<tr>  <td><span id=sName>Cleglaw's Claw</span><br><span id=stats>Small Shield<br>Level 6</span></td>    <td><span id=mods>+50-100 Defense<br>75% Reduced Poison Length<br>+25% Resist Poison<br>+20% ICBlocking<br>+20% FBRate<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+15% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Cleglaw's Pincers</span><br><span id=stats>Bracers(M)<br>Level 12</span></td>    <td><span id=mods>Knockback<br>+15% chance for Deadly Strike<br>+50 ARating<br>+30% IASpeed<br>+30% FHRecovery<br>+10% FCRate<br>+30% FR/Walk<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+20/2 ARating per Player Level</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Iratha's Finery</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+75 Defense<br>+10 Dexterity<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+33% FR/Walk<br>+15% FCRate<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+33% Resist All<br>+25 Dexterity<br>+25 Strength<br>+3 to All Skills<br>+100 ARating<br>+10% chance for Deadly Strike<br>15% chance to Open Wounds</span></td>  </tr>
+	<tr>  <td><span id=sName>Iratha's Collar</span><br><span id=stats>Blade Talons<br>Level 22</span></td>    <td><span id=mods>+40% Resist Poison<br>50% Reduced Poison Length<br>+200-300% Enhanced Damage<br>+4% Life Steal<br>+1 to Assassin Skills<br>+2/8 Max PhysDamage per Player Level<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+15% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Iratha's Cuff</span><br><span id=stats>Light Gauntlets<br>Level 22</span></td>    <td><span id=mods>+40% Resist Cold<br>Cannot Be Frozen<br>+15% IASpeed<br>+50-100 Defense<br>+30% FHRecovery<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+25% IASpeed</span></td>  </tr>
+	<tr>  <td><span id=sName>Iratha's Coil</span><br><span id=stats>Helm<br>Level 18</span></td>    <td><span id=mods>+40% Resist Fire<br>+1 to Assassin Skills<br>+60 MP<br>+50-100 Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+16/8 Defense per Player level</span></td>  </tr>
+	<tr>  <td><span id=sName>Iratha's Cord</span><br><span id=stats>Heavy Belt<br>Level 22</span></td>    <td><span id=mods>+50-100 Defense<br>+2 to Min Phys Damage<br>+2 to Max Phys Damage<br>+40% Resist Lightning<br>+25% Missiles Pierce Targets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5 Dexterity</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Isenhart's Armory</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+15 Strength<br>+20 Vitality<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+2 to All Skills<br>+25% Resist All<br>+15% FCRate<br>+30% ICBlocking<br>+20% FR/Walk<br>+10 to Strength, Dexterity, Vitality, and Energy<br>+25 Dexterity</span></td>  </tr>
+	<tr>  <td><span id=sName>Isenhart's Lightbrand</span><br><span id=stats>Battle Sword<br>Level 55</span></td>    <td><span id=mods>+2 to All Skills<br>+80% IASpeed<br>+350-400% Enhanced Damage<br>3 Sockets<br>4% chance for Crushing Blow<br>+15% Resist Magic<br>+10-30 Phys Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Isenhart's Case</span><br><span id=stats>Cuirass<br>Level 55</span></td>    <td><span id=mods>+200-250% Enhanced Defense<br>PhysDmg Reduced by 15-25<br>+15-25% Resist All<br>3 Sockets<br>+50% FHRecovery<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+16/8 Defense per Player level</span></td>  </tr>
+	<tr>  <td><span id=sName>Isenhart's Horns</span><br><span id=stats>Basinet<br>Level 55</span></td>    <td><span id=mods>+200-250% Enhanced Defense<br>+15-25 Strength<br>Mag and Elem Dmg Reduced by 5-10<br>3 Sockets<br>1% chance for Crushing Blow<br>+1 to All Skills<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+8/8 Defense per Player level</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Vidala's Rig</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+5 Strength<br>+15 Dexterity<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+10-20 Cold Damage, Chills 150/25 seconds<br>+2 to Min Phys Damage<br>+5 to Pierce (Class Only)<br>+15 Dexterity<br>+2 to All Skills<br>+25% IASpeed<br>+15% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Vidala's Barb</span><br><span id=stats>Composite Bow<br>Level 12</span></td>    <td><span id=mods>+150-200% Enhanced Damage<br>+40% IASpeed<br>+3 to Min Phys Damage<br>+6% Cast Level 1 Amplify DamageCTC on Strike<br>+/8 Max PhysDamage per Player Level<br><br></span><span id=stats>3 Pieces:</span><br><span id=sName>+2/8 Max PhysDamage per Player Level</span></td>  </tr>
+	<tr>  <td><span id=sName>Vidala's Fetlock</span><br><span id=stats>Leather Boots<br>Level 9</span></td>    <td><span id=mods>+150 Stamina<br>+50% FR/Walk<br>+4% Mana Steal<br>+2% Life Steal<br>+15-25% Resist Poison<br>+15-25 Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+8% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Vidala's Ambush</span><br><span id=stats>Leather Armor<br>Level 11</span></td>    <td><span id=mods>+15 Dexterity<br>+15-25% Resist Lightning<br>+15-25% Resist Fire<br>+15-25% Resist Cold<br>+15-25 Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+24% Resist Fire<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+20/8 Defense per Player level</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Milabrega's Regalia</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+40 Vitality<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25% Resist Magic<br>+40 Dexterity<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Paladin Skills<br>+10% Resist Phys<br>+5% HP<br>+30% FR/Walk<br>+100% Enhanced Damage vs Demons<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Milabrega's Orb</span><br><span id=stats>Sacred Targe<br>Level 88</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+40% ICBlocking<br>+40% Resist All<br>+3 to Paladin Skills<br>3 Sockets<br>+3% Magic Skill Damage<br>+10% Resist Phys<br>+30% FCRate</span></td>  </tr>
+	<tr>  <td><span id=sName>Milabrega's Rod</span><br><span id=stats>Seraph Rod<br>Level 83</span></td>    <td><span id=mods>+3 to Paladin Skills<br>+30-40% FCRate<br>+200 MP<br>3 Sockets<br>-50% Stats Required<br>+4% Magic Skill Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Milabrega's Diadem</span><br><span id=stats>Spired Helm<br>Level 83</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+2 to Paladin Skills<br>+20% Resist All<br>3 Sockets<br>+200 HP<br>-50% Stats Required<br>+10% Resist Phys</span></td>  </tr>
+	<tr>  <td><span id=sName>Milabrega's Robe</span><br><span id=stats>Diamond Mail<br>Level 83</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>PhysDmg Reduced by 50<br>-50% Stats Required<br>+15% Resist Phys<br>+30% Resist All<br>3 Sockets<br>+2 to Paladin Skills<br>+10-15% HP<br>+2 to random skill between Sacrifice and Salvation</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Cathan's Traps</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+15% Resist Fire<br>+15% Resist Cold<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% Resist Lightning<br>+15% Resist Poison<br></span><span id=stats>4 Pieces:</span><br><span id=sName>+15% Resist Magic<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>PhysDmg Reduced by 15<br>Mag and Elem Dmg Reduced by 10<br>+25% Resist All<br>+25% FCRate<br>+25% MP<br>+3 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>Cathan's Rule</span><br><span id=stats>Grand Scepter<br>Level 19</span></td>    <td><span id=mods>+1 to All Skills<br>+8% Elemental and Non-Elemental Damage<br>+2/8 Max PhysDamage per Player Level<br>+40% IASpeed<br>+200-300% Enhanced Damage<br>+15% FCRate<br>2 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+100 MP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% Resist Poison</span></td>  </tr>
+	<tr>  <td><span id=sName>Cathan's Mesh</span><br><span id=stats>Chain Mail<br>Level 19</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>-50% Stats Required<br>+20% MP<br>+20% Resist Poison<br>2 Sockets<br>+15% FCRate<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+16/8 Defense per Player level<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% Resist Fire</span></td>  </tr>
+	<tr>  <td><span id=sName>Cathan's Visage</span><br><span id=stats>Mask<br>Level 19</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>+20% Resist Cold<br>+20% Resist Fire<br>2 Sockets<br>+15 Replenish HP<br>+15% Regen MP<br>+10% FCRate<br>+3% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+8/8 Defense per Player level<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% Resist Cold</span></td>  </tr>
+	<tr>  <td><span id=sName>Cathan's Sigil</span><br><span id=stats>Amulet<br>Level 19</span></td>    <td><span id=mods>+30% FHRecovery<br>+1 to All Skills<br>+20% Resist Lightning<br>+5% FCRate<br>+15 Replenish HP<br>+15% Regen MP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+200 ARating<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% Resist Lightning</span></td>  </tr>
+	<tr>  <td><span id=sName>Cathan's Seal</span><br><span id=stats>Ring<br>Level 19</span></td>    <td><span id=mods>+1% Life Steal<br>PhysDmg Reduced by 3<br>+5% FCRate<br>+15 Replenish HP<br>+7-8% Resist All<br>+15% Regen MP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10 Strength<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+10 Vitality<br>+10 Dexterity</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Berserker's Garb</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName>40% Reduced Poison Length<br>+8 to Min Phys Damage<br>+10 to Max Phys Damage<br>+30 Vitality<br>+15% Resist Phys<br>+1 to All Skills<br>+15% Resist All<br>50% chance to Open Wounds</span></td>  </tr>
+	<tr>  <td><span id=sName>Berserker's Headgear</span><br><span id=stats>Crown<br>Level 27</span></td>    <td><span id=mods>+200-250% Enhanced Defense<br>+25% Resist Fire<br>+50% Enhanced Damage<br>2 Sockets<br>+25% Resist Cold<br>+2% Life Steal<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+16/2 ARating per Player Level</span></td>  </tr>
+	<tr>  <td><span id=sName>Berserker's Hauberk</span><br><span id=stats>Splint Mail<br>Level 24</span></td>    <td><span id=mods>Mag and Elem Dmg Reduced by 10-15<br>+50% Enhanced Damage<br>2 Sockets<br>+25% Resist Lightning<br>+25% Resist Poison<br>+200-250% Enhanced Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+24/8 Defense per Player level</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Death's Disguise</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+3% Life Steal<br>33% chance to Open Wounds<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+100% ARating<br>+4 to Min Phys Damage<br>+25% Resist All<br>+15% FCRate<br>+10% Mana Steal<br>+2 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>Death's Hand</span><br><span id=stats>Gloves(L)<br>Level 8</span></td>    <td><span id=mods>+50% Resist Poison<br>50% Reduced Poison Length<br>+20% FHRecovery<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+25% IASpeed</span></td>  </tr>
+	<tr>  <td><span id=sName>Death's Guard</span><br><span id=stats>Sash(L)<br>Level 8</span></td>    <td><span id=mods>+25 Defense<br>Cannot Be Frozen<br>+5% FCRate<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+15% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Death's Touch</span><br><span id=stats>Kriss<br>Level 17</span></td>    <td><span id=mods>+150-200% Enhanced Damage<br>+2% Life Steal<br>+20% chance for Deadly Strike<br>+100 ARating<br>+80% IASpeed<br>Indestructible<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+25-75 Cold Damage, Chills 75/25 seconds<br>+25-75 Fire Damage</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Angelical Raiment</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+15 Vitality<br>+15 Energy<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15 Dexterity<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+15% Resist All<br>Cannot Be Frozen<br>+50% Magic Find<br>+20% Regen MP<br>+2 to All Skills<br>+50% Enhanced Damage vs Undead<br>+50% Enhanced Damage vs Demons<br>+20 Replenish HP</span></td>  </tr>
+	<tr>  <td><span id=sName>Angelic Sickle</span><br><span id=stats>Crystal Sword<br>Level 17</span></td>    <td><span id=mods>+100 ARating<br>+200% Enhanced Damage vs Undead<br>+80% IASpeed<br>+100% Enhanced Damage<br>+100% Enhanced Damage vs Demons<br>+2/8 Max PhysDamage per Player Level<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+2 Phys Damage<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+20% IASpeed</span></td>  </tr>
+	<tr>  <td><span id=sName>Angelic Mantle</span><br><span id=stats>Ring Mail<br>Level 17</span></td>    <td><span id=mods>PhysDmg Reduced by 6<br>+200-300% Enhanced Defense<br>+15% Resist All<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+150 Defense<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+50% Resist Fire</span></td>  </tr>
+	<tr>  <td><span id=sName>Angelic Halo</span><br><span id=stats>Ring<br>Level 17</span></td>    <td><span id=mods>+20 Replenish HP<br>+20% Regen MP<br>+40 HP<br>+40 MP<br>+5% FCRate<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+24/2 ARating per Player Level<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25% Magic Find</span></td>  </tr>
+	<tr>  <td><span id=sName>Angelic Wings</span><br><span id=stats>Amulet<br>Level 17</span></td>    <td><span id=mods>+6 Light Radius<br>25% HP lost goes to MP<br>+100% Enhanced Damage vs Demons<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+75 HP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+1 to All Skills</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Natalya's Odium</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+40 Dexterity<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25 Energy<br>+25 Vitality<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Assassin Skills<br>+10% Resist Phys<br>+5% Life Steal<br>+40 Strength<br>+5% HP<br>+100% Enhanced Damage vs Demons<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Natalya's Totem</span><br><span id=stats>Shako<br>Level 83</span></td>    <td><span id=mods>+400 Defense<br>+25 Dexterity<br>+25 Strength<br>+30% Resist All<br>Mag and Elem Dmg Reduced by 25<br>+2 to Assassin Skills<br>3 Sockets<br>-50% Stats Required</span></td>  </tr>
+	<tr>  <td><span id=sName>Natalya's Mark</span><br><span id=stats>Feral Claws<br>Level 83</span></td>    <td><span id=mods>+80% IASpeed<br>+400-500% Enhanced Damage<br>+3/8 Max PhysDamage per Player Level<br>+8% Elemental and Non-Elemental Damage<br>-50% Stats Required<br>4% chance for Crushing Blow<br>3 Sockets</span></td>  </tr>
+	<tr>  <td><span id=sName>Natalya's Shadow</span><br><span id=stats>Dusk Shroud<br>Level 88</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+15% HP<br>+2 to Assassin Skills<br>50% Reduced Poison Length<br>+50-60% Resist Poison<br>3 Sockets<br>+3% Elemental and Non-Elemental Damage<br>+2 to random skill between Fire Trauma and Phoenix Strike</span></td>  </tr>
+	<tr>  <td><span id=sName>Natalya's Soul</span><br><span id=stats>Mirrored Boots<br>Level 83</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+50% FR/Walk<br>+20-30 Strength<br>+20-30% Resist Fire<br>+20-30% Resist Cold<br>+20-30% Resist Lightning<br>+3 to Martial Arts Skills (Assassin only)<br>+4-5% Elemental and Non-Elemental Damage<br>-50% Stats Required<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% Enhanced Damage</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Aldur's Watchtower</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+200 ARating<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25 Vitality<br>+40 Strength<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+40% Resist All<br>+4 to Druid Skills<br>+10% HP<br>+5% Life Steal<br>+100% Enhanced Damage vs Demons<br>+10% Resist Phys<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Aldur's Stony Gaze</span><br><span id=stats>Blood Spirt<br>Level 80</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>Prevents Monster HP Regen<br>+33% FHRecovery<br>+30% Resist Cold<br>3 Sockets<br>+2 to Shapeshifting Skills (Druid only)<br>+10-15% Resist Phys<br>+100 HP<br>+2 to Druid Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>Aldur's Deception</span><br><span id=stats>Shadow Plate<br>Level 88</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+3 to Shapeshifting Skills (Druid only)<br>+20% Resist Phys<br>+30-40% Resist Lightning<br>+3% Elemental and Non-Elemental Damage<br>+15% HP<br>3 Sockets<br>+2 to random skill between Raven and Hurricane</span></td>  </tr>
+	<tr>  <td><span id=sName>Aldur's Gauntlet</span><br><span id=stats>Vambraces<br>Level 80</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+2 to Shapeshifting Skills (Druid only)<br>+4% Life Steal<br>+100 HP<br>+100% Enhanced Damage vs Demons<br>+10% Mana Steal<br>+30-40% Resist Poison<br>+100-200 MP<br>+50 HP per kill<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Elemental and Non-Elemental Damage<br></span><span id=stats>3 Pieces:</span><br><span id=sName>1% chance for Crushing Blow</span></td>  </tr>
+	<tr>  <td><span id=sName>Aldur's Advance</span><br><span id=stats>Scarabshell Boots<br>Level 80</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+100 HP<br>25% HP lost goes to MP<br>+50% FR/Walk<br>+33% FBRate<br>+30% Resist Fire<br>+33% FHRecovery<br>+5% Resist Phys<br>+15 Strength<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Elemental and Non-Elemental Damage</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Immortal King</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+250 ARating<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+3 to Mastery Skills (Barbarian only)<br>+25 Dexterity<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Barbarian Skills<br>+5% Life Steal<br>+10% Resist Phys<br>+50 Strength<br>2% chance for Crushing Blow<br>+5% HP<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Immortal King's Will</span><br><span id=stats>Conquerer Crown<br>Level 86</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+2 to Barbarian Skills<br>+100-200 ARating<br>+40-50% Resist Fire<br>3 Sockets<br>+40-50% Resist Lightning<br>+75% Enhanced Damage<br>+10% Resist Phys<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% IASpeed</span></td>  </tr>
+	<tr>  <td><span id=sName>Immortal King's Soul Cage</span><br><span id=stats>Sacred Armor<br>Level 88</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+2 to Barbarian Skills<br>+20-30% Resist Poison<br>+15% HP<br>+30% Resist All<br>+20% Resist Phys<br>3 Sockets<br>+2 to random skill between Bash and Battle Command<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+55% FHRecovery</span></td>  </tr>
+	<tr>  <td><span id=sName>Immortal King's Forge</span><br><span id=stats>Ogre Gauntlets<br>Level 78</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+30% Resist Cold<br>+15-25 Dexterity<br>+40% IASpeed<br>+2% Life Steal<br>+3 to Warcry Skills (Barbarian only)<br>+15-25 Vitality<br>+5% Magic Skill Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+25% FCRate<br>+5% Mana Steal</span></td>  </tr>
+	<tr>  <td><span id=sName>Immortal King's Pillar</span><br><span id=stats>Myrmidon Greaves<br>Level 78</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+50% FR/Walk<br>+100% ARating<br>+100 HP<br>+3 to Combat Skills (Barbarian only)<br>+15-25 Dexterity<br>Cannot Be Frozen<br>+5% Magic Skill Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+25% FCRate</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Tal Rasha's Wrappings</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+100 Replenish HP<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25% MP<br>+15% FCRate<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Sorceress Skills<br>+15% FCRate<br>+10% Cast Level 1 Lower ResistCTC on Struck<br>+25% MP<br>+5% HP<br>Casting Delays Reduced by 15%<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Tal Rasha's Fire-Spun Cloth</span><br><span id=stats>Mithril Coil<br>Level 75</span></td>    <td><span id=mods>+1 to Sorceress Skills<br>+200 MP<br>+40-50% Resist Poison<br>-60% Stats Required<br>+4-5% Fire Damage<br>+4-5% Cold Damage<br>+4-5% Lightning Damage<br>+15-25% FCRate<br>+5-10% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Tal Rasha's Lidless Eye</span><br><span id=stats>Dimensional Shard<br>Level 88</span></td>    <td><span id=mods>+100 HP<br>+100 MP<br>+30 Energy<br>+30-40% FCRate<br>+6 to Sorceress Skills<br>3 Sockets<br>+4% Fire, Cold, and Lightning Damage<br>+40 HP per kill</span></td>  </tr>
+	<tr>  <td><span id=sName>Tal Rasha's Howling Wind</span><br><span id=stats>Lacquered Plate<br>Level 82</span></td>    <td><span id=mods>-60% Stats Required<br>+1 to Sorceress Skills<br>+25-35% Resist All<br>25-35% Reduced Poison Length<br>+2 to random skill between Fire Bolt and Cold Mastery<br>+400-500 Defense<br>3 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>Mag and Elem Dmg Reduced by 30</span></td>  </tr>
+	<tr>  <td><span id=sName>Tal Rasha's Horadric Crest</span><br><span id=stats>Demonhead<br>Level 75</span></td>    <td><span id=mods>+50-100 MP<br>+50-100 HP<br>+100-200 Defense<br>+15-25% Resist All<br>+30-40 HP per kill<br>+2 to Sorceress Skills<br>3 Sockets<br>+15-25% FCRate<br>-60% Stats Required</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Griswold's Legacy</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>Mag and Elem Dmg Reduced by 50<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+50 HP<br>+40 Dexterity<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Paladin Skills<br>+10% Resist Phys<br>+5% Life Steal<br>+5% HP<br>+40 Strength<br>+100% Enhanced Damage vs Demons<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Griswold's Valor</span><br><span id=stats>Corona<br>Level 84</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>Mag and Elem Dmg Reduced by 15-25<br>3 Sockets<br>+2 to Paladin Skills<br>+75% Magic Find<br>+25% Resist All<br>+12% Mana Steal<br>+10% Resist Phys<br>+2% Life Steal</span></td>  </tr>
+	<tr>  <td><span id=sName>Griswold's Heart</span><br><span id=stats>Archon Plate<br>Level 85</span></td>    <td><span id=mods>+400-500% Enhanced Defense<br>+2 to Defensive Aura Skills (Paladin only)<br>3 Sockets<br>+50% FHRecovery<br>+2 to Paladin Skills<br>+20% Resist Phys<br>+15% HP<br>+2 to random skill between Sacrifice and Salvation<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>Mag and Elem Dmg Reduced by 30</span></td>  </tr>
+	<tr>  <td><span id=sName>Griswolds's Redemption</span><br><span id=stats>Caduceus<br>Level 88</span></td>    <td><span id=mods>+400-500% Enhanced Damage<br>+60% IASpeed<br>+400-500% Enhanced Damage vs Undead<br>+3 to Paladin Skills<br>4 Sockets<br>+25% chance for Deadly Strike<br>+3% Life Steal<br>+30-60 Phys Damage<br>4% chance for Crushing Blow</span></td>  </tr>
+	<tr>  <td><span id=sName>Griswold's Honor</span><br><span id=stats>Sacred Rondache<br>Level 80</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>3 Sockets<br>+100% FBRate<br>+50% ICBlocking<br>+45% Resist All<br>+3 to Paladin Skills<br>Mag and Elem Dmg Reduced by 15-25<br>+10-15 Phys Damage<br>+10% Resist Phys</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Trang-Oul's Avatar</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+50 Energy<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% FCRate<br>+25 Vitality<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Necromancer Skills<br>+5% HP<br>+30% FR/Walk<br>+15% FCRate<br>+100% Enhanced Damage vs Demons<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Trang-Oul's Guise</span><br><span id=stats>Bone Visage<br>Level 82</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+33% FHRecovery<br>+100 MP<br>+100 Replenish HP<br>-40% Stats Required<br>+2 to Necromancer Skills<br>3 Sockets<br>+30-40% Resist Fire</span></td>  </tr>
+	<tr>  <td><span id=sName>Trang-Oul's Scales</span><br><span id=stats>Boneweave<br>Level 80</span></td>    <td><span id=mods>-60% Stats Required<br>+25-35% Resist All<br>25-35% Reduced Poison Length<br>+3 to Summoning Skills (Necromancer only)<br>+40% FR/Walk<br>+300-400% Enhanced Defense<br>+2 to random skill between Amplify Damage and Revive<br>3 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+100 HP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+30% FCRate</span></td>  </tr>
+	<tr>  <td><span id=sName>Trang-Oul's Wing</span><br><span id=stats>Succubae Skull<br>Level 88</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+3 to Necromancer Skills<br>-60% Stats Required<br>+40-50% ICBlocking<br>+3% Elemental and Non-Elemental Damage<br>+40-50% FBRate<br>+3 to Poison and Bone Skills (Necromancer only)<br>3 Sockets<br>+30-40% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Trang-Oul's Claws</span><br><span id=stats>Vampirebone Gloves<br>Level 75</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+15-25% FCRate<br>+40-50% Resist Lightning<br>+3 to Curse Skills (Necromancer only)<br>+30% IASpeed<br>+20 HP per kill<br>+4-5% Elemental and Non-Elemental Damage<br>+100 Replenish HP<br>+2 to random skill between Amplify Damage and Revive</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>M'avina's Battle Hymn</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% FR/Walk<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+40 Dexterity<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Amazon Skills<br>+5% HP<br>+5% Life Steal<br>+100% IASpeed<br>+25-50 Phys Damage<br>+100% Enhanced Damage vs Demons<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>M'avina's True Sight</span><br><span id=stats>Diadem<br>Level 80</span></td>    <td><span id=mods>+25% Resist All<br>+30% FR/Walk<br>+30% IASpeed<br>+140-180 MP<br>+2 to Amazon Skills<br>+140-180 HP<br>3 Sockets<br>+40 Dexterity<br>+50% FHRecovery<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+15 Dexterity</span></td>  </tr>
+	<tr>  <td><span id=sName>M'avina's Embrace</span><br><span id=stats>Wire Fleece<br>Level 80</span></td>    <td><span id=mods>-60% Stats Required<br>+30% Resist All<br>+2 to random skill between Magic Arrow and Lightning Fury<br>+2 to Amazon Skills<br>+75-100% Enhanced Damage<br>+300-400% Enhanced Defense<br>3 Sockets<br>+10% HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+200 HP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+20% Resist Magic</span></td>  </tr>
+	<tr>  <td><span id=sName>M'avina's Tenet</span><br><span id=stats>Vampirefang Belt<br>Level 80</span></td>    <td><span id=mods>+20% Resist All<br>+30% FR/Walk<br>+5% Mana Steal<br>+80-100 HP<br>+4-5% Elemental and Non-Elemental Damage<br>+1 to Amazon Skills<br>+300-400% Enhanced Defense<br>Cannot Be Frozen<br>+30% Missiles Pierce Targets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+15 Dexterity</span></td>  </tr>
+	<tr>  <td><span id=sName>M'avina's Caster</span><br><span id=stats>Grand Matron Bow<br>Level 88</span></td>    <td><span id=mods>+400-500% Enhanced Damage<br>+60% IASpeed<br>+15% Resist All<br>+40% FCRate<br>+30-50 to Max Phys Damage<br>+30-40 Dexterity<br>4 Sockets<br>+4 to Amazon Skills</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>The Disciple</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>Mag and Elem Dmg Reduced by 25<br>+20 Dexterity<br></span><span id=stats>3 Pieces:</span><br><span id=sName>PhysDmg Reduced by 25<br>+20 Strength<br></span><span id=stats>4 Pieces:</span><br><span id=sName>+20 Energy<br>+20 Vitality<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+40% Resist All<br>+5 to All Skills<br>+50 Energy<br>+250 HP<br>+10% HP<br>+5% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Telling of Beads</span><br><span id=stats>Amulet<br>Level 65</span></td>    <td><span id=mods>+30% Resist Poison<br>+2 to All Skills<br>+30% Resist Cold<br>+50 Replenish HP<br>+15-25 Vitality<br>+50-100 MP<br>+15-25% FCRate<br>+10% MP<br>+4-5% Physical Skill Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Laying of Hands</span><br><span id=stats>Bramble Mitts<br>Level 70</span></td>    <td><span id=mods>+50-100 Defense<br>+15-25% FCRate<br>+60% Resist Fire<br>+30-40 HP per kill<br>+4-5% Cold Damage<br>+30% Resist Lightning<br>+2-4 to Holy Bolt (Class Only)<br>+10% MP<br>+5% HP</span></td>  </tr>
+	<tr>  <td><span id=sName>Rite of Passage</span><br><span id=stats>Demonhide Boots<br>Level 55</span></td>    <td><span id=mods>+50-100 Defense<br>+40% FR/Walk<br>Cannot Be Frozen<br>+30% Resist Fire<br>+30% Resist Lightning<br>+20 MP per Kill<br>+1 to All Skills<br>+4-5% Poison Damage<br>+4-5% Magic Skill Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% MP</span></td>  </tr>
+	<tr>  <td><span id=sName>Spiritual Custodian</span><br><span id=stats>Dusk Shroud<br>Level 70</span></td>    <td><span id=mods>+420 Defense<br>+30% Resist Poison<br>+2 to All Skills<br>+10% Cast Level 1 Lower ResistCTC on Struck<br>4 Sockets<br>+10% HP<br>+30% FCRate<br>+25% MP</span></td>  </tr>
+	<tr>  <td><span id=sName>Credendum</span><br><span id=stats>Mesh Belt<br>Level 55</span></td>    <td><span id=mods>+50-100 Defense<br>+15 Strength<br>+15 Dexterity<br>+15% Resist All<br>+4-5% Lightning Damage<br>+200% Enhanced Damage vs Demons<br>+50% FHRecovery<br>+10% MP<br>+4-5% Fire Damage</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Heaven's Brethren</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% chance for Deadly Strike<br>+20 Strength<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+20% Resist All<br>+2 to All Skills<br>+3% Life Steal<br>1% chance for Crushing Blow<br>+50% FR/Walk<br>+5% HP<br>+15 to Strength, Dexterity, Vitality, and Energy</span></td>  </tr>
+	<tr>  <td><span id=sName>Heaven's Taebaek</span><br><span id=stats>Hurlbat<br>Level 50</span></td>    <td><span id=mods>+400-450% Enhanced Damage<br>+2/8 Max PhysDamage per Player Level<br>+60% IASpeed<br>3 Sockets<br>100/100 Seconds per +1 Quantity<br>+1 to Barbarian Skills<br>+200-300% Enhanced Damage vs Undead<br>+10-20 Phys Damage<br>+40-50% Missiles Pierce Targets</span></td>  </tr>
+	<tr>  <td><span id=sName>Haemosu's Adament</span><br><span id=stats>War Dart<br>Level 50</span></td>    <td><span id=mods>+400-450% Enhanced Damage<br>+2/8 Max PhysDamage per Player Level<br>+40% IASpeed<br>2 Sockets<br>100/100 Seconds per +1 Quantity<br>+3-4 to Shout (Class Only)<br>+200-300% Enhanced Damage vs Demons<br>+10-20 Phys Damage<br>+40-50% Missiles Pierce Targets</span></td>  </tr>
+	<tr>  <td><span id=sName>Ondal's Almighty</span><br><span id=stats>Jawbone Visor<br>Level 50</span></td>    <td><span id=mods>+100-200 Defense<br>+2 to Barbarian Skills<br>+10-15 Strength<br>+10-15 Dexterity<br>+30% FHRecovery<br>3 Sockets<br>+15-25% Resist All<br>+50-100 HP</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Orphan's Call</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+150 HP<br>+35% Enhanced Damage<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+15 Strength<br>+30 Dexterity<br>+4-8 Phys Damage<br>+3 to All Skills<br>+40% Resist All<br>2% chance for Crushing Blow<br>+35% Enhanced Damage<br>+150 HP</span></td>  </tr>
+	<tr>  <td><span id=sName>Guillaume's Face</span><br><span id=stats>Grim Helm<br>Level 58</span></td>    <td><span id=mods>+100-200 Defense<br>+30% FHRecovery<br>+1 to All Skills<br>+15% chance for Deadly Strike<br>+15 Strength<br>1% chance for Crushing Blow<br>+100 HP<br>3 Sockets<br>+10% Resist Phys</span></td>  </tr>
+	<tr>  <td><span id=sName>Wilhelm's Pride</span><br><span id=stats>Battle Belt<br>Level 58</span></td>    <td><span id=mods>+100-200 Defense<br>+5% Mana Steal<br>+20% Resist Magic<br>+5% Life Steal<br>+1 to All Skills<br>40% Reduced Poison Length<br>+10% Resist Phys<br>+4-8 Phys Damage<br>+10% chance for Deadly Strike</span></td>  </tr>
+	<tr>  <td><span id=sName>Wihtstan's Guard</span><br><span id=stats>Barbed Shield<br>Level 58</span></td>    <td><span id=mods>+100-200 Defense<br>+40% FBRate<br>+40% ICBlocking<br>Cannot Be Frozen<br>Mag and Elem Dmg Reduced by 10-15<br>3 Sockets<br>+15% Resist Phys<br>+4-8 Phys Damage<br>+10% chance for Deadly Strike</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>gobo</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Resist All<br>+200 ARating<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+2 to All Skills<br>+3% Life Steal<br>+50% FR/Walk<br>+20% Resist All<br>+25% Resist Magic<br>+10% Resist Phys</span></td>  </tr>
+	<tr>  <td><span id=sName>Hwanin's Splendor</span><br><span id=stats>Grand Crown<br>Level 60</span></td>    <td><span id=mods>+50 Replenish HP<br>Mag and Elem Dmg Reduced by 25<br>+40% Resist Cold<br>+100% Enhanced Defense<br>3 Sockets<br>+1 to All Skills<br>+5% Resist Phys<br>+40% Resist Lightning<br>+15 Strength<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50 HP<br>+50 HP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+50 HP</span></td>  </tr>
+	<tr>  <td><span id=sName>Hwanin's Refuge</span><br><span id=stats>Tigulated Mail<br>Level 60</span></td>    <td><span id=mods>+250% Enhanced Defense<br>+100 HP<br>+10% Resist Phys<br>+10% Cast Level 35 Frost NovaCTC on Struck<br>+1 to All Skills<br>3 Sockets<br>+20-30% Resist All<br>+15% HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50 HP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+50 HP</span></td>  </tr>
+	<tr>  <td><span id=sName>Hwanin's Seal</span><br><span id=stats>War Belt<br>Level 60</span></td>    <td><span id=mods>+200-400 Fire Damage<br>Prevents Monster HP Regen<br>+12/8 Defense per Player level<br>25% HP lost goes to MP<br>+15% Resist All<br>+200-400 Cold Damage, Chills 200/25 seconds<br>+5% HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50 HP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+50 HP</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Sazabi's Grand Tribute</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FR/Walk<br>+30% FCRate<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+50% Resist All<br>+3 to All Skills<br>+10% HP<br>+20% MP<br>+10% chance for Deadly Strike<br>Mag and Elem Dmg Reduced by 25<br>+5% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Sazabi's Cobalt Redeemer</span><br><span id=stats>Cryptic Sword<br>Level 82</span></td>    <td><span id=mods>+400-500% Enhanced Damage<br>+250-500 Cold Damage, Chills 200/25 seconds<br>+100% IASpeed<br>+250-500 Fire Damage<br>+30 Dexterity<br>+5 Strength<br>4 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>4% chance for Crushing Blow</span></td>  </tr>
+	<tr>  <td><span id=sName>Sazabi's Ghost Liberator</span><br><span id=stats>Balrog Skin<br>Level 78</span></td>    <td><span id=mods>+400 Defense<br>+50% FHRecovery<br>+30 Strength<br>+300% Enhanced Damage vs Demons<br>+300 HP<br>+15% Resist Phys<br>Mag and Elem Dmg Reduced by 25-50<br>3 Sockets<br>+1 to All Skills<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% HP</span></td>  </tr>
+	<tr>  <td><span id=sName>Sazabi's Mental Sheath</span><br><span id=stats>Armet<br>Level 76</span></td>    <td><span id=mods>+100 Defense<br>+1 to All Skills<br>+30% Resist Fire<br>+30% Resist Lightning<br>+30% Resist Cold<br>3 Sockets<br>+10% HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Resist Phys<br>+1 to All Skills</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Bul-Kathos' Children</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName>+20% Resist All<br>+2 to All Skills<br>+10% Mana Steal<br>+5% Resist Phys<br>+100% Enhanced Damage vs Undead<br>+100% Enhanced Damage vs Demons<br>1% chance for Crushing Blow<br>+10 to Strength, Dexterity, Vitality, and Energy</span></td>  </tr>
+	<tr>  <td><span id=sName>Bul-Kathos' Sacred Charge</span><br><span id=stats>Colossus Blade<br>Level 82</span></td>    <td><span id=mods>+2 to Barbarian Skills<br>+25% Resist All<br>+50% IASpeed<br>Indestructible<br>+480-500% Enhanced Damage<br>+33-50 Phys Damage<br>+200 HP<br>5% chance for Crushing Blow<br>+25% chance for Deadly Strike<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Life Steal</span></td>  </tr>
+	<tr>  <td><span id=sName>Bul-Kathos' Tribal Guardian</span><br><span id=stats>Colossal Sword<br>Level 82</span></td>    <td><span id=mods>+25% Resist All<br>+25% chance for Deadly Strike<br>+50% IASpeed<br>Indestructible<br>+480-500% Enhanced Damage<br>+33-50 Phys Damage<br>+200 MP<br>+2 to Barbarian Skills<br>5% chance for Crushing Blow<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Life Steal</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Cow King's Leathers</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+20% Resist All<br>+30 Energy<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+100 HP<br>+25 Strength<br>+25 Dexterity<br>+200% Gold Find<br>+100% Magic Find<br>+10% Cast Level 1 Lower ResistCTC on Struck<br>+25% FCRate<br>+2 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>Cow King's Horns</span><br><span id=stats>War Hat<br>Level 44</span></td>    <td><span id=mods>+50-100 Defense<br>Cannot Be Frozen<br>35% HP lost goes to MP<br>+1 to All Skills<br>+50% Magic Find</span></td>  </tr>
+	<tr>  <td><span id=sName>Cow King's Hide</span><br><span id=stats>Demonhide Armor<br>Level 44</span></td>    <td><span id=mods>+20% Resist All<br>+300-400% Enhanced Defense<br>+50 HP<br>2 Sockets<br>+50-100% Gold Find<br>+1 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>Cow King's Hoofs</span><br><span id=stats>Demonhide Gloves<br>Level 44</span></td>    <td><span id=mods>+50-100 Defense<br>+15-25% FCRate<br>+50% Magic Find<br>+10 Dexterity<br>+1 to All Skills</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Naj's Ancient Set</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+50 Energy<br>+50 HP<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+3 to All Skills<br>+50% Regen MP<br>+30% Resist All<br>+25% FCRate<br>+30% Resist Magic<br>+25% MP<br>+5% HP<br>+5% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Naj's Puzzler</span><br><span id=stats>Divine Scepter<br>Level 60</span></td>    <td><span id=mods>+60% IASpeed<br>+300-400% Enhanced Damage<br>+25-35% FCRate<br>+1 to All Skills<br>3 Sockets</span></td>  </tr>
+	<tr>  <td><span id=sName>Naj's Light Plate</span><br><span id=stats>Mage Plate<br>Level 70</span></td>    <td><span id=mods>+50% Magic Find<br>+100 HP<br>+30% Resist All<br>50% HP lost goes to MP<br>+1 to All Skills<br>+100 Defense<br>+15-25% FCRate<br>3 Sockets</span></td>  </tr>
+	<tr>  <td><span id=sName>Naj's Circlet</span><br><span id=stats>Coronet<br>Level 70</span></td>    <td><span id=mods>+50-100 Defense<br>+100 MP<br>+30% FR/Walk<br>+25% Resist All<br>+15-25% FCRate<br>+2 to All Skills<br>3 Sockets</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>McAuley's Folly</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Resist All<br>+25 Energy<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+10% Resist All<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+20% Resist All<br>+6% Cast Level 1 608 on Melee hit<br>+100 HP<br>+10% Cast Level 1 Lower ResistCTC on Struck<br>Cannot Be Frozen<br>+1 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>McAuley's Paragon</span><br><span id=stats>SiegeHelm<br>Level 40</span></td>    <td><span id=mods>+50-100 Defense<br>2 Sockets<br>+10% Resist Poison<br>+30% FHRecovery<br>+25-50% Gold Find<br>+30% FBRate<br>-33% Stats Required<br>+10-20% MP<br>+3-4% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30 Replenish HP<br>+1 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>McAuley's Riprap</span><br><span id=stats>SiegeBoots<br>Level 40</span></td>    <td><span id=mods>+50% FR/Walk<br>+10% Resist Cold<br>+10 Strength<br>+15 Dexterity<br>1% chance for Crushing Blow<br>-33% Stats Required<br>+50-100 Defense<br>+10-20% MP<br>+3-4% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Mana Steal<br>+1 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>McAuley's Taboo</span><br><span id=stats>SiegeGauntlets<br>Level 40</span></td>    <td><span id=mods>+50-100 Defense<br>+10% FCRate<br>+30% IASpeed<br>+40 HP<br>+30% FHRecovery<br>-33% Stats Required<br>+10% Resist Lightning<br>+10-20% MP<br>+3-4% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+2% Life Steal<br>+1 to All Skills</span></td>  </tr>
+	<tr>  <td><span id=sName>McAuley's Superstition</span><br><span id=stats>SiegeBelt<br>Level 40</span></td>    <td><span id=mods>+25% Regen MP<br>+10% FCRate<br>+15% IASpeed<br>+80 MP<br>-33% Stats Required<br>+10% Resist Fire<br>+10-20% MP<br>+3-4% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% Regen MP<br>+1 to All Skills</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>SoulmancerSet</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+35% Resist All<br>+50% Enhanced Damage<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25% Resist All<br>+50% Enhanced Damage<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+4 to All Skills<br>+50% Enhanced Damage<br>+10% Resist Phys<br>Cannot Be Frozen<br>+20% HP<br>+40% Resist All<br>+50% Magic Find<br>+100% Gold Find</span></td>  </tr>
+	<tr>  <td><span id=sName>SoulmancerHelm</span><br><span id=stats>Adamant Helm<br>Level 90</span></td>    <td><span id=mods>+200-300% Enhanced Defense<br>+200 HP<br>+1-2 to All Skills<br>+2 to random skill between Magic Arrow and Phoenix Strike<br>+30 Vitality<br>+5% Resist Phys<br>+3% Elemental and Non-Elemental Damage<br>3 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% IASpeed<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% chance for Deadly Strike</span></td>  </tr>
+	<tr>  <td><span id=sName>SoulmancerGloves</span><br><span id=stats>Adamant Gauntlets<br>Level 90</span></td>    <td><span id=mods>+200-300% Enhanced Defense<br>PhysDmg Reduced by 20-30<br>+1-2 to All Skills<br>+2 to random skill between Magic Arrow and Phoenix Strike<br>+30 Strength<br>+5% Resist Phys<br>+5% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FBRate<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+5% Life Steal</span></td>  </tr>
+	<tr>  <td><span id=sName>SoulmancerBoots</span><br><span id=stats>Adamant Boots<br>Level 90</span></td>    <td><span id=mods>+200-300% Enhanced Defense<br>+50% FR/Walk<br>+1-2 to All Skills<br>+2 to random skill between Magic Arrow and Phoenix Strike<br>+30 Dexterity<br>+5% Resist Phys<br>+5% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FHRecovery<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+200 MP</span></td>  </tr>
+	<tr>  <td><span id=sName>SoulmancerBelt</span><br><span id=stats>Adamant Belt<br>Level 90</span></td>    <td><span id=mods>+200-300% Enhanced Defense<br>Mag and Elem Dmg Reduced by 20-30<br>+1-2 to All Skills<br>+2 to random skill between Magic Arrow and Phoenix Strike<br>+30 Energy<br>+5% Resist Phys<br>+5% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FCRate<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+5% Mana Steal</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>ElementalSet</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+100 HP<br>+100 MP<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+25% Resist All<br>+20 Energy<br>+20% MP<br>Cannot Be Frozen<br>+2 to All Skills<br>+5% HP</span></td>  </tr>
+	<tr>  <td><span id=sName>FireRing</span><br><span id=stats>Ring<br>Level 75</span></td>    <td><span id=mods>+3% Life Steal<br>+250-500 Fire Damage<br>+50-60% Resist Fire<br>+1-2 to Fire Skills<br>+40-100 HP<br>+10-20% MP<br>+15-25% FCRate<br>+5-10 Strength</span></td>  </tr>
+	<tr>  <td><span id=sName>IceRing</span><br><span id=stats>Ring<br>Level 75</span></td>    <td><span id=mods>+3% Life Steal<br>+250-500 Cold Damage, Chills 200/25 seconds<br>+50-60% Resist Cold<br>+1-2 to Cold Skills<br>+40-100 HP<br>+10-20% MP<br>+30% FHRecovery<br>+5-10 Dexterity</span></td>  </tr>
+	<tr>  <td><span id=sName>LitRing</span><br><span id=stats>Amulet<br>Level 75</span></td>    <td><span id=mods>+3% Life Steal<br>+1-1000 Lightning Damage<br>+50-60% Resist Lightning<br>+1-2 to Ltng Skills<br>+40-100 HP<br>+10-20% MP<br>+30% FR/Walk<br>+5-10 Vitality</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>LachdananRelics</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>Cannot Be Frozen<br>+15% Resist All<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+2 to All Skills<br>+30% FR/Walk<br>+100-200 Fire, Cold, Lightning Damage, Chills /25 sec<br>+1 to oSkill Vengeance<br>15% chance to Open Wounds<br>+20% Resist All<br>+20% Resist Magic</span></td>  </tr>
+	<tr>  <td><span id=sName>LachdananConviction</span><br><span id=stats>War Axe<br>Level 35</span></td>    <td><span id=mods>+150-200% Enhanced Damage<br>+5% Mana Steal<br>+60% IASpeed<br>+20-30% Resist Fire<br>4% chance for Crushing Blow<br>3 Sockets<br>+8 to Min Phys Damage<br>Indestructible</span></td>  </tr>
+	<tr>  <td><span id=sName>LachdananFaith</span><br><span id=stats>Amulet<br>Level 35</span></td>    <td><span id=mods>+100 Defense<br>+10% ICBlocking<br>+20% FBRate<br>+20-30% Resist Lightning<br>+50 HP<br>+8% Cast Level 15 603 on Melee hit</span></td>  </tr>
+	<tr>  <td><span id=sName>LachdananVeneration</span><br><span id=stats>Plate Mail<br>Level 32</span></td>    <td><span id=mods>+10% HP<br>Mag and Elem Dmg Reduced by 15<br>+20-30% Resist Cold<br>+2% Life Steal<br>2 Sockets<br>+10-15% Resist Phys<br>+200 Defense</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Drax's Sandstorm</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName>+50 HP per kill<br>+30% FCRate<br>+100% Gold Find<br>+25% Resist All<br>Mag and Elem Dmg Reduced by 20<br>+10 to Strength, Dexterity, Vitality, and Energy<br>+2 to All Skills<br>+50% Magic Find</span></td>  </tr>
+	<tr>  <td><span id=sName>Drax's Anti-Magic Hide</span><br><span id=stats>Mesh Armor<br>Level 55</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+15% Resist All<br>+5% Resist Magic<br>Mag and Elem Dmg Reduced by 10-15<br>3 Sockets<br>+10-15% HP<br>+15 Strength<br>+10 Vitality<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% FR/Walk<br>Cannot Be Frozen</span></td>  </tr>
+	<tr>  <td><span id=sName>Drax's Nullifying Halo</span><br><span id=stats>Sallet<br>Level 55</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+10% Resist All<br>+5% Resist Magic<br>+10 Vitality<br>Mag and Elem Dmg Reduced by 10-15<br>+50 Replenish HP<br>3 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FHRecovery<br>+50 HP</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Decimation</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName>+2 to Barbarian Skills<br>2% chance for Crushing Blow<br>+12-25 Phys Damage<br>+100% Enhanced Damage vs Undead<br>+100% Enhanced Damage vs Demons<br>+5% Life Steal<br>Cannot Be Frozen</span></td>  </tr>
+	<tr>  <td><span id=sName>Paroxysm</span><br><span id=stats>Winged Axe<br>Level 85</span></td>    <td><span id=mods>+1 to Barbarian Skills<br>+400-500% Enhanced Damage<br>+80% IASpeed<br>+20-40 Phys Damage<br>+200-300 ARating<br>+6-8 to Double Throw (Class Only)<br>3 Sockets<br>100/100 Seconds per +1 Quantity<br>+40-50% Missiles Pierce Targets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>4% chance for Crushing Blow</span></td>  </tr>
+	<tr>  <td><span id=sName>Onslaught</span><br><span id=stats>Flying Axe<br>Level 85</span></td>    <td><span id=mods>+6-8 to Weapon Mastery (Class Only)<br>+400-500% Enhanced Damage<br>+6% Cast Level 1 Amplify DamageCTC on Strike<br>+20-40 Phys Damage<br>+25% chance for Deadly Strike<br>Prevents Monster HP Regen<br>2 Sockets<br>100/100 Seconds per +1 Quantity<br>+40-50% Missiles Pierce Targets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>4% chance for Crushing Blow</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Serenthia's Regalia</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>PhysDmg Reduced by 40<br>+33 to Max Phys Damage<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+20% Resist Magic<br>+25 Vitality<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+4 to Amazon Skills<br>+35% Resist All<br>+60 Dexterity<br>+10% Resist Phys<br>+5% Life Steal<br>+5% HP<br>+100% Enhanced Damage vs Demons<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Serenthia's Valor</span><br><span id=stats>Ring<br>Level 80</span></td>    <td><span id=mods>+2 to Passive and Magic Skills (Amazon only)<br>+100% Enhanced Damage vs Demons<br>Cannot Be Frozen<br>+100 HP<br>+40% Resist Poison<br>20-30% Reduced Poison Length<br>+15 Dexterity<br>+10-15% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Serenthia's Vice</span><br><span id=stats>Crusader Gauntlets<br>Level 80</span></td>    <td><span id=mods>+3 to Passive and Magic Skills (Amazon only)<br>+300% Enhanced Defense<br>+20% IASpeed<br>+30 Strength<br>+100 ARating<br>+3% Life Steal<br>+40% Resist Cold<br>+100% Enhanced Damage vs Demons</span></td>  </tr>
+	<tr>  <td><span id=sName>Serenthia's Vengeance</span><br><span id=stats>Matriarchal Pike<br>Level 85</span></td>    <td><span id=mods>+400-500% Enhanced Damage<br>+30-50 Phys Damage<br>+10-15% HP<br>+50% IASpeed<br>+40% Resist Fire<br>4 Sockets<br>Indestructible<br>8% chance for Crushing Blow</span></td>  </tr>
+	<tr>  <td><span id=sName>Serenthia's Visage</span><br><span id=stats>Tiara<br>Level 80</span></td>    <td><span id=mods>+200-300 Replenish HP<br>+300 Defense<br>+40% FR/Walk<br>+10% Mana Steal<br>+3 to Passive and Magic Skills (Amazon only)<br>+40% Resist Lightning<br>3 Sockets<br>+100% Enhanced Damage vs Demons</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Corsair's Rig</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+20% IASpeed<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+40 Energy<br>+25 Vitality<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Assassin Skills<br>+30% FCRate<br>+50% IASpeed<br>+5% HP<br>+100% Enhanced Damage vs Demons<br>+5% HP<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Corsair's Trappings</span><br><span id=stats>Scarab Husk<br>Level 88</span></td>    <td><span id=mods>+2 to Assassin Skills<br>+300-400% Enhanced Defense<br>+30% Resist All<br>+3% Elemental and Non-Elemental Damage<br>+2 to random skill between Fire Trauma and Phoenix Strike<br>+40% IASpeed<br>3 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+40% FCRate</span></td>  </tr>
+	<tr>  <td><span id=sName>Corsair's Wrap</span><br><span id=stats>Mithril Coil<br>Level 80</span></td>    <td><span id=mods>+2 to Assassin Skills<br>+300-400% Enhanced Defense<br>+4-5% Elemental and Non-Elemental Damage<br>+5-10% HP<br>+50-100 HP<br>-50% Stats Required<br>+15-20 Dexterity<br>+50-100% Regen MP</span></td>  </tr>
+	<tr>  <td><span id=sName>Corsair's Medallion</span><br><span id=stats>Amulet<br>Level 80</span></td>    <td><span id=mods>+2 to Assassin Skills<br>+15-25% FCRate<br>+20% FHRecovery<br>+12-16 Dexterity<br>+80 MP<br>+15-20 Strength<br>+15-20 Vitality<br>+20-30% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Corsair's Blade</span><br><span id=stats>Wrist Sword<br>Level 80</span></td>    <td><span id=mods>+4 to Assassin Skills<br>+150-200 MP<br>+4% Elemental and Non-Elemental Damage<br>+80-120 HP<br>+25% FCRate<br>+60% IASpeed<br>3 Sockets<br>+50% Magic Find</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Nature's Guardian</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+40% FHRecovery<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25% MP<br>+30% FCRate<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Druid Skills<br>+5% HP<br>+30% FR/Walk<br>+50% FBRate<br>+100% Enhanced Damage vs Demons<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Eyes of the Earth</span><br><span id=stats>Earth Spirit<br>Level 88</span></td>    <td><span id=mods>+3 to Druid Skills<br>+300-400% Enhanced Defense<br>+3% Elemental and Non-Elemental Damage<br>+15-25% FCRate<br>+30% FHRecovery<br>3 Sockets<br>+30% Resist All<br>+40 Vitality</span></td>  </tr>
+	<tr>  <td><span id=sName>Heart of Fury</span><br><span id=stats>Wyrmhide<br>Level 80</span></td>    <td><span id=mods>+2 to Druid Skills<br>+300-400% Enhanced Defense<br>+25-35% FCRate<br>+20-30% Resist All<br>+2 to random skill between Raven and Hurricane<br>3 Sockets<br>+3% Elemental and Non-Elemental Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FHRecovery</span></td>  </tr>
+	<tr>  <td><span id=sName>Howling Winds</span><br><span id=stats>Spiderweb Sash<br>Level 80</span></td>    <td><span id=mods>+2 to Druid Skills<br>+300-400% Enhanced Defense<br>+100 MP<br>+120-140 HP<br>+20% FCRate<br>+4-5% Elemental and Non-Elemental Damage<br>+30% FR/Walk<br>+50% Regen MP<br>+5% Resist Magic</span></td>  </tr>
+	<tr>  <td><span id=sName>Keeper's Sigil</span><br><span id=stats>Ring<br>Level 80</span></td>    <td><span id=mods>+1 to Druid Skills<br>+20% FCRate<br>+10 Strength<br>+30% FHRecovery<br>+140 Replenish HP<br>+35% Regen MP<br>50% Reduced Poison Length<br>+20-40 HP</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Twin seas</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>Cannot Be Frozen<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+25 Dexterity<br>+25 Vitality<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+35% Resist All<br>+4 to Amazon Skills<br>+10% Resist Phys<br>+40 Dexterity<br>+5% HP<br>+100% Enhanced Damage vs Demons<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Serenity</span><br><span id=stats>Kraken Shell<br>Level 80</span></td>    <td><span id=mods>+2 to Amazon Skills<br>+300-400% Enhanced Defense<br>-50% Stats Required<br>+3% Elemental and Non-Elemental Damage<br>3 Sockets<br>+25-35% Resist All<br>+2 to random skill between Magic Arrow and Lightning Fury</span></td>  </tr>
+	<tr>  <td><span id=sName>Fury</span><br><span id=stats>MatriarchalJavelin<br>Level 80</span></td>    <td><span id=mods>+4 to Amazon Skills<br>+400-500% Enhanced Damage<br>+60% IASpeed<br>4% chance for Crushing Blow<br>+4% Elemental and Non-Elemental Damage<br>+10% Mana Steal<br>+15-25 Phys Damage<br>3 Sockets<br>100/100 Seconds per +1 Quantity</span></td>  </tr>
+	<tr>  <td><span id=sName>Bounty</span><br><span id=stats>Diadem<br>Level 85</span></td>    <td><span id=mods>+2 to Amazon Skills<br>+300-400% Enhanced Defense<br>+30% FR/Walk<br>+3% Lightning Damage<br>+3% Poison Damage<br>+70-80% Magic Find<br>2 Sockets<br>+160 MP<br>+55-60% Resist Fire<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+40% FCRate</span></td>  </tr>
+	<tr>  <td><span id=sName>Famine</span><br><span id=stats>Boneweave Boots<br>Level 80</span></td>    <td><span id=mods>+1 to Amazon Skills<br>+300-400% Enhanced Defense<br>+50% FR/Walk<br>+4-5% Elemental and Non-Elemental Damage<br>+30 Dexterity<br>+55-60% Resist Cold<br>+2% Life Steal<br>-50% Stats Required</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Norrec's Nightmare</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% FHRecovery<br>+15 Dexterity<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+30% IASpeed<br>+30% FR/Walk<br></span><span id=stats>4 Pieces:</span><br><span id=sName>2% chance for Crushing Blow<br>+15-25 Phys Damage<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+3 to All Skills<br>+15% Resist Phys<br>+20% Resist Magic<br>+150% Enhanced Damage<br>+10% Cast Level 30 Corpse Explosion on Kill<br>+40% Resist All<br>+15% HP<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Norrec's Twisted Mind</span><br><span id=stats>Bone Visage<br>Level 83</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+100-200 Defense<br>3 Sockets<br>+1 to All Skills<br>+20-30 Dexterity<br>+1% Cast Level 25 Confuse on Struck<br>+2% Life Steal<br>+15% chance for Deadly Strike<br>+40% Resist Cold<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50 HP per kill</span></td>  </tr>
+	<tr>  <td><span id=sName>Norrec's Corrupt Tenement</span><br><span id=stats>Hellforged Plate<br>Level 83</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>3 Sockets<br>+2 to All Skills<br>+10-15% HP<br>+10-15% Resist Magic<br>+10-15% Resist Phys<br>+15-25% Resist All<br>+2 to random skill between Magic Arrow and Phoenix Strike<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+3% Life Steal</span></td>  </tr>
+	<tr>  <td><span id=sName>Norrec's Unending Avidity</span><br><span id=stats>Troll Nest<br>Level 83</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+100-200 Defense<br>3 Sockets<br>+50-60% ICBlocking<br>+50-60% FBRate<br>+2% Life Steal<br>+40% Resist Poison<br>+20-30 Energy<br>4-6% Reduced Cursed Duration<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>50% Reduced Poison Length</span></td>  </tr>
+	<tr>  <td><span id=sName>Norrec's Affable Pledge</span><br><span id=stats>Colossus Girdle<br>Level 83</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+100-200 Defense<br>+50% FHRecovery<br>+20-30 Vitality<br>+2% Life Steal<br>+100-200 ARating<br>+4-6% Resist Phys<br>+20% IASpeed<br>+40% Resist Fire</span></td>  </tr>
+	<tr>  <td><span id=sName>Norrec's Asperous Journey</span><br><span id=stats>Boneweave Boots<br>Level 83</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+100-200 Defense<br>+50% FR/Walk<br>+20-30 Strength<br>+2% Life Steal<br>Cannot Be Frozen<br>1% chance for Crushing Blow<br>+4-6% Resist Phys<br>+40% Resist Lightning</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Fiacla-Gear's Prowess</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>PhysDmg Reduced by 25<br>Mag and Elem Dmg Reduced by 25<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+3 to All Skills<br>+15% Resist Phys<br>+20% Resist Magic<br>10% Reduced Cursed Duration<br>+500 Defense<br>+40% Resist All<br>+10% chance for Deadly Strike<br>25% chance to Open Wounds</span></td>  </tr>
+	<tr>  <td><span id=sName>Fiacla-Gear's Supremacy</span><br><span id=stats>Great Poleaxe<br>Level 84</span></td>    <td><span id=mods>+400-500% Enhanced Damage<br>+100-150% ARating<br>+100% IASpeed<br>8% chance for Crushing Blow<br>4 Sockets<br>+9/8 Max PhysDamage per Player Level<br>+300-500 Cold Damage, Chills 250/25 seconds<br>+10-15 Strength<br>+33% chance for Deadly Strike<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% HP</span></td>  </tr>
+	<tr>  <td><span id=sName>Fiacla-Gear's Merit</span><br><span id=stats>Archon Plate<br>Level 84</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+100-150% ARating<br>+15-25% Resist All<br>+10-15% HP<br>+10-15% Resist Magic<br>+10-15% Resist Phys<br>+20-30 Dexterity<br>3 Sockets<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% Enhanced Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Fiacla-Gear's Veneration</span><br><span id=stats>Giant Conch<br>Level 84</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+100-150% ARating<br>+10-15% Resist All<br>+1 to All Skills<br>3 Sockets<br>+20-30 Vitality<br>+30% FHRecovery<br>+10-15% chance for Deadly Strike<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FHRecovery</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Order of Conflict</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Resist Phys<br>+20% Resist Magic<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+2 to Assassin Skills<br>+25% IASpeed<br>+25% FR/Walk<br>+30% Resist All<br>+20% FCRate</span></td>  </tr>
+	<tr>  <td><span id=sName>Mage-Slayer's Parity</span><br><span id=stats>Sharkskin Boots<br>Level 46</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>+50% FR/Walk<br>+50% FHRecovery<br>+5-10% Resist All<br>1% chance for Crushing Blow<br>+15% FCRate<br>+50-100 Defense<br>+1 to Assassin Skills<br>+4-5% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Mage-Slayer's Rumination</span><br><span id=stats>Circlet<br>Level 46</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>+20% IASpeed<br>+5-10% Resist All<br>Mag and Elem Dmg Reduced by 5-10<br>3 Sockets<br>+50-100 Defense<br>+15% FCRate<br>+1 to Assassin Skills<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+20% FCRate</span></td>  </tr>
+	<tr>  <td><span id=sName>Mage-Slayer's Cincture</span><br><span id=stats>Sharkskin Belt<br>Level 46</span></td>    <td><span id=mods>+150-200% Enhanced Defense<br>+20% IASpeed<br>+5-10% Resist All<br>Mag and Elem Dmg Reduced by 5-10<br>+2-3% Resist Phys<br>+50-100 Defense<br>+15% FCRate<br>+4-5% Elemental and Non-Elemental Damage<br>+1 to Assassin Skills<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FHRecovery</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Tristram's Artifacts</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% FHRecovery<br>+20 Energy<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+2 to All Skills<br>+30% FCRate<br>Fades Character<br>+10 to Strength, Dexterity, Vitality, and Energy<br>+20% Resist Magic<br>+20% Resist All<br>35% Reduced Poison Length</span></td>  </tr>
+	<tr>  <td><span id=sName>Ogden's Family Crest</span><br><span id=stats>Kite Shield<br>Level 16</span></td>    <td><span id=mods>+100-200% Enhanced Defense<br>+7/8 Defense per Player level<br>+15-20% Resist All<br>Indestructible<br>+15-20 Energy<br>2 Sockets<br>+1 to All Skills<br>+4-5% Magic Skill Damage<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+20% FBRate</span></td>  </tr>
+	<tr>  <td><span id=sName>Pepin's Old Balteus</span><br><span id=stats>Belt(M)<br>Level 16</span></td>    <td><span id=mods>+100-200% Enhanced Defense<br>+5/8 Defense per Player level<br>+10% FCRate<br>+5-10 MP per Kill<br>+25-50 HP<br>+33 Replenish HP<br>+4-5% Magic Skill Damage<br>+5% Resist Phys</span></td>  </tr>
+	<tr>  <td><span id=sName>Gillian's Hand Warmers</span><br><span id=stats>Heavy Gloves<br>Level 16</span></td>    <td><span id=mods>+100-200% Enhanced Defense<br>+5/8 Defense per Player level<br>+30% FHRecovery<br>+3-5 to Strength, Dexterity, Vitality, and Energy<br>+20% ICBlocking<br>+4-5% Magic Skill Damage<br>+10% FCRate<br>Mag and Elem Dmg Reduced by 3-5<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+20% FCRate</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Ascenian Birthright</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+200 ARating<br>+15 Dexterity<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+3 to All Skills<br>+8% Cast Level 50 614 on Melee hit<br>+20% IASpeed<br>2% chance for Crushing Blow<br>+300% Enhanced Damage vs Demons<br>+300% Enhanced Damage vs Undead<br>+30% Resist All</span></td>  </tr>
+	<tr>  <td><span id=sName>Uldyssian's Heroism</span><br><span id=stats>Chaos Armor<br>Level 66</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+20-25% Resist All<br>+10-15% HP<br>+10-15% Resist Magic<br>+10-15% Resist Phys<br>3 Sockets<br>+10% Cast Level 40 War CryCTC on Struck<br>+2 to random skill between Magic Arrow and Phoenix Strike<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+25 Vitality</span></td>  </tr>
+	<tr>  <td><span id=sName>Uldyssian's Acumen</span><br><span id=stats>Grand Crown<br>Level 66</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+1 to All Skills<br>+50% FHRecovery<br>+5-10 to Strength, Dexterity, Vitality, and Energy<br>3 Sockets<br>+15% FCRate<br>+5-10% Resist All<br>+5-10% Resist Phys</span></td>  </tr>
+	<tr>  <td><span id=sName>Uldyssian's Piety</span><br><span id=stats>Ring<br>Level 66</span></td>    <td><span id=mods>+10% chance for Deadly Strike<br>+4/2% ARating per Player Level<br>+10-15% Resist All<br>PhysDmg Reduced by 10-15<br>+25-50% Gold Find<br>1% chance for Crushing Blow<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+20% FR/Walk</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>The Forgotten Horadrim</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+200 HP<br>+200 MP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% Resist Magic<br>+15% Resist All<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+3 to All Skills<br>+300 HP<br>+50% FCRate<br>+40% MP<br>+100% Resist All<br>50% chance to Open Wounds<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Horadric Anchor</span><br><span id=stats>Samite Vest<br>Level 96</span></td>    <td><span id=mods>+2 to All Skills<br>+300 Defense<br>+50% FHRecovery<br>4 Sockets<br>+2 to random skill between Magic Arrow and Phoenix Strike<br>+2 to random skill between Magic Arrow and Phoenix Strike<br>+10-15 to Strength, Dexterity, Vitality, and Energy<br>+50% MP<br>+10-15% Resist Phys<br><br></span><span id=stats>3 Pieces:</span><br><span id=sName>Level 10 Conviction on Equip</span></td>  </tr>
+	<tr>  <td><span id=sName>Horadric Brogan</span><br><span id=stats>Samite Boots<br>Level 96</span></td>    <td><span id=mods>+2 to All Skills<br>+50% FR/Walk<br>+4-5% Elemental and Non-Elemental Damage<br>+25-35% FCRate<br>+50% IASpeed<br>+200-300 HP<br>+200-300 MP<br>+20-30% Resist All<br>PhysDmg Reduced by 20-30<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FHRecovery</span></td>  </tr>
+	<tr>  <td><span id=sName>Horadric Ribbon</span><br><span id=stats>Samite Sash<br>Level 96</span></td>    <td><span id=mods>+2 to All Skills<br>+4-5% Elemental and Non-Elemental Damage<br>+20% ICBlocking, +% FBRate<br>+20-30% Resist All<br>+20-30% Resist Magic<br>+20-30 Energy<br>10-15% Reduced Cursed Duration</span></td>  </tr>
+	<tr>  <td><span id=sName>Horadric Mitts</span><br><span id=stats>Samite Mitts<br>Level 96</span></td>    <td><span id=mods>+2 to All Skills<br>Cannot Be Frozen<br>+10-20% HP<br>+20-30% MP<br>+25-35% FCRate<br>75% Reduced Poison Length<br>+4-5% Elemental and Non-Elemental Damage<br>+20-30% Resist All</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Angiris Bindings</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+200 HP<br>+200 MP<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+15% Resist Magic<br>+15% Resist All<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+3 to All Skills<br>+300 HP<br>+33 Replenish HP<br>+100% Resist All<br>+25% Resist Magic<br>+20% HP<br>50% chance to Open Wounds<br>+10% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Izual's Rage</span><br><span id=stats>Titan Gauntlets<br>Level 96</span></td>    <td><span id=mods>+2 to All Skills<br>5% chance for Crushing Blow<br>+5% Life Steal<br>+50% IASpeed<br>+400-500 Magic Damage<br>+10-20% HP<br>+10-20% Resist Phys<br>+400-500% Enhanced Defense<br>+100-200 Defense</span></td>  </tr>
+	<tr>  <td><span id=sName>Tyrael's Mercy</span><br><span id=stats>Titan Belt<br>Level 96</span></td>    <td><span id=mods>+2 to All Skills<br>PhysDmg Reduced by 30-50<br>+30-50 Strength<br>+30-50 Dexterity<br>+30-50 Vitality<br>+10-20% HP<br>+10-20% Resist Phys<br>+400-500% Enhanced Defense<br>+100-200 Defense</span></td>  </tr>
+	<tr>  <td><span id=sName>Deckard's Faith</span><br><span id=stats>Titan Plate<br>Level 96</span></td>    <td><span id=mods>+2 to All Skills<br>4 Sockets<br>+50% FHRecovery<br>Mag and Elem Dmg Reduced by 25-50<br>+10-15 to Strength, Dexterity, Vitality, and Energy<br>+15-25% HP<br>+15-25% Resist Phys<br>+400-500% Enhanced Defense<br>+200-300 Defense<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30% FCRate<br></span><span id=stats>3 Pieces:</span><br><span id=sName>Level 10 Purify on Equip</span></td>  </tr>
+	<tr>  <td><span id=sName>Hadriel's Enlightenment</span><br><span id=stats>Titan Greaves<br>Level 96</span></td>    <td><span id=mods>+2 to All Skills<br>+50% FR/Walk<br>+100-200% ARating<br>Cannot Be Frozen<br>+50% FHRecovery<br>+10-20% HP<br>+10-20% Resist Phys<br>+400-500% Enhanced Defense<br>+100-200 Defense</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Justinian's Patrimony</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Resist All<br>+100 MP<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+2 to All Skills<br>+25% Resist All<br>+5% Resist Phys<br>+30% IASpeed<br>+20% FCRate<br>+100 HP</span></td>  </tr>
+	<tr>  <td><span id=sName>Sin of Karybdus</span><br><span id=stats>Heavy Bracers<br>Level 53</span></td>    <td><span id=mods>+1 to All Skills<br>+300-400% Enhanced Defense<br>+30% IASpeed<br>+10-15% Resist All<br>Cannot Be Frozen<br>+5% Life Steal<br>+4-5% Elemental and Non-Elemental Damage<br>+5% Resist Phys<br>50% Reduced Poison Length</span></td>  </tr>
+	<tr>  <td><span id=sName>Fortitude of Zayl</span><br><span id=stats>Trellised Armor<br>Level 53</span></td>    <td><span id=mods>+1 to All Skills<br>+300-400% Enhanced Defense<br>3 Sockets<br>+10% Resist Phys<br>+15-25% Resist All<br>+10-15% Resist Magic<br>+5% Mana Steal<br>+3% Elemental and Non-Elemental Damage</span></td>  </tr>
+	<tr>  <td><span id=sName>Naivete of Aldric</span><br><span id=stats>Battle Boots<br>Level 53</span></td>    <td><span id=mods>+1 to All Skills<br>+300-400% Enhanced Defense<br>+50% FR/Walk<br>2% chance for Crushing Blow<br>+10-15% Resist All<br>+5 to Strength, Dexterity, Vitality, and Energy<br>4-6% Reduced Cursed Duration<br>+33 Replenish HP<br>+4-5% Elemental and Non-Elemental Damage</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Warlord of Blood</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+25% Resist All<br>+50% Magic Find<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+300 HP<br>+300 MP<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+4 to All Skills<br>+50% Resist All<br>+100% FCRate<br>3% chance for Crushing Blow<br>100% chance to Open Wounds<br>+20-40 Phys Damage<br>+1 to oSkill Teleport<br>+30% Resist Magic</span></td>  </tr>
+	<tr>  <td><span id=sName>Warlord's Ultimatum</span><br><span id=stats>Dragonscale Belt<br>Level 99</span></td>    <td><span id=mods>+2 to All Skills<br>+400-500% Enhanced Defense<br>+30-40% FCRate<br>+100-200 ARating<br>+15-25% Resist Magic<br>+5-15 to Strength, Dexterity, Vitality, and Energy<br>+10-20% Resist Phys<br>Cannot Be Frozen<br>+10-20% HP<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30 MP per Kill</span></td>  </tr>
+	<tr>  <td><span id=sName>Warlord's Sufferance</span><br><span id=stats>Dragonscale Plate<br>Level 99</span></td>    <td><span id=mods>+3 to All Skills<br>+400-500% Enhanced Defense<br>+100% FHRecovery<br>+2 to random skill between Magic Arrow and Phoenix Strike<br>+30-50% Resist All<br>+20-30% HP<br>+15-25% Resist Phys<br>4 Sockets<br>+200 ARating<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30 HP per kill<br></span><span id=stats>3 Pieces:</span><br><span id=sName>Level 20 Purify on Equip</span></td>  </tr>
+	<tr>  <td><span id=sName>Warlord's Aversion</span><br><span id=stats>Dragonscale Boots<br>Level 99</span></td>    <td><span id=mods>+2 to All Skills<br>+400-500% Enhanced Defense<br>+60% FR/Walk<br>+100-200 ARating<br>+10-20% Resist Phys<br>+5% Elemental and Non-Elemental Damage<br>+10-20% HP<br>+5-15 to Strength, Dexterity, Vitality, and Energy<br>+5% Life Steal<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FHRecovery</span></td>  </tr>
+	<tr>  <td><span id=sName>Warlord's Animus</span><br><span id=stats>Dragonscale Gauntlets<br>Level 99</span></td>    <td><span id=mods>+2 to All Skills<br>+400-500% Enhanced Defense<br>+60% IASpeed<br>+100-200 ARating<br>+10-20% Resist Phys<br>+5% Elemental and Non-Elemental Damage<br>+10-20% HP<br>+5-15 to Strength, Dexterity, Vitality, and Energy<br>5% chance for Crushing Blow<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+5% Life Steal</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Delsere's Magnum Opus</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+25% Resist All<br>+50% Magic Find<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+300 HP<br>+300 MP<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+4 to All Skills<br>+50% Resist All<br>+100% FCRate<br>PhysDmg Reduced by 50<br>+1 to oSkill Teleport<br>+30% Resist Magic</span></td>  </tr>
+	<tr>  <td><span id=sName>Delsere's Proud Tarsi</span><br><span id=stats>Obsidian Gloves<br>Level 99</span></td>    <td><span id=mods>+2 to All Skills<br>+300-500% Enhanced Defense<br>+30-40% FCRate<br>+5% Elemental and Non-Elemental Damage<br>+100-200 HP<br>+10-20% MP<br>+100-200 MP<br>+20-30 Strength<br>+50-60% Resist Fire<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30 MP per Kill</span></td>  </tr>
+	<tr>  <td><span id=sName>Delsere's Sightless Destiny </span><br><span id=stats>Obsidian Belt<br>Level 99</span></td>    <td><span id=mods>+2 to All Skills<br>+300-500% Enhanced Defense<br>+30-40% FCRate<br>+5% Elemental and Non-Elemental Damage<br>Cannot Be Frozen<br>+10-20% MP<br>50% Reduced Poison Length<br>+20-30 Energy<br>+50-60% Resist Poison<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+30 HP per kill</span></td>  </tr>
+	<tr>  <td><span id=sName>Delsere's Swaggering Stance</span><br><span id=stats>Obsidian Boots<br>Level 99</span></td>    <td><span id=mods>+2 to All Skills<br>+300-500% Enhanced Defense<br>PhysDmg Reduced by 30-40<br>+5% Elemental and Non-Elemental Damage<br>+15-25% Resist Magic<br>+10-20% MP<br>+60% FR/Walk<br>+20-30 Dexterity<br>+50-60% Resist Cold<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+50% FHRecovery</span></td>  </tr>
+	<tr>  <td><span id=sName>Delsere's Astonishing Aura</span><br><span id=stats>Obsidian Plate<br>Level 99</span></td>    <td><span id=mods>+3 to All Skills<br>+2 to random skill between Magic Arrow and Phoenix Strike<br>+2 to random skill between Magic Arrow and Phoenix Strike<br>4 Sockets<br>+15-25% HP<br>+50% MP<br>+15-25% Resist Phys<br>+20-30 Vitality<br>+50-60% Resist Lightning<br><br></span><span id=stats>2 Pieces:</span><br><span id=sName>+500 Defense<br></span><span id=stats>3 Pieces:</span><br><span id=sName>Level 20 Conviction on Equip</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Bones of Rathma</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Resist All<br>+10% Resist Magic<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+2 to All Skills<br>1% chance for Crushing Blow<br>+15-25 Phys Damage<br>+30% Resist All<br>20% chance to Open Wounds<br>+15% Resist Magic</span></td>  </tr>
+	<tr>  <td><span id=sName>Rathma's Macabre Capitate </span><br><span id=stats>Ring<br>Level 96</span></td>    <td><span id=mods>+1 to All Skills<br>+15-25 Dexterity<br>+20-30% FR/Walk<br>+20-30% IASpeed<br>Cannot Be Frozen<br>+15-25% Resist All<br>+5-15% Resist Magic<br>+30-50% FHRecovery<br>4-8% Reduced Cursed Duration</span></td>  </tr>
+	<tr>  <td><span id=sName>Rathma's Ossified Knuckle</span><br><span id=stats>Ring<br>Level 96</span></td>    <td><span id=mods>+1 to All Skills<br>+15-25 Strength<br>+3-5% Life Steal<br>1-2% chance for Crushing Blow<br>+15-25 HP per kill<br>+100-200 HP<br>PhysDmg Reduced by 10-20<br>50% Reduced Poison Length</span></td>  </tr>
+	<tr>  <td><span id=sName>Rathma's Mysterious Mandible</span><br><span id=stats>Amulet<br>Level 96</span></td>    <td><span id=mods>+1 to All Skills<br>+15-25 Vitality<br>+100-200 HP<br>+5-10 to Min Phys Damage<br>+10-20 to Max Phys Damage<br>+5-15% Resist All<br>+5-15% Resist Magic<br>+200-300 Defense<br>+30-40% FCRate</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Uliana's Stratagem</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+10% Resist All<br>+10% Resist Magic<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+2 to All Skills<br>+30% Resist All<br>+25% MP<br>+15% Resist Magic</span></td>  </tr>
+	<tr>  <td><span id=sName>Uliana's Spirit</span><br><span id=stats>Ring<br>Level 96</span></td>    <td><span id=mods>+1 to All Skills<br>+200-300 MP<br>+10-20% MP<br>+5-10 to Strength, Dexterity, Vitality, and Energy<br>+5-15% Resist All<br>+5-15% Resist Magic</span></td>  </tr>
+	<tr>  <td><span id=sName>Uliana's Heart</span><br><span id=stats>Ring<br>Level 96</span></td>    <td><span id=mods>+1 to All Skills<br>+100-200 HP<br>+15-25 HP per kill<br>+5-10 to Strength, Dexterity, Vitality, and Energy<br>+5-15% Resist All<br>4-8% Reduced Cursed Duration</span></td>  </tr>
+	<tr>  <td><span id=sName>Uliana's Burden</span><br><span id=stats>Amulet<br>Level 96</span></td>    <td><span id=mods>+1 to All Skills<br>+20-30% FCRate<br>+60-80% FHRecovery<br>Cannot Be Frozen<br>+5-10 to Strength, Dexterity, Vitality, and Energy<br>+15-25% Resist All</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>Blackthorne's Battlegear</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+40% FHRecovery<br>+20% Resist Magic<br></span><span id=stats>3 Pieces:</span><br><span id=sName>+30% FCRate<br>+25% MP<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+4 to Druid Skills<br>+35% Resist All<br>+15% Resist Phys<br>+10% Elemental and Non-Elemental Damage<br>+1 to oSkill Teleport2<br>+5% HP<br>+100% Enhanced Damage vs Demons</span></td>  </tr>
+	<tr>  <td><span id=sName>Blackthorne's Frozen Skull</span><br><span id=stats>Sky Spirit<br>Level 85</span></td>    <td><span id=mods>+3 to Druid Skills<br>3 Sockets<br>+300-400% Enhanced Defense<br>Cannot Be Frozen<br>+2-4 to Summon Grizzly (Class Only)<br>+2-4 to Raven (Class Only)<br>+15-25% Resist All<br>+10-15 Strength<br>+15-25 Vitality</span></td>  </tr>
+	<tr>  <td><span id=sName>Blackthorne's Reticence</span><br><span id=stats>Monarch<br>Level 81</span></td>    <td><span id=mods>+2 to Druid Skills<br>3 Sockets<br>+300-400% Enhanced Defense<br>-66% Stats Required<br>+2-4 to Summon Spirit Wolf (Class Only)<br>+30-40% ICBlocking<br>+30-40% FBRate<br>+30-40% Resist All<br>+2-4 to Spirit of Barbs (Class Only)</span></td>  </tr>
+	<tr>  <td><span id=sName>Blackthorne's Martyrdom</span><br><span id=stats>Amulet<br>Level 81</span></td>    <td><span id=mods>+1 to Druid Skills<br>+25% FCRate<br>+35-50% FHRecovery<br>+15-25 HP per kill<br>+2-4 to Summon Fenris (Class Only)<br>+25-35% Resist All<br>+2-4 to Oak Sage (Class Only)<br>+10-15 Dexterity<br>75% Reduced Poison Length</span></td>  </tr>
+	<tr>  <td><span id=sName>Blackthorne's Surcoat</span><br><span id=stats>Hellforged Plate<br>Level 81</span></td>    <td><span id=mods>+2 to Druid Skills<br>3 Sockets<br>+300-400% Enhanced Defense<br>-66% Stats Required<br>+2-4 to Plague Poppy (Class Only)<br>+2-4 to Heart of Wolverine (Class Only)<br>+30% FCRate<br>+10-15% Resist Phys<br>+10-15% HP</span></td>  </tr>
+</table>
+
+<br>
+
+<br>
+<table>
+	<tr>  <td><span id=sName>The Legacy of Raekor</span><br><span id=stats>Complete Set</span></td>    <td><span id=sName></span><span id=stats>2 Pieces:</span><br><span id=sName>+20% Resist Magic<br>+20 to Max Phys Damage<br></span><br><span id=stats>Completed Set:</span><span id=sName><br>+3 to All Skills<br>2% chance for Crushing Blow<br>+5% Resist Phys<br>+200 HP<br>+25% FR/Walk<br>25% chance to Open Wounds<br>Prevents Monster HP Regen<br>Cannot Be Frozen</span></td>  </tr>
+	<tr>  <td><span id=sName>Raekor's Mountain</span><br><span id=stats>Embossed Plate<br>Level 68</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>3 Sockets<br>+40-50% Resist Fire<br>+10-20 Vitality<br>4-6% Reduced Cursed Duration<br>+50-75% Enhanced Damage<br>+10-15% HP<br>+10-15% Resist Phys<br>+40-50% Resist Poison</span></td>  </tr>
+	<tr>  <td><span id=sName>Raekor's Foundation</span><br><span id=stats>PlatBelt<br>Level 68</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>+40% FHRecovery<br>+40-50% Resist Lightning<br>+10-20 Dexterity<br>+2-3% Life Steal<br>+2-3% Mana Steal<br>+10% chance for Deadly Strike<br>+33 Replenish HP<br>+40-50% Resist Cold</span></td>  </tr>
+	<tr>  <td><span id=sName>Raekor's Courage</span><br><span id=stats>Pavise<br>Level 68</span></td>    <td><span id=mods>+300-400% Enhanced Defense<br>3 Sockets<br>+30-50% ICBlocking<br>+30-50% FBRate<br>+25-35% Resist All<br>+50-75% Enhanced Damage<br>+10-15% Resist Phys<br>+50-100 HP</span></td>  </tr>
+</table>
+</body>
+</html>
+
